@@ -23,11 +23,9 @@ const MaterialSymbolsWidget = ({
   };
 
   return (
-    <>
-      <Icon className={classes} fontSize={fontSize} style={style} {...props}>
-        {name}
-      </Icon>
-    </>
+    <Icon className={classes} fontSize={fontSize} style={style} {...props}>
+      {name}
+    </Icon>
   );
 };
 

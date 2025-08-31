@@ -1,3 +1,1 @@
-import MaterialSymbolsWidget from "./material_symbols_widget";
-
-export { MaterialSymbolsWidget };
+export { default as MaterialSymbolsWidget } from "./material_symbols_widget";

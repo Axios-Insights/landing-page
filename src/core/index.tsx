@@ -1,14 +1,24 @@
-import { Button, ThemeProvider, Typography } from "@mui/material";
-import { lightTheme } from "@themes";
+import { AppBar, Button, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
-const WEB = () => {
+import { LayoutProvider } from "./layout";
+
+const Core = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <ThemeProvider theme={lightTheme}>
+    <LayoutProvider>
+      <AppBar>ABC</AppBar>
+
+      {Array.from({ length: 50 - 1 + 1 }, (_, i) => 1 + i).map((v) => {
+        return (
+          <div key={v}>
+            <Typography>AAA</Typography>
+          </div>
+        );
+      })}
+
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <Typography>Languages</Typography>
         <Button onClick={() => i18n.changeLanguage("en")}>
           {t("languages.english")}
         </Button>
@@ -19,8 +29,8 @@ const WEB = () => {
           {t("languages.portuguese")}
         </Button>
       </div>
-    </ThemeProvider>
+    </LayoutProvider>
   );
 };
 
-export default WEB;
+export default Core;

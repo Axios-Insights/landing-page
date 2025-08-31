@@ -1,8 +1,8 @@
 import type { Palette, TypographyVariantsOptions } from "@mui/material";
 
-const typographyTheme:
-  | TypographyVariantsOptions
-  | ((palette: Palette) => TypographyVariantsOptions) = {
+const typographyTheme: (palette: Palette) => TypographyVariantsOptions = (
+  palette
+) => ({
   fontFamily: [
     "Source Sans Pro",
     "Segoe UI",
@@ -23,6 +23,9 @@ const typographyTheme:
     fontWeight: 400,
     textTransform: "none",
   },
-};
+  allVariants: {
+    color: palette.text.primary,
+  },
+});
 
 export default typographyTheme;

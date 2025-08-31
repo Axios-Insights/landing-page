@@ -9,14 +9,11 @@ import "./index.css";
 
 import { StrictMode } from "react";
 
-import { WEB } from "@core";
-import { CssBaseline } from "@mui/material";
+import Core from "@core";
 import { createRoot } from "react-dom/client";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <CssBaseline />
-
-    <WEB />
+    <Core />
   </StrictMode>
 );

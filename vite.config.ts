@@ -13,6 +13,7 @@ export default defineConfig({
       "@widgets": path.resolve(__dirname, "src/widgets"),
       "@modules": path.resolve(__dirname, "src/modules"),
       "@i18n": path.resolve(__dirname, "src/i18n"),
+      "@utils": path.resolve(__dirname, "src/utils"),
     },
   },
 });
