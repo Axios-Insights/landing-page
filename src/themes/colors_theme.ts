@@ -1,6 +1,6 @@
 const colorsTheme: Record<"dark" | "primary" | "light", string> = {
-  dark: "#0A0400",
-  primary: "#FF6600",
+  dark: "#151515",
+  primary: "#FF6E00",
   light: "#FAFAFA",
 };
 

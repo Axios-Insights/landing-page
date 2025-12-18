@@ -24,15 +24,14 @@
     "noUncheckedSideEffectImports": true,
 
     /* Modules */
-    "baseUrl": ".",
     "paths": {
-      "@core": ["src/core"],
-      "@routes": ["src/routes"],
-      "@themes": ["src/themes"],
-      "@widgets": ["src/widgets"],
-      "@modules": ["src/modules"],
-      "@i18n": ["src/i18n"],
-      "@utils": ["src/utils"]
+      "@core": ["./src/core"],
+      "@routes": ["./src/routes"],
+      "@themes": ["./src/themes"],
+      "@widgets": ["./src/widgets"],
+      "@modules": ["./src/modules"],
+      "@i18n": ["./src/i18n"],
+      "@utils": ["./src/utils"]
     }
   },
   "include": ["src"]

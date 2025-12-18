@@ -25,6 +25,7 @@ const typographyTheme: (palette: Palette) => TypographyVariantsOptions = (
   },
   allVariants: {
     color: palette.text.primary,
+    letterSpacing: "-0.05em",
   },
 });
 

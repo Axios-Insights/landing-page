@@ -1,4 +1,4 @@
-import type { TranslationObject } from "src/i18n";
+import type { TranslationObject } from "@i18n";
 
 const deepKeys = (obj: TranslationObject, prefix = ""): string[] => {
   return Object.keys(obj).flatMap((key) => {
