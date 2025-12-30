@@ -31,7 +31,8 @@
       "@widgets": ["./src/widgets"],
       "@modules": ["./src/modules"],
       "@i18n": ["./src/i18n"],
-      "@utils": ["./src/utils"]
+      "@utils": ["./src/utils"],
+      "@pages": ["./src/pages"]
     }
   },
   "include": ["src"]
