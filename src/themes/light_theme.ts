@@ -1,6 +1,7 @@
 import { createTheme } from "@mui/material";
 
 import colorsTheme from "./colors_theme";
+import componentsTheme from "./components_theme";
 import typographyTheme from "./typography_theme";
 
 const lightTheme = createTheme({
@@ -19,6 +20,7 @@ const lightTheme = createTheme({
       secondary: colorsTheme.light,
     },
   },
+  components: componentsTheme,
   typography: typographyTheme,
 });
 

@@ -1,41 +1,52 @@
-import {
-  AppBar,
-  Box,
-  Button,
-  Toolbar,
-  Typography,
-  useScrollTrigger,
-} from "@mui/material";
+import { useEffect, useState } from "react";
+
+import { AppBar, Toolbar, useScrollTrigger } from "@mui/material";
 
 import type { HeaderWidgetPropsType } from "./types";
 
 const HeaderWidget = ({
+  children,
   sx,
   scrollThreshold = 10,
   ...props
 }: HeaderWidgetPropsType) => {
+  const [headerNode, setHeaderNode] = useState<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (!headerNode) return;
+
+    const updateHeight = () => {
+      const height = headerNode.offsetHeight;
+      document.documentElement.style.setProperty(
+        "--header-height",
+        `${height}px`
+      );
+    };
+
+    const resizeObserver = new ResizeObserver(() => {
+      updateHeight();
+    });
+
+    resizeObserver.observe(headerNode);
+
+    updateHeight();
+
+    return () => resizeObserver.disconnect();
+  }, [headerNode]);
+
   const triggered = useScrollTrigger({
     disableHysteresis: true,
     threshold: scrollThreshold,
   });
 
-  const navItems = [
-    "Services",
-    "Use Cases",
-    "About Us",
-    "EN PT",
-    "Get in touch",
-  ];
-
   return (
     <AppBar
+      ref={setHeaderNode}
       elevation={triggered ? 4 : 0}
       position="fixed"
       sx={{
-        backgroundColor: triggered
-          ? "rgba(255, 255, 255, 0.25)"
-          : "transparent",
-        backgroundFiler: triggered ? "blur(10px)" : "none",
+        backgroundColor: "transparent",
+        backdropFilter: triggered ? "blur(4px)" : "none",
         transition: "all 0.3s ease-in-out",
         boxShadow: "none",
         ...sx,
@@ -49,41 +60,11 @@ const HeaderWidget = ({
           minHeight: "auto",
           display: "flex",
           justifyContent: "space-between",
+          color: triggered ? "text.primary" : "text.secondary",
+          transition: "all 0.3s ease-in-out",
         }}
       >
-        <Button //! Componentize
-          variant="text"
-          sx={{
-            backgroundColor: "peru",
-            padding: 0,
-            minWidth: 0,
-            background: "none",
-            border: "none",
-            color: "inherit",
-            "&:hover": {
-              background: "none",
-              opacity: 0.8,
-            },
-          }}
-        >
-          <Typography
-            sx={{
-              flexGrow: 1,
-              color: "text.secondary",
-              fontSize: "24px",
-            }}
-          >
-            <b>axios</b> insights
-          </Typography>
-        </Button>
-
-        <Box>
-          {navItems.map((item) => (
-            <Button key={item} sx={{ color: "#fff" }}>
-              {item}
-            </Button>
-          ))}
-        </Box>
+        {children}
       </Toolbar>
     </AppBar>
   );
