@@ -1,26 +1,20 @@
-import { AppBar, Button } from "@mui/material";
-import { useTranslation } from "react-i18next";
+import { Box } from "@mui/material";
+import { HeaderWidget, LayoutWidget } from "@widgets";
+// import { Button } from "@mui/material";
+// import { useTranslation } from "react-i18next";
 
 const HomePage = () => {
-  const { t, i18n } = useTranslation();
+  // const { t, i18n } = useTranslation();
 
   return (
-    <>
-      <AppBar>
-        <p>
-          <b>axios</b> insights
-        </p>
-      </AppBar>
+    <LayoutWidget>
+      <HeaderWidget />
 
-      {/* {Array.from({ length: 50 - 1 + 1 }, (_, i) => 1 + i).map((v) => {
-        return (
-          <div key={v}>
-            <Typography>AAA</Typography>
-          </div>
-        );
-      })} */}
+      <Box sx={{ height: "100vh", backgroundColor: "primary.main" }}>ABC</Box>
 
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <Box sx={{ p: 2, bgcolor: "grey.200" }}>Footer</Box>
+
+      {/* <div style={{ display: "flex", flexDirection: "column" }}>
         <Button onClick={() => i18n.changeLanguage("en")}>
           {t("languages.english")}
         </Button>
@@ -30,8 +24,8 @@ const HomePage = () => {
         <Button onClick={() => i18n.changeLanguage("pt")}>
           {t("languages.portuguese")}
         </Button>
-      </div>
-    </>
+      </div> */}
+    </LayoutWidget>
   );
 };
 

@@ -16,7 +16,7 @@ const lightTheme = createTheme({
     },
     text: {
       primary: colorsTheme.dark,
-      secondary: "yellow",
+      secondary: colorsTheme.light,
     },
   },
   typography: typographyTheme,
