@@ -4,7 +4,7 @@ import { SECTIONS } from "../constants";
 
 const UseCasesSection = () => {
   return (
-    <SectionWidget id={SECTIONS.USE_CASES} sx={{ height: "100vh" }}>
+    <SectionWidget id={SECTIONS.USE_CASES} height="100vh">
       {SECTIONS.USE_CASES}
     </SectionWidget>
   );

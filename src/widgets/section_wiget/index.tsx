@@ -11,12 +11,10 @@ const SectionWidget = ({
   return (
     <Box
       component="section"
-      sx={{
-        padding: "32px",
-        paddingTop: applyHeaderOffset ? "var(--header-height)" : undefined,
-        transition: "padding-top 0.1s ease",
-        ...sx,
-      }}
+      padding={8}
+      paddingTop={applyHeaderOffset ? "var(--header-height)" : undefined}
+      transition="padding-top 0.1s ease"
+      sx={sx}
       {...props}
     >
       {children}

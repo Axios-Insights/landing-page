@@ -56,7 +56,7 @@ const HeaderWidget = ({
       <Toolbar
         disableGutters
         sx={{
-          padding: "32px 32px 0px 32px",
+          padding: "32px 32px 0 32px",
           minHeight: "auto",
           display: "flex",
           justifyContent: "space-between",

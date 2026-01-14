@@ -4,7 +4,7 @@ import { SECTIONS } from "../constants";
 
 const ServicesSection = () => {
   return (
-    <SectionWidget id={SECTIONS.SERVICES} sx={{ height: "100vh" }}>
+    <SectionWidget id={SECTIONS.SERVICES} height="100vh">
       {SECTIONS.SERVICES}
     </SectionWidget>
   );

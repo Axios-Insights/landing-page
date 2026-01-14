@@ -29,8 +29,8 @@ const HomePage = () => {
           </Typography>
         </Button>
 
-        <Box display="flex" gap="64px">
-          <Box display="flex" gap="24px">
+        <Box display="flex" gap={8}>
+          <Box display="flex" gap={3}>
             <Button
               component={Link}
               variant="clear"
@@ -80,7 +80,7 @@ const HomePage = () => {
 
       <AboutUsSection />
 
-      <Box sx={{ p: 2, bgcolor: "grey.200" }}>Footer</Box>
+      <Box sx={{ backgroundColor: "grey.200" }}>Footer</Box>
 
       {/* <div style={{ display: "flex", flexDirection: "column" }}>
         <Button onClick={() => i18n.changeLanguage("en")}>
