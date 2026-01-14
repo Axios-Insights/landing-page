@@ -5,7 +5,7 @@ import type { SectionWidgetPropsType } from "./types";
 const SectionWidget = ({
   children,
   sx,
-  applyHeaderOffset = false,
+  applyHeaderOffset = true,
   ...props
 }: SectionWidgetPropsType) => {
   return (
