@@ -1,22 +1,22 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
-import { AppBar, Toolbar, useScrollTrigger } from "@mui/material";
+import { AppBar, Toolbar, useScrollTrigger, useTheme } from "@mui/material";
 
 import type { HeaderWidgetPropsType } from "./types";
 
-const HeaderWidget = ({
-  children,
-  sx,
-  scrollThreshold = 10,
-  ...props
-}: HeaderWidgetPropsType) => {
+const HeaderWidget = ({ children, sx, ...props }: HeaderWidgetPropsType) => {
   const [headerNode, setHeaderNode] = useState<HTMLElement | null>(null);
+  const [headerHeight, setHeaderHeight] = useState(0);
+  const [viewportHeight, setViewportHeight] = useState(0);
 
   useEffect(() => {
     if (!headerNode) return;
 
     const updateHeight = () => {
       const height = headerNode.offsetHeight;
+
+      setHeaderHeight(height);
+
       document.documentElement.style.setProperty(
         "--header-height",
         `${height}px`
@@ -34,21 +34,54 @@ const HeaderWidget = ({
     return () => resizeObserver.disconnect();
   }, [headerNode]);
 
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const handleResize = () => {
+      setViewportHeight(window.innerHeight);
+
+      if (headerNode) setHeaderHeight(headerNode.offsetHeight);
+    };
+
+    const resizeObserver = new ResizeObserver(handleResize);
+
+    handleResize();
+
+    if (headerNode) resizeObserver.observe(headerNode);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+
+      resizeObserver.disconnect();
+    };
+  }, [headerNode]);
+
+  const threshold = useMemo(() => {
+    return viewportHeight > 0 ? viewportHeight - headerHeight : 10;
+  }, [viewportHeight, headerHeight]);
+
   const triggered = useScrollTrigger({
     disableHysteresis: true,
-    threshold: scrollThreshold,
+    threshold: threshold,
   });
+
+  const theme = useTheme();
 
   return (
     <AppBar
       ref={setHeaderNode}
-      elevation={triggered ? 4 : 0}
       position="fixed"
       sx={{
-        backgroundColor: "transparent",
-        backdropFilter: triggered ? "blur(4px)" : "none",
-        transition: "all 0.3s ease-in-out",
+        backgroundColor: triggered ? "rgba(250, 250, 250, .1)" : "transparent",
+        backdropFilter: "blur(4px)",
         boxShadow: "none",
+
+        transition: theme.transitions.create(["all"], {
+          easing: theme.transitions.easing.easeInOut,
+          duration: theme.transitions.duration.standard,
+        }),
         ...sx,
       }}
       {...props}
@@ -56,12 +89,16 @@ const HeaderWidget = ({
       <Toolbar
         disableGutters
         sx={{
-          padding: "32px 32px 0 32px",
+          padding: "16px 32px",
           minHeight: "auto",
           display: "flex",
           justifyContent: "space-between",
           color: triggered ? "text.primary" : "text.secondary",
-          transition: "all 0.3s ease-in-out",
+
+          transition: theme.transitions.create(["all"], {
+            easing: theme.transitions.easing.easeInOut,
+            duration: theme.transitions.duration.standard,
+          }),
         }}
       >
         {children}
