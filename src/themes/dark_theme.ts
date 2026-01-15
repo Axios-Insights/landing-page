@@ -13,7 +13,7 @@ const darkTheme = createTheme({
     },
     background: {
       default: colorsTheme.dark,
-      paper: "red",
+      paper: colorsTheme.dark,
     },
     text: {
       primary: colorsTheme.light,

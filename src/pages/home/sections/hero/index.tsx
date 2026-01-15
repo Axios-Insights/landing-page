@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import { SectionWidget } from "@widgets";
 
 import { SECTIONS } from "../constants";
@@ -16,24 +16,26 @@ const HeroSection = () => {
       color="text.secondary"
       sx={{ backgroundColor: "primary.main" }}
     >
-      <Box display="flex" flexDirection="column" gap={1}>
+      <Stack direction="column" spacing={1}>
         <Typography
           fontSize={64}
           fontWeight={600}
           lineHeight={1}
           color="inherit"
         >
-          The future begins with <br />
+          The future begins <br />
+          with{" "}
           <Box component="span" fontWeight={900}>
             your
           </Box>{" "}
           imagination.
         </Typography>
 
-        <Typography fontSize={32} color="inherit">
-          Get in touch and secure your piece of the future
+        <Typography fontSize={32} color="inherit" lineHeight={1}>
+          Get in touch and secure your <br />
+          piece of the future
         </Typography>
-      </Box>
+      </Stack>
     </SectionWidget>
   );
 };

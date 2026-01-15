@@ -16,21 +16,22 @@ const HomePage = () => {
 
   return (
     <LayoutWidget>
-      <HeaderWidget>
-        <Button
-          component={Link}
-          variant="clear"
-          to={{
-            hash: SECTIONS.HERO,
-          }}
-        >
-          <Typography flexGrow={1} fontSize={24} color="inherit">
-            <b>axios</b> insights
-          </Typography>
-        </Button>
-
-        <Box display="flex" gap={8}>
-          <Box display="flex" gap={3}>
+      <HeaderWidget
+        brand={
+          <Button
+            component={Link}
+            variant="clear"
+            to={{
+              hash: SECTIONS.HERO,
+            }}
+          >
+            <Typography flexGrow={1} fontSize={24} color="inherit">
+              <b>axios</b> insights
+            </Typography>
+          </Button>
+        }
+        navigation={
+          <>
             <Button
               component={Link}
               variant="clear"
@@ -60,17 +61,20 @@ const HomePage = () => {
             >
               <Typography color="inherit">About us</Typography>
             </Button>
-          </Box>
+          </>
+        }
+        actions={
+          <>
+            <Button variant="clear">
+              <Typography color="inherit">EN PT</Typography>
+            </Button>
 
-          <Button variant="clear">
-            <Typography color="inherit">EN PT</Typography>
-          </Button>
-
-          <Button variant="clear">
-            <Typography color="inherit">Get in touch</Typography>
-          </Button>
-        </Box>
-      </HeaderWidget>
+            <Button variant="clear">
+              <Typography color="inherit">Get in touch</Typography>
+            </Button>
+          </>
+        }
+      />
 
       <HeroSection />
 
