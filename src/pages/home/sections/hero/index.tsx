@@ -3,6 +3,8 @@ import { SectionWidget } from "@widgets";
 
 import { SECTIONS } from "../constants";
 
+import { backgroundImage } from "./assets";
+
 const HeroSection = () => {
   return (
     <SectionWidget
@@ -14,7 +16,13 @@ const HeroSection = () => {
       justifyContent="space-between"
       alignItems="flex-end"
       color="text.secondary"
-      sx={{ backgroundColor: "primary.main" }}
+      sx={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundColor: "primary.main",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       <Stack direction="column" spacing={1}>
         <Typography

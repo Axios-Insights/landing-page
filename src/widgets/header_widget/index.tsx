@@ -42,7 +42,7 @@ const HeaderWidget = ({
 
       document.documentElement.style.setProperty(
         "--header-height",
-        `${hHeight}px`
+        `${hHeight}px`,
       );
     };
 
@@ -86,7 +86,7 @@ const HeaderWidget = ({
         {actions}
       </Stack>
     ),
-    [actions, isMobile, navigation]
+    [actions, isMobile, navigation],
   );
 
   return (
@@ -95,16 +95,38 @@ const HeaderWidget = ({
         ref={setHeaderNode}
         position="fixed"
         sx={{
-          backgroundColor: triggered
-            ? "rgba(250, 250, 250, .1)"
-            : "transparent",
-          backdropFilter: "blur(4px)",
+          backgroundColor: "transparent",
           boxShadow: "none",
+          color: triggered ? "text.primary" : "text.secondary",
 
-          transition: theme.transitions.create(["all"], {
+          transition: theme.transitions.create(["color"], {
             easing: theme.transitions.easing.easeInOut,
             duration: theme.transitions.duration.standard,
           }),
+
+          "&::before": {
+            content: '""',
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            zIndex: -1,
+
+            backgroundColor: "transparent",
+            backdropFilter: "blur(4px)",
+
+            maskImage:
+              "linear-gradient(to bottom, black 50%, transparent 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to bottom, black 50%, transparent 100%)",
+
+            transition: theme.transitions.create(["backdrop-filter"], {
+              easing: theme.transitions.easing.easeInOut,
+              duration: theme.transitions.duration.standard,
+            }),
+          },
+
           ...sx,
         }}
         {...props}
@@ -117,12 +139,6 @@ const HeaderWidget = ({
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            color: triggered ? "text.primary" : "text.secondary",
-
-            transition: theme.transitions.create(["all"], {
-              easing: theme.transitions.easing.easeInOut,
-              duration: theme.transitions.duration.standard,
-            }),
           }}
         >
           {brand}
