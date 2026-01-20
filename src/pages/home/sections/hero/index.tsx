@@ -1,11 +1,14 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { SectionWidget } from "@widgets";
+import { useTranslation, Trans } from "react-i18next";
 
 import { SECTIONS } from "../constants";
 
 import { backgroundImage } from "./assets";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
+
   return (
     <SectionWidget
       applyHeaderOffset
@@ -31,17 +34,17 @@ const HeroSection = () => {
           lineHeight={1}
           color="inherit"
         >
-          The future begins <br />
-          with{" "}
-          <Box component="span" fontWeight={900}>
-            your
-          </Box>{" "}
-          imagination.
+          <Trans
+            t={t}
+            i18nKey="pages.home.sections.hero.title"
+            components={{
+              1: <Box component="span" fontWeight={900} />,
+            }}
+          />
         </Typography>
 
         <Typography fontSize={32} color="inherit" lineHeight={1}>
-          Get in touch and secure your <br />
-          piece of the future
+          <Trans t={t} i18nKey="pages.home.sections.hero.subtitle" />
         </Typography>
       </Stack>
     </SectionWidget>

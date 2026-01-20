@@ -3,5 +3,25 @@
     "english": "English",
     "portuguese": "Portuguese",
     "spanish": "Spanish"
+  },
+  "pages": {
+    "home": {
+      "header": {
+        "navigation": {
+          "services": "Services",
+          "use_cases": "Use Cases",
+          "about_us": "About us"
+        },
+        "actions": {
+          "get_in_touch": "Get in touch"
+        }
+      },
+      "sections": {
+        "hero": {
+          "title": "The future begins <br/> with <1>your</1> imagination.",
+          "subtitle": "Get in touch and secure your <br/> piece of the future"
+        }
+      }
+    }
   }
 }

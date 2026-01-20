@@ -1,5 +1,6 @@
 import { Box, Button, Typography } from "@mui/material";
 import { HeaderWidget, LayoutWidget } from "@widgets";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import {
@@ -9,10 +10,9 @@ import {
   ServicesSection,
   UseCasesSection,
 } from "./sections";
-// import { useTranslation } from "react-i18next";
 
 const HomePage = () => {
-  // const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <LayoutWidget>
@@ -39,7 +39,9 @@ const HomePage = () => {
                 hash: SECTIONS.SERVICES,
               }}
             >
-              <Typography color="inherit">Services</Typography>
+              <Typography color="inherit">
+                {t("pages.home.header.navigation.services")}
+              </Typography>
             </Button>
 
             <Button
@@ -49,7 +51,9 @@ const HomePage = () => {
                 hash: SECTIONS.USE_CASES,
               }}
             >
-              <Typography color="inherit">Use cases</Typography>
+              <Typography color="inherit">
+                {t("pages.home.header.navigation.use_cases")}
+              </Typography>
             </Button>
 
             <Button
@@ -59,7 +63,9 @@ const HomePage = () => {
                 hash: SECTIONS.ABOUT_US,
               }}
             >
-              <Typography color="inherit">About us</Typography>
+              <Typography color="inherit">
+                {t("pages.home.header.navigation.about_us")}
+              </Typography>
             </Button>
           </>
         }
@@ -70,7 +76,9 @@ const HomePage = () => {
             </Button>
 
             <Button variant="clear">
-              <Typography color="inherit">Get in touch</Typography>
+              <Typography color="inherit">
+                {t("pages.home.header.actions.get_in_touch")}
+              </Typography>
             </Button>
           </>
         }
@@ -85,18 +93,6 @@ const HomePage = () => {
       <AboutUsSection />
 
       <Box sx={{ backgroundColor: "grey.200" }}>Footer</Box>
-
-      {/* <div style={{ display: "flex", flexDirection: "column" }}>
-        <Button onClick={() => i18n.changeLanguage("en")}>
-          {t("languages.english")}
-        </Button>
-        <Button onClick={() => i18n.changeLanguage("es")}>
-          {t("languages.spanish")}
-        </Button>
-        <Button onClick={() => i18n.changeLanguage("pt")}>
-          {t("languages.portuguese")}
-        </Button>
-      </div> */}
     </LayoutWidget>
   );
 };
