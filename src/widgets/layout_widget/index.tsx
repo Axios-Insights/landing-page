@@ -2,7 +2,11 @@ import { Box } from "@mui/material";
 
 import type { LayoutWidgetPropsType } from "./types";
 
-const LayoutWidget = ({ children, sx, ...props }: LayoutWidgetPropsType) => {
+export const LayoutWidget = ({
+  children,
+  sx,
+  ...props
+}: LayoutWidgetPropsType) => {
   return (
     <Box
       component="main"
@@ -17,5 +21,3 @@ const LayoutWidget = ({ children, sx, ...props }: LayoutWidgetPropsType) => {
     </Box>
   );
 };
-
-export default LayoutWidget;

@@ -1,14 +1,12 @@
-import router from "@routes";
+import { router } from "@routes";
 import { RouterProvider } from "react-router";
 
-import CoreProviders from "./providers";
+import { Providers } from "./providers";
 
-const Core = () => {
+export const Core = () => {
   return (
-    <CoreProviders>
+    <Providers>
       <RouterProvider router={router} />
-    </CoreProviders>
+    </Providers>
   );
 };
-
-export default Core;

@@ -15,7 +15,7 @@ import {
 
 import type { HeaderWidgetPropsType } from "./types";
 
-const HeaderWidget = ({
+export const HeaderWidget = ({
   brand,
   navigation,
   actions,
@@ -179,5 +179,3 @@ const HeaderWidget = ({
     </>
   );
 };
-
-export default HeaderWidget;

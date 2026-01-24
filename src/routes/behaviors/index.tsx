@@ -1,14 +1,12 @@
 import { Outlet } from "react-router";
 
-import ScrollToHash from "./scroll_to_hash";
+import { ScrollToHashBehavior } from "./scroll_to_hash_behavior";
 
-const RouteBehaviors = () => {
+export const Behaviors = () => {
   return (
     <>
-      <ScrollToHash />
+      <ScrollToHashBehavior />
       <Outlet />
     </>
   );
 };
-
-export default RouteBehaviors;

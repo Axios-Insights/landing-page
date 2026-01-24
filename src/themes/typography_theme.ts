@@ -1,8 +1,8 @@
 import type { Palette, TypographyVariantsOptions } from "@mui/material";
 
-const typographyTheme: (palette: Palette) => TypographyVariantsOptions = (
-  palette
-) => ({
+export const typographyTheme: (
+  palette: Palette,
+) => TypographyVariantsOptions = (palette) => ({
   fontFamily: [
     "Source Sans Pro",
     "Segoe UI",
@@ -28,5 +28,3 @@ const typographyTheme: (palette: Palette) => TypographyVariantsOptions = (
     letterSpacing: "-0.05em",
   },
 });
-
-export default typographyTheme;

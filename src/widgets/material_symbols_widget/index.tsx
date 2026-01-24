@@ -2,7 +2,7 @@ import { Icon } from "@mui/material";
 
 import type { MaterialSymbolsPropsType } from "./types";
 
-const MaterialSymbolsWidget = ({
+export const MaterialSymbolsWidget = ({
   name,
   variant = "outlined",
   filled = false,
@@ -28,5 +28,3 @@ const MaterialSymbolsWidget = ({
     </Icon>
   );
 };
-
-export default MaterialSymbolsWidget;

@@ -1,17 +1,17 @@
 import { Box, Button, Typography } from "@mui/material";
-import { HeaderWidget, LayoutWidget } from "@widgets";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
-import {
-  AboutUsSection,
-  HeroSection,
-  SECTIONS,
-  ServicesSection,
-  UseCasesSection,
-} from "./sections";
+import { HeaderWidget } from "@widgets/header_widget";
+import { LayoutWidget } from "@widgets/layout_widget";
 
-const HomePage = () => {
+import { AboutUsSection } from "./sections/about_us_section";
+import { SECTIONS } from "./sections/constants";
+import { HeroSection } from "./sections/hero_section";
+import { ServicesSection } from "./sections/services_section";
+import { UseCasesSection } from "./sections/use_cases_section";
+
+export const HomePage = () => {
   const { t } = useTranslation();
 
   return (
@@ -96,5 +96,3 @@ const HomePage = () => {
     </LayoutWidget>
   );
 };
-
-export default HomePage;

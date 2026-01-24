@@ -1,11 +1,13 @@
 import { useMemo, useState, type ReactNode } from "react";
 
 import { CssBaseline, ThemeProvider } from "@mui/material";
-import { darkTheme, lightTheme } from "@themes";
 
-import ThemeSystemContext from "./context";
+import { darkTheme } from "@themes/dark_theme";
+import { lightTheme } from "@themes/light_theme";
 
-const ThemeSystemProvider = ({ children }: { children: ReactNode }) => {
+import { ThemeSystemContext } from "./context";
+
+export const ThemeSystemProvider = ({ children }: { children: ReactNode }) => {
   const [isDark, setIsDark] = useState(false);
 
   const toggleTheme = () => setIsDark((prev) => !prev);
@@ -15,7 +17,7 @@ const ThemeSystemProvider = ({ children }: { children: ReactNode }) => {
       isDark,
       toggleTheme,
     }),
-    [isDark]
+    [isDark],
   );
 
   return (
@@ -27,5 +29,3 @@ const ThemeSystemProvider = ({ children }: { children: ReactNode }) => {
     </ThemeSystemContext.Provider>
   );
 };
-
-export default ThemeSystemProvider;

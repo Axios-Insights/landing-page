@@ -1,10 +1,11 @@
 import { Button } from "@mui/material";
-import { SectionWidget } from "@widgets";
 import { useTranslation } from "react-i18next";
+
+import { SectionWidget } from "@widgets/section_widget";
 
 import { SECTIONS } from "../constants";
 
-const ServicesSection = () => {
+export const ServicesSection = () => {
   const { t, i18n } = useTranslation();
 
   return (
@@ -25,5 +26,3 @@ const ServicesSection = () => {
     </SectionWidget>
   );
 };
-
-export default ServicesSection;

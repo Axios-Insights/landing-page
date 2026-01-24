@@ -8,9 +8,9 @@ const deepKeys = (obj: TranslationObject, prefix = ""): string[] => {
   });
 };
 
-const validateTranslations = (
+export const validateTranslations = (
   baseLocale: string,
-  locales: Record<string, TranslationObject>
+  locales: Record<string, TranslationObject>,
 ) => {
   const baseKeys = deepKeys(locales[baseLocale]);
 
@@ -23,7 +23,7 @@ const validateTranslations = (
     if (missing.length > 0) {
       console.warn(
         `[i18n][${locale}] Missing translations compared to '${baseLocale}':`,
-        missing
+        missing,
       );
     }
 
@@ -31,10 +31,8 @@ const validateTranslations = (
     if (extras.length > 0) {
       console.warn(
         `[i18n][${locale}] Extra translations not in '${baseLocale}':`,
-        extras
+        extras,
       );
     }
   });
 };
-
-export default validateTranslations;

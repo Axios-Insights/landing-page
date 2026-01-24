@@ -1,10 +1,10 @@
 import { createTheme } from "@mui/material";
 
-import colorsTheme from "./colors_theme";
-import componentsTheme from "./components_theme";
-import typographyTheme from "./typography_theme";
+import { colorsTheme } from "./colors_theme";
+import { componentsTheme } from "./components_theme";
+import { typographyTheme } from "./typography_theme";
 
-const lightTheme = createTheme({
+export const lightTheme = createTheme({
   palette: {
     mode: "light",
     primary: {
@@ -23,5 +23,3 @@ const lightTheme = createTheme({
   components: componentsTheme,
   typography: typographyTheme,
 });
-
-export default lightTheme;

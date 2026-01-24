@@ -1,6 +1,6 @@
 import type { Components, CssVarsTheme, Theme } from "@mui/material";
 
-const componentsTheme: Components<
+export const componentsTheme: Components<
   Omit<Theme, "components" | "palette"> & CssVarsTheme
 > = {
   MuiButton: {
@@ -27,5 +27,3 @@ const componentsTheme: Components<
     ],
   },
 };
-
-export default componentsTheme;

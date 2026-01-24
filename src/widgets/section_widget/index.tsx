@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 
 import type { SectionWidgetPropsType } from "./types";
 
-const SectionWidget = ({
+export const SectionWidget = ({
   children,
   sx,
   applyHeaderOffset = true,
@@ -21,5 +21,3 @@ const SectionWidget = ({
     </Box>
   );
 };
-
-export default SectionWidget;

@@ -1,12 +1,13 @@
 import { Box, Stack, Typography } from "@mui/material";
-import { SectionWidget } from "@widgets";
 import { useTranslation, Trans } from "react-i18next";
+
+import { SectionWidget } from "@widgets/section_widget";
 
 import { SECTIONS } from "../constants";
 
 import { backgroundImage } from "./assets";
 
-const HeroSection = () => {
+export const HeroSection = () => {
   const { t } = useTranslation();
 
   return (
@@ -50,5 +51,3 @@ const HeroSection = () => {
     </SectionWidget>
   );
 };
-
-export default HeroSection;

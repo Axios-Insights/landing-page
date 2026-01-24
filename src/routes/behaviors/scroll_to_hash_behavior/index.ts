@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import { useLocation } from "react-router";
 
-function ScrollToHash() {
+export const ScrollToHashBehavior = () => {
   const location = useLocation();
 
   useEffect(() => {
@@ -17,6 +17,4 @@ function ScrollToHash() {
   }, [location]);
 
   return null;
-}
-
-export default ScrollToHash;
+};

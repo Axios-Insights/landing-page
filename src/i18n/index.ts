@@ -1,7 +1,8 @@
-import { validateTranslations } from "@utils";
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
+
+import { validateTranslations } from "@utils/i18n_validators_util";
 
 import { enLocale, esLocale, ptLocale } from "./locales";
 
@@ -35,7 +36,7 @@ i18n
     saveMissing: true,
     missingKeyHandler: (language, _, key) => {
       console.warn(
-        `[i18n][${language}] Missing key "${key}" (fallback to key)`
+        `[i18n][${language}] Missing key "${key}" (fallback to key)`,
       );
     },
     returnNull: false,
@@ -44,6 +45,5 @@ i18n
 
 validateTranslations(baseLocale, locales);
 
-export default i18n;
 export type { TranslationValue, TranslationObject };
-export { baseLocale, locales };
+export { i18n, baseLocale, locales };

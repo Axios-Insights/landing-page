@@ -9,11 +9,11 @@ import "./index.css";
 
 import { StrictMode } from "react";
 
-import Core from "@core";
+import { Core } from "@core";
 import { createRoot } from "react-dom/client";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Core />
-  </StrictMode>
+  </StrictMode>,
 );
