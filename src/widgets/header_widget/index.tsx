@@ -25,17 +25,17 @@ export const HeaderWidget = ({
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  const [headerNode, setHeaderNode] = useState<HTMLElement | null>(null);
+  const [refEl, setRefEl] = useState<HTMLElement | null>(null);
   const [headerHeight, setHeaderHeight] = useState(0);
   const [viewportHeight, setViewportHeight] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
-    if (!headerNode || typeof window === "undefined") return;
+    if (!refEl || typeof window === "undefined") return;
 
     const measure = () => {
       const vHeight = window.innerHeight;
-      const hHeight = headerNode.offsetHeight;
+      const hHeight = refEl.offsetHeight;
 
       setViewportHeight(vHeight);
       setHeaderHeight(hHeight);
@@ -48,7 +48,7 @@ export const HeaderWidget = ({
 
     const resizeObserver = new ResizeObserver(measure);
 
-    resizeObserver.observe(headerNode);
+    resizeObserver.observe(refEl);
 
     window.addEventListener("resize", measure);
 
@@ -58,7 +58,7 @@ export const HeaderWidget = ({
       resizeObserver.disconnect();
       window.removeEventListener("resize", measure);
     };
-  }, [headerNode]);
+  }, [refEl]);
 
   useEffect(() => {
     if (!isMobile && drawerOpen) setDrawerOpen(false);
@@ -83,7 +83,7 @@ export const HeaderWidget = ({
           {navigation}
         </Stack>
 
-        {actions}
+        {!isMobile && actions}
       </Stack>
     ),
     [actions, isMobile, navigation],
@@ -92,7 +92,7 @@ export const HeaderWidget = ({
   return (
     <>
       <AppBar
-        ref={setHeaderNode}
+        ref={setRefEl}
         position="fixed"
         sx={{
           backgroundColor: "transparent",

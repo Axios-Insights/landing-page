@@ -12,7 +12,7 @@ export const LayoutWidget = ({
       component="main"
       display="flex"
       flexDirection="column"
-      minHeight="100vh"
+      minHeight="100dvh"
       width="100%"
       sx={sx}
       {...props}

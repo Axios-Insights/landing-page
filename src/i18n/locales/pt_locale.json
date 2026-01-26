@@ -1,8 +1,14 @@
 {
   "languages": {
-    "english": "Inglês",
-    "portuguese": "Português",
-    "spanish": "Espanhol"
+    "en": {
+      "label": "Inglês"
+    },
+    "pt": {
+      "label": "Português"
+    },
+    "es": {
+      "label": "Espanhol"
+    }
   },
   "pages": {
     "home": {

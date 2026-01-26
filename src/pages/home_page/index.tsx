@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { HeaderWidget } from "@widgets/header_widget";
+import { LanguageSwitcherWidget } from "@widgets/language_switcher_widget";
 import { LayoutWidget } from "@widgets/layout_widget";
 
 import { AboutUsSection } from "./sections/about_us_section";
@@ -71,9 +72,7 @@ export const HomePage = () => {
         }
         actions={
           <>
-            <Button variant="clear">
-              <Typography color="inherit">EN PT</Typography>
-            </Button>
+            <LanguageSwitcherWidget />
 
             <Button variant="clear">
               <Typography color="inherit">

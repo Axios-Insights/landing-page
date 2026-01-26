@@ -14,7 +14,7 @@ export const HeroSection = () => {
     <SectionWidget
       applyHeaderOffset
       id={SECTIONS.HERO}
-      height="100vh"
+      height="100dvh"
       display="flex"
       flexDirection="row"
       justifyContent="space-between"
