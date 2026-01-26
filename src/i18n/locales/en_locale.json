@@ -28,6 +28,16 @@
           "subtitle": "Get in touch and secure your <br/> piece of the future"
         }
       }
+    },
+    "not_found": {
+      "sections": {
+        "hero": {
+          "title": "Page not found",
+          "buttons": {
+            "redirect": "Go back"
+          }
+        }
+      }
     }
   }
 }

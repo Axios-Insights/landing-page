@@ -12,13 +12,11 @@ export const HeroSection = () => {
 
   return (
     <SectionWidget
-      applyHeaderOffset
       id={SECTIONS.HERO}
       height="100dvh"
       display="flex"
-      flexDirection="row"
-      justifyContent="space-between"
-      alignItems="flex-end"
+      justifyContent="flex-end"
+      alignItems="flex-start"
       color="text.secondary"
       sx={{
         backgroundImage: `url(${backgroundImage})`,
@@ -28,13 +26,8 @@ export const HeroSection = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <Stack direction="column" spacing={1}>
-        <Typography
-          fontSize={64}
-          fontWeight={600}
-          lineHeight={1}
-          color="inherit"
-        >
+      <Stack spacing={1}>
+        <Typography fontSize={64} fontWeight={600} color="inherit">
           <Trans
             t={t}
             i18nKey="pages.home.sections.hero.title"
@@ -44,7 +37,7 @@ export const HeroSection = () => {
           />
         </Typography>
 
-        <Typography fontSize={32} color="inherit" lineHeight={1}>
+        <Typography fontSize={32} color="inherit">
           <Trans t={t} i18nKey="pages.home.sections.hero.subtitle" />
         </Typography>
       </Stack>

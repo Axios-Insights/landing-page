@@ -1,4 +1,4 @@
-import { Box, useMediaQuery, useTheme } from "@mui/material";
+import { Stack, useMediaQuery, useTheme } from "@mui/material";
 
 import type { SectionWidgetPropsType } from "./types";
 
@@ -12,7 +12,7 @@ export const SectionWidget = ({
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <Box
+    <Stack
       component="section"
       padding={isMobile ? 4 : 8}
       paddingTop={applyHeaderOffset ? "var(--header-height)" : undefined}
@@ -21,6 +21,6 @@ export const SectionWidget = ({
       {...props}
     >
       {children}
-    </Box>
+    </Stack>
   );
 };

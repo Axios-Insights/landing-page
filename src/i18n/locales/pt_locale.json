@@ -28,6 +28,16 @@
           "subtitle": "Entre em contato e garanta o seu <br/> pedaço do futuro"
         }
       }
+    },
+    "not_found": {
+      "sections": {
+        "hero": {
+          "title": "Página não encontrada",
+          "buttons": {
+            "redirect": "Volte"
+          }
+        }
+      }
     }
   }
 }

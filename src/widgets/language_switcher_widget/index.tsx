@@ -36,7 +36,7 @@ export const LanguageSwitcherWidget = ({
   };
 
   return (
-    <Box {...props} color={"inherit"}>
+    <Box {...props} color="inherit">
       <Button variant="clear" color="inherit" onClick={handleClick}>
         <Typography color="inherit">{i18n.language.toUpperCase()}</Typography>
       </Button>

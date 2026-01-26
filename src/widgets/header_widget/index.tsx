@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { Children, useEffect, useMemo, useState } from "react";
 
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -73,6 +73,8 @@ export const HeaderWidget = ({
     threshold: threshold,
   });
 
+  const hasNavigation = Children.count(navigation) > 0;
+
   const content = useMemo(
     () => (
       <Stack direction={isMobile ? "column" : "row"} spacing={isMobile ? 4 : 8}>
@@ -145,7 +147,7 @@ export const HeaderWidget = ({
 
           {!isMobile && content}
 
-          {isMobile && (
+          {isMobile && hasNavigation && (
             <IconButton color="inherit" onClick={() => setDrawerOpen(true)}>
               <MenuIcon sx={{ fontSize: 32 }} />
             </IconButton>

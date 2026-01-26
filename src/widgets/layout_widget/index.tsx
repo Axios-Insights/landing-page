@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Stack } from "@mui/material";
 
 import type { LayoutWidgetPropsType } from "./types";
 
@@ -8,16 +8,15 @@ export const LayoutWidget = ({
   ...props
 }: LayoutWidgetPropsType) => {
   return (
-    <Box
+    <Stack
       component="main"
       display="flex"
-      flexDirection="column"
       minHeight="100dvh"
       width="100%"
       sx={sx}
       {...props}
     >
       {children}
-    </Box>
+    </Stack>
   );
 };

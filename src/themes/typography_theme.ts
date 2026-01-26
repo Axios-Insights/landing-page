@@ -26,5 +26,6 @@ export const typographyTheme: (
   allVariants: {
     color: palette.text.primary,
     letterSpacing: "-0.05em",
+    lineHeight: 1,
   },
 });
