@@ -26,6 +26,51 @@
         "hero": {
           "title": "El futuro comienza <br/> con <1>tu</1> imaginación.",
           "subtitle": "Su excelencia, nuestra tecnología"
+        },
+        "results": {
+          "title": "Resultados que transforman operaciones",
+          "cards": [
+            {
+              "metric": {
+                "prefix": "-",
+                "amount": 75,
+                "suffix": "%"
+              },
+              "description": "en accidentes de vuelco"
+            },
+            {
+              "metric": {
+                "prefix": "-",
+                "amount": 90,
+                "suffix": "%"
+              },
+              "description": "en casos de somnolencia y distracción"
+            },
+            {
+              "metric": {
+                "prefix": "-",
+                "amount": 40,
+                "suffix": "%"
+              },
+              "description": "en sucesos con vehículos"
+            },
+            {
+              "metric": {
+                "prefix": "-",
+                "amount": 96,
+                "suffix": "%"
+              },
+              "description": "en eventos de telemetría"
+            },
+            {
+              "metric": {
+                "prefix": "+",
+                "amount": 40,
+                "suffix": "Millions"
+              },
+              "description": "de alertas generadas para garantizar la seguridad"
+            }
+          ]
         }
       }
     },

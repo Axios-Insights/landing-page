@@ -79,8 +79,14 @@ export const CountUpWidget = ({
   );
 
   useEffect(() => {
-    updateText(initialValue);
-  }, [initialValue, updateText]);
+    const unsubscribe = springValue.on("change", (latest: number) => {
+      updateText(latest);
+    });
+
+    updateText(springValue.get());
+
+    return () => unsubscribe();
+  }, [springValue, updateText]);
 
   useEffect(() => {
     if (isInView && startWhen) {

@@ -1,4 +1,5 @@
 import { Grid, Stack, Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 import { CountUpWidget } from "@widgets/count_up_widget";
 import { SectionWidget } from "@widgets/section_widget";
@@ -6,42 +7,45 @@ import { SpotlightCardWidget } from "@widgets/spotlight_card";
 
 import { SECTIONS } from "../constants";
 
-import { cardNumbers } from "./constants";
+import type { CardMetricType } from "./types";
 
 export const ResultsSection = () => {
+  const { t } = useTranslation();
+
+  const cards = t("pages.home.sections.results.cards", {
+    returnObjects: true,
+  }) as CardMetricType[];
+
   return (
-    <SectionWidget
-      id={SECTIONS.RESULTS}
-      justifyContent="center"
-      alignItems="center"
-      gap={4}
-    >
+    <SectionWidget id={SECTIONS.RESULTS} alignItems="center" gap={8}>
       <Typography fontSize={32} color="inherit">
-        Resultados que transformam operações
+        {t("pages.home.sections.results.title")}
       </Typography>
 
       <Grid
         container
-        width="100%"
         justifyContent="center"
         spacing={{
           xs: 2,
           md: 4,
         }}
       >
-        {cardNumbers.map((value, index) => {
-          // const isMiddle = index === 2;
-
+        {cards.map((value, index) => {
           return (
             <Grid
               size={{
                 xs: 12,
-                md: 12 / cardNumbers.length,
+                md: 12 / cards.length + 1,
               }}
               key={index}
             >
-              <SpotlightCardWidget sx={{ height: "100%", aspectRatio: 2 / 1 }}>
-                <Stack padding={4}>
+              <SpotlightCardWidget
+                sx={{
+                  aspectRatio: 2 / 1,
+                  padding: 4,
+                }}
+              >
+                <Stack width="100%" justifyContent="center" gap={1}>
                   <CountUpWidget
                     delay={index / 2}
                     prefix={value.metric.prefix && `${value.metric.prefix} `}
@@ -51,7 +55,7 @@ export const ResultsSection = () => {
                     fontWeight={700}
                   />
 
-                  <Typography>{value.description}</Typography>
+                  <Typography fontSize={24}>{value.description}</Typography>
                 </Stack>
               </SpotlightCardWidget>
             </Grid>
