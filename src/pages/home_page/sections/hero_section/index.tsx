@@ -14,7 +14,6 @@ export const HeroSection = () => {
     <SectionWidget
       id={SECTIONS.HERO}
       height="100dvh"
-      display="flex"
       justifyContent="flex-end"
       alignItems="flex-start"
       color="text.secondary"

@@ -14,7 +14,6 @@ export const HeroSection = () => {
     <SectionWidget
       height="100dvh"
       position="relative"
-      display="flex"
       justifyContent="center"
       alignItems="center"
       overflow="hidden"

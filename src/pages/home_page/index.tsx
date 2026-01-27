@@ -9,8 +9,8 @@ import { LayoutWidget } from "@widgets/layout_widget";
 import { AboutUsSection } from "./sections/about_us_section";
 import { SECTIONS } from "./sections/constants";
 import { HeroSection } from "./sections/hero_section";
+import { ResultsSection } from "./sections/results_section";
 import { ServicesSection } from "./sections/services_section";
-import { UseCasesSection } from "./sections/use_cases_section";
 
 export const HomePage = () => {
   const { t } = useTranslation();
@@ -37,11 +37,11 @@ export const HomePage = () => {
               component={Link}
               variant="clear"
               to={{
-                hash: SECTIONS.SERVICES,
+                hash: SECTIONS.RESULTS,
               }}
             >
               <Typography color="inherit">
-                {t("pages.home.header.navigation.services")}
+                {t("pages.home.header.navigation.results")}
               </Typography>
             </Button>
 
@@ -49,11 +49,11 @@ export const HomePage = () => {
               component={Link}
               variant="clear"
               to={{
-                hash: SECTIONS.USE_CASES,
+                hash: SECTIONS.SERVICES,
               }}
             >
               <Typography color="inherit">
-                {t("pages.home.header.navigation.use_cases")}
+                {t("pages.home.header.navigation.services")}
               </Typography>
             </Button>
 
@@ -85,9 +85,9 @@ export const HomePage = () => {
 
       <HeroSection />
 
-      <ServicesSection />
+      <ResultsSection />
 
-      <UseCasesSection />
+      <ServicesSection />
 
       <AboutUsSection />
 

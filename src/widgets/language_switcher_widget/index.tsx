@@ -19,15 +19,15 @@ export const LanguageSwitcherWidget = ({
 }: LanguageSwitcherWidgetPropsType) => {
   const { t, i18n } = useTranslation();
 
-  const [refEl, setRefEl] = useState<HTMLElement | null>(null);
-  const open = Boolean(refEl);
+  const [menuRef, setMenuRef] = useState<HTMLElement | null>(null);
+  const open = Boolean(menuRef);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setRefEl(event.currentTarget);
+    setMenuRef(event.currentTarget);
   };
 
   const handleClose = () => {
-    setRefEl(null);
+    setMenuRef(null);
   };
 
   const handleLanguageChange = (language: string) => {
@@ -42,7 +42,7 @@ export const LanguageSwitcherWidget = ({
       </Button>
 
       <Menu
-        anchorEl={refEl}
+        anchorEl={menuRef}
         open={open}
         onClose={handleClose}
         anchorOrigin={{

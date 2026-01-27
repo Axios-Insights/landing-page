@@ -1,4 +1,4 @@
-import { Children, useEffect, useMemo, useState } from "react";
+import { Children, useEffect, useMemo, useRef, useState } from "react";
 
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -25,17 +25,20 @@ export const HeaderWidget = ({
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  const [refEl, setRefEl] = useState<HTMLElement | null>(null);
+  const appBarRef = useRef<HTMLElement | null>(null);
+
   const [headerHeight, setHeaderHeight] = useState(0);
   const [viewportHeight, setViewportHeight] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
-    if (!refEl || typeof window === "undefined") return;
+    if (!appBarRef.current || typeof window === "undefined") return;
+
+    const element = appBarRef.current;
 
     const measure = () => {
       const vHeight = window.innerHeight;
-      const hHeight = refEl.offsetHeight;
+      const hHeight = element.offsetHeight;
 
       setViewportHeight(vHeight);
       setHeaderHeight(hHeight);
@@ -48,7 +51,7 @@ export const HeaderWidget = ({
 
     const resizeObserver = new ResizeObserver(measure);
 
-    resizeObserver.observe(refEl);
+    resizeObserver.observe(element);
 
     window.addEventListener("resize", measure);
 
@@ -58,7 +61,7 @@ export const HeaderWidget = ({
       resizeObserver.disconnect();
       window.removeEventListener("resize", measure);
     };
-  }, [refEl]);
+  }, [appBarRef]);
 
   useEffect(() => {
     if (!isMobile && drawerOpen) setDrawerOpen(false);
@@ -94,7 +97,7 @@ export const HeaderWidget = ({
   return (
     <>
       <AppBar
-        ref={setRefEl}
+        ref={appBarRef}
         position="fixed"
         sx={{
           backgroundColor: "transparent",
@@ -109,10 +112,8 @@ export const HeaderWidget = ({
           "&::before": {
             content: '""',
             position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
+            inset: 0,
+
             zIndex: -1,
 
             backgroundColor: "transparent",

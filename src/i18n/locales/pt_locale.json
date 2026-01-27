@@ -14,8 +14,8 @@
     "home": {
       "header": {
         "navigation": {
+          "results": "Resultados",
           "services": "Serviços",
-          "use_cases": "Casos de Uso",
           "about_us": "Sobre nós"
         },
         "actions": {
@@ -25,7 +25,7 @@
       "sections": {
         "hero": {
           "title": "O futuro começa <br/> com a <1>sua</1> imaginação.",
-          "subtitle": "Entre em contato e garanta o seu <br/> pedaço do futuro"
+          "subtitle": "Sua excelência, nossa tecnologia"
         }
       }
     },

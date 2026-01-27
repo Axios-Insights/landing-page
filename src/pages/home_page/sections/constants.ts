@@ -1,7 +1,7 @@
 const SECTIONS = {
   HERO: "hero",
+  RESULTS: "results",
   SERVICES: "services",
-  USE_CASES: "use-cases",
   ABOUT_US: "about-us",
 } as const;
 

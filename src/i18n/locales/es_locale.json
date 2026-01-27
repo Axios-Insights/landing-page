@@ -14,18 +14,18 @@
     "home": {
       "header": {
         "navigation": {
+          "results": "Resultados",
           "services": "Servicios",
-          "use_cases": "Casos de uso",
           "about_us": "Sobre nosotros"
         },
         "actions": {
-          "get_in_touch": "Contáctanos"
+          "get_in_touch": "Contáctenos"
         }
       },
       "sections": {
         "hero": {
           "title": "El futuro comienza <br/> con <1>tu</1> imaginación.",
-          "subtitle": "Contáctanos y asegura tu <br/> parte del futuro"
+          "subtitle": "Su excelencia, nuestra tecnología"
         }
       }
     },

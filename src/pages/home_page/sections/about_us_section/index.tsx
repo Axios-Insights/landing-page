@@ -4,8 +4,8 @@ import { SECTIONS } from "../constants";
 
 export const AboutUsSection = () => {
   return (
-    <SectionWidget id={SECTIONS.ABOUT_US} height="100dvh">
-      {SECTIONS.ABOUT_US}
+    <SectionWidget id={SECTIONS.RESULTS} height="100dvh">
+      {SECTIONS.RESULTS}
     </SectionWidget>
   );
 };
