@@ -6,10 +6,10 @@ import { validateTranslations } from "@utils/i18n_validators_util";
 
 import { enLocale, esLocale, ptLocale } from "./locales";
 
-import type { TranslationValue, TranslationObject } from "./types";
+import type { TranslationObject } from "./types";
 
-const baseLocale = "en";
-const locales: Record<string, TranslationObject> = {
+export const baseLocale = "en";
+export const locales: Record<string, TranslationObject> = {
   en: enLocale,
   es: esLocale,
   pt: ptLocale,
@@ -45,5 +45,4 @@ i18n
 
 validateTranslations(baseLocale, locales);
 
-export type { TranslationValue, TranslationObject };
-export { i18n, baseLocale, locales };
+export { i18n };

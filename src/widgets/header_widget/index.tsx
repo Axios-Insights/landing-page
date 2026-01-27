@@ -80,10 +80,25 @@ export const HeaderWidget = ({
 
   const content = useMemo(
     () => (
-      <Stack direction={isMobile ? "column" : "row"} spacing={isMobile ? 4 : 8}>
+      <Stack
+        direction={{
+          xs: "column",
+          md: "row",
+        }}
+        spacing={{
+          xs: 4,
+          md: 8,
+        }}
+      >
         <Stack
-          direction={isMobile ? "column" : "row"}
-          spacing={isMobile ? 1.5 : 3}
+          direction={{
+            xs: "column",
+            md: "row",
+          }}
+          spacing={{
+            xs: 1.5,
+            md: 3,
+          }}
         >
           {navigation}
         </Stack>

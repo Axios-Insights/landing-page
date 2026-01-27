@@ -1,3 +1,10 @@
+/**
+ * Based on components from the React Bits project
+ * https://github.com/DavidHDev/react-bits
+ *
+ * Modified by: Dainel Torquato - danieltorquatof
+ */
+
 import { useRef } from "react";
 
 import { Card, useTheme } from "@mui/material";

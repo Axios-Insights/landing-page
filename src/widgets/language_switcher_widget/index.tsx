@@ -54,14 +54,14 @@ export const LanguageSwitcherWidget = ({
           horizontal: "center",
         }}
       >
-        {Object.keys(locales).map((lang) => (
+        {Object.keys(locales).map((value) => (
           <MenuItem
-            key={lang}
-            onClick={() => handleLanguageChange(lang)}
-            selected={i18n.language === lang}
+            key={value}
+            onClick={() => handleLanguageChange(value)}
+            selected={i18n.language === value}
           >
-            <ListItemIcon>{lang.toUpperCase()}</ListItemIcon>
-            <ListItemText>{t(`languages.${lang}.label`)}</ListItemText>
+            <ListItemIcon>{value.toUpperCase()}</ListItemIcon>
+            <ListItemText>{t(`languages.${value}.label`)}</ListItemText>
           </MenuItem>
         ))}
       </Menu>
