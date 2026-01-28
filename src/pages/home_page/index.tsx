@@ -5,6 +5,7 @@ import { Link } from "react-router";
 import { HeaderWidget } from "@widgets/header_widget";
 import { LanguageSwitcherWidget } from "@widgets/language_switcher_widget";
 import { LayoutWidget } from "@widgets/layout_widget";
+import { LogoWidget } from "@widgets/logo_widget";
 
 import { AboutUsSection } from "./sections/about_us_section";
 import { SECTIONS } from "./sections/constants";
@@ -26,9 +27,7 @@ export const HomePage = () => {
               hash: SECTIONS.HERO,
             }}
           >
-            <Typography flexGrow={1} fontSize={24} color="inherit">
-              <b>axios</b> insights
-            </Typography>
+            <LogoWidget />
           </Button>
         }
         navigation={[
