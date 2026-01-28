@@ -81,7 +81,7 @@ export const HeaderWidget = ({
   const content = useMemo(
     () => (
       <Stack
-        direction={{
+        flexDirection={{
           xs: "column",
           md: "row",
         }}
@@ -91,7 +91,7 @@ export const HeaderWidget = ({
         }}
       >
         <Stack
-          direction={{
+          flexDirection={{
             xs: "column",
             md: "row",
           }}

@@ -31,60 +31,24 @@ export const HomePage = () => {
             </Typography>
           </Button>
         }
-        navigation={
-          [SECTIONS.ABOUT_US, SECTIONS.RESULTS, SECTIONS.SOLUTIONS].map(
-            (value) => (
-              <Button
-                component={Link}
-                variant="clear"
-                to={{
-                  hash: value,
-                }}
-              >
-                <Typography color="inherit">
-                  {t(`pages.home.header.navigation.${value.replace("-", "_")}`)}
-                </Typography>
-              </Button>
-            ),
-          )
-          // <>
-          //   <Button
-          //     component={Link}
-          //     variant="clear"
-          //     to={{
-          //       hash: SECTIONS.RESULTS,
-          //     }}
-          //   >
-          //     <Typography color="inherit">
-          //       {t("pages.home.header.navigation.results")}
-          //     </Typography>
-          //   </Button>
-
-          //   <Button
-          //     component={Link}
-          //     variant="clear"
-          //     to={{
-          //       hash: SECTIONS.SOLUTIONS,
-          //     }}
-          //   >
-          //     <Typography color="inherit">
-          //       {t("pages.home.header.navigation.solutions")}
-          //     </Typography>
-          //   </Button>
-
-          //   <Button
-          //     component={Link}
-          //     variant="clear"
-          //     to={{
-          //       hash: SECTIONS.ABOUT_US,
-          //     }}
-          //   >
-          //     <Typography color="inherit">
-          //       {t("pages.home.header.navigation.about_us")}
-          //     </Typography>
-          //   </Button>
-          // </>
-        }
+        navigation={[
+          SECTIONS.ABOUT_US,
+          SECTIONS.RESULTS,
+          SECTIONS.SOLUTIONS,
+        ].map((value, index) => (
+          <Button
+            key={index}
+            component={Link}
+            variant="clear"
+            to={{
+              hash: value,
+            }}
+          >
+            <Typography color="inherit">
+              {t(`pages.home.header.navigation.${value.replace("-", "_")}`)}
+            </Typography>
+          </Button>
+        ))}
         actions={
           <>
             <LanguageSwitcherWidget />

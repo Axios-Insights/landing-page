@@ -1,7 +1,7 @@
 export const SECTIONS = {
   HERO: "hero",
-  RESULTS: "results",
   ABOUT_US: "about-us",
+  RESULTS: "results",
   SOLUTIONS: "solutions",
 } as const;
 

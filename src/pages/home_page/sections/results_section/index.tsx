@@ -18,7 +18,7 @@ export const ResultsSection = () => {
 
   return (
     <SectionWidget id={SECTIONS.RESULTS} alignItems="center" gap={8}>
-      <Typography fontSize={32} color="inherit">
+      <Typography fontSize={32}>
         {t("pages.home.sections.results.title")}
       </Typography>
 

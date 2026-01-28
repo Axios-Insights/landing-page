@@ -1,6 +1,6 @@
 import { Children, useRef } from "react";
 
-import { Box, Card } from "@mui/material";
+import { Box } from "@mui/material";
 import { motion, useScroll, useTransform } from "motion/react";
 
 import type {
@@ -23,7 +23,7 @@ const ScrollStackItemWidget = ({
     <Box
       ref={boxRef}
       className="card-container"
-      height="100dvh"
+      height="97.5dvh"
       display="flex"
       justifyContent="center"
       alignItems="center"
@@ -70,7 +70,7 @@ export const ScrollStackWidget = ({
       {...props}
     >
       {children &&
-        children.map((value, index) => {
+        Children.toArray(children).map((value, index) => {
           const targetScale = 1 - (childrenCount - index) * 0.05;
           const rangeStart = index * (1 / childrenCount);
           const rangeEnd = 1;
