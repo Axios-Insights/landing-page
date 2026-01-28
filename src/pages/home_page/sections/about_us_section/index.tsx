@@ -95,7 +95,7 @@ export const AboutUsSection = () => {
                 <SpotlightCardWidget
                   key={index}
                   variant="outlined"
-                  spotlightColor={theme.palette.primary.contrastText}
+                  spotlightColor={theme.palette.primary.main}
                   sx={{
                     height: "100%",
                     width: "100%",

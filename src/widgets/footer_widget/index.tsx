@@ -1,6 +1,6 @@
 import { faSquareLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, Divider, Link, Stack, Typography } from "@mui/material";
+import { Box, Button, Divider, Link, Stack, Typography } from "@mui/material";
 import { Link as RouterLink } from "react-router";
 
 import { LogoWidget } from "@widgets/logo_widget";
@@ -20,29 +20,32 @@ export const FooterWidget = ({ sx, ...props }: FooterWidgetPropsType) => {
       sx={{ backgroundColor: "text.primary", ...sx }}
       {...props}
     >
-      <Button
-        component={RouterLink}
-        variant="clear"
-        to={{
-          pathname: "/",
-        }}
-      >
-        <LogoWidget fontSize={32} />
-      </Button>
+      <Box alignSelf="center">
+        <Button
+          component={RouterLink}
+          variant="clear"
+          to={{
+            pathname: "/",
+          }}
+        >
+          <LogoWidget fontSize={32} />
+        </Button>
+      </Box>
 
       <Divider
         variant="middle"
         sx={{ borderColor: "currentColor", opacity: 0.25 }}
       />
-
-      <Button
-        variant="clear"
-        href="https://www.linkedin.com/company/axios-insights"
-        target="_blank"
-        color="inherit"
-      >
-        <FontAwesomeIcon icon={faSquareLinkedin} fontSize={32} />
-      </Button>
+      <Box alignSelf="center">
+        <Button
+          variant="clear"
+          href="https://www.linkedin.com/company/axios-insights"
+          target="_blank"
+          color="inherit"
+        >
+          <FontAwesomeIcon icon={faSquareLinkedin} fontSize={32} />
+        </Button>
+      </Box>
 
       <Typography align="center" color="inherit">
         {"Copyright © "}

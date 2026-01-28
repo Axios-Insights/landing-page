@@ -16,9 +16,6 @@
         "navigation": {
           "about_us": "Sobre nosotros",
           "results": "Resultados",
-          "solutions": "Soluciones"
-        },
-        "actions": {
           "get_in_touch": "Contáctenos"
         }
       },
@@ -108,6 +105,10 @@
             ],
             "step_suffix": "Paso {{step}}"
           }
+        },
+        "get_in_touch": {
+          "title": "Construyamos el futuro, juntos.",
+          "subtitle": "Ponte en contacto y descubre cómo nuestras soluciones pueden impulsar tus resultados."
         }
       }
     },

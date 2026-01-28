@@ -9,9 +9,9 @@ import { LogoWidget } from "@widgets/logo_widget";
 
 import { AboutUsSection } from "./sections/about_us_section";
 import { SECTIONS } from "./sections/constants";
+import { GetInTouchSection } from "./sections/get_in_touch_section";
 import { HeroSection } from "./sections/hero_section";
 import { ResultsSection } from "./sections/results_section";
-import { SolutionsSection } from "./sections/solutions_section";
 
 export const HomePage = () => {
   const { t } = useTranslation();
@@ -33,7 +33,7 @@ export const HomePage = () => {
         navigation={[
           SECTIONS.ABOUT_US,
           SECTIONS.RESULTS,
-          SECTIONS.SOLUTIONS,
+          SECTIONS.GET_IN_TOUCH,
         ].map((value, index) => (
           <Button
             key={index}
@@ -44,21 +44,11 @@ export const HomePage = () => {
             }}
           >
             <Typography color="inherit">
-              {t(`pages.home.header.navigation.${value.replace("-", "_")}`)}
+              {t(`pages.home.header.navigation.${value.replaceAll("-", "_")}`)}
             </Typography>
           </Button>
         ))}
-        actions={
-          <>
-            <LanguageSwitcherWidget />
-
-            <Button variant="clear">
-              <Typography color="inherit">
-                {t("pages.home.header.actions.get_in_touch")}
-              </Typography>
-            </Button>
-          </>
-        }
+        actions={<LanguageSwitcherWidget />}
       />
 
       <HeroSection />
@@ -67,7 +57,7 @@ export const HomePage = () => {
 
       <ResultsSection />
 
-      <SolutionsSection />
+      <GetInTouchSection />
     </LayoutWidget>
   );
 };
