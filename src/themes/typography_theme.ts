@@ -4,10 +4,11 @@ export const typographyTheme: (
   palette: Palette,
 ) => TypographyVariantsOptions = (palette) => ({
   fontFamily: [
-    "Source Sans Pro",
-    "Segoe UI",
+    '"Source Sans 3"',
+    "-apple-system",
+    "BlinkMacSystemFont",
+    '"Segoe UI"',
     "Roboto",
-    "Helvetica Neue",
     "Arial",
     "sans-serif",
   ].join(","),

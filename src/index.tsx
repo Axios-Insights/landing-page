@@ -1,9 +1,13 @@
 import "@i18n";
 
-import "@fontsource/source-sans-pro/300.css";
-import "@fontsource/source-sans-pro/400.css";
-import "@fontsource/source-sans-pro/700.css";
-import "@fontsource/source-sans-pro/900.css";
+import "@fontsource/source-sans-3/200.css";
+import "@fontsource/source-sans-3/300.css";
+import "@fontsource/source-sans-3/400.css";
+import "@fontsource/source-sans-3/500.css";
+import "@fontsource/source-sans-3/600.css";
+import "@fontsource/source-sans-3/700.css";
+import "@fontsource/source-sans-3/800.css";
+import "@fontsource/source-sans-3/900.css";
 
 import "./styles.css";
 

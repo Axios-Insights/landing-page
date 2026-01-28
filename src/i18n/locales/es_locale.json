@@ -14,9 +14,9 @@
     "home": {
       "header": {
         "navigation": {
+          "about_us": "Sobre nosotros",
           "results": "Resultados",
-          "services": "Servicios",
-          "about_us": "Sobre nosotros"
+          "solutions": "Soluciones"
         },
         "actions": {
           "get_in_touch": "Contáctenos"

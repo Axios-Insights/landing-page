@@ -25,7 +25,7 @@ export const HeroSection = () => {
         position="absolute"
         display="flex"
         zIndex={0}
-        align="center"
+        textAlign="center"
         alignItems="center"
         justifyContent="center"
         color="primary.contrastText"
@@ -42,7 +42,6 @@ export const HeroSection = () => {
       >
         404
       </Typography>
-
       <Stack
         spacing={4}
         alignItems="center"
