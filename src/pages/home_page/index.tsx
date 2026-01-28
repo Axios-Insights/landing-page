@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
@@ -68,8 +68,6 @@ export const HomePage = () => {
       <ResultsSection />
 
       <SolutionsSection />
-
-      <Box sx={{ backgroundColor: "grey.200" }}>Footer</Box>
     </LayoutWidget>
   );
 };

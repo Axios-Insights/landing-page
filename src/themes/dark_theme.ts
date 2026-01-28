@@ -19,6 +19,7 @@ export const darkTheme = createTheme({
       primary: colorsTheme.light,
       secondary: colorsTheme.dark,
     },
+    divider: colorsTheme.light,
   },
   components: componentsTheme,
   typography: typographyTheme,

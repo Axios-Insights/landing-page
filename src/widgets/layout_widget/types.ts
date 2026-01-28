@@ -1,3 +1,5 @@
 import type { BoxProps } from "@mui/material";
 
-export type LayoutWidgetPropsType = BoxProps;
+export interface LayoutWidgetPropsType extends BoxProps {
+  activeFooter?: boolean;
+}
