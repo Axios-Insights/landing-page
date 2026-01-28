@@ -71,6 +71,43 @@
               "description": "de alertas generadas para garantizar la seguridad"
             }
           ]
+        },
+        "about_us": {
+          "title": "El desarrollador que entiende tu negocio",
+          "subtitle": "Axios Insights se especializa en ingeniería de datos y desarrollo de software<br />Nuestra misión es crear el puente entre la complejidad tecnológica y la eficiencia operativa",
+          "pillars": [
+            {
+              "title": "Seguridad",
+              "description": "Gobernanza rigurosa y pleno cumplimiento de la LGPD<br />y las mejores prácticas de seguridad de datos"
+            },
+            {
+              "title": "Escalabilidad",
+              "description": "Sistemas diseñados con arquitectura elástica cloud-ready<br />y listos para crecer según su demanda"
+            },
+            {
+              "title": "Evolución continua",
+              "description": "Investigación y desarrollo alineados con los avances del mercado<br />y las tendencias tecnológicas"
+            }
+          ],
+          "flow": {
+            "title": "Seguridad y eficiencia operativa basadas en datos",
+            "description": "Actuamos en la extracción de valor en operaciones complejas. Nuestra tecnología transforma los datos en decisiones estratégicas a través de un flujo operativo de tres pasos diseñado para la máxima eficiencia.",
+            "steps": [
+              {
+                "title": "Integración y recopilación",
+                "description": "Centralizamos datos de múltiples fuentes para un tratamiento posterior que sea seguro, inteligente y sostenible"
+              },
+              {
+                "title": "Procesamiento inteligente",
+                "description": "Aplicamos algoritmos patentados y modelos de inteligencia artificial para analizar desencadenantes, identificar patrones y resaltar comportamientos que requieren atención"
+              },
+              {
+                "title": "Gestión y decisión",
+                "description": "Organizamos la información en análisis claros que respaldan decisiones más rápidas, precisas y estratégicas."
+              }
+            ],
+            "step_suffix": "Paso {{step}}"
+          }
         }
       }
     },

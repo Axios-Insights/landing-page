@@ -15,15 +15,14 @@ export const typographyTheme: (
   fontSize: 16,
   fontWeightLight: 300,
   fontWeightRegular: 400,
+  fontWeightMedium: 500,
   fontWeightBold: 700,
-  body1: {
-    fontSize: "1rem",
-    fontWeight: 400,
-  },
+
   button: {
     fontWeight: 400,
     textTransform: "none",
   },
+
   allVariants: {
     color: palette.text.primary,
     letterSpacing: "-0.05em",

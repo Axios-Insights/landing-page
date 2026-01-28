@@ -50,7 +50,7 @@ export const HeroSection = () => {
         color="text.primary"
       >
         <Stack>
-          <Typography fontSize={64} fontWeight={700} color="inherit">
+          <Typography fontSize={64} fontWeight={900} color="inherit">
             404
           </Typography>
 

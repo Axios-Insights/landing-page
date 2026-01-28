@@ -71,6 +71,43 @@
               "description": "de alertas gerados para garantir a segurança"
             }
           ]
+        },
+        "about_us": {
+          "title": "A desenvolvedora que entende seu negócio",
+          "subtitle": "A Axios Insights é especialista em engenharia de dados e desenvolvimento de software<br />Nossa missão é criar a ponte entre a complexidade tecnológica e a eficiência operacional",
+          "pillars": [
+            {
+              "title": "Segurança",
+              "description": "Governança rigorosa e conformidade total com LGPD<br />e as melhores práticas de segurança de dados"
+            },
+            {
+              "title": "Escalabilidade",
+              "description": "Sistemas projetados com arquitetura cloud-ready elásticas<br />e prontas para crescer conforme sua demanda"
+            },
+            {
+              "title": "Evolução contínua",
+              "description": "Pesquisa e desenvolvimento alinhados aos avanços<br />e tendencias técnologicas do mercado"
+            }
+          ],
+          "flow": {
+            "title": "Segurança e eficiência operacional guiadas por dados",
+            "description": "Atuamos na extração de valor em operações complexas. Nossa tecnologia transforma dados em decisões estratégicas por meio de um fluxo operacional estruturado em três etapas, projetado para máxima eficiência",
+            "steps": [
+              {
+                "title": "Integração e coleta",
+                "description": "Centralizamos dados de múltiplas fontes para uma posterior tratativa que seja segura, inteligente e sustentável"
+              },
+              {
+                "title": "Processamento inteligente",
+                "description": "Aplicamos algoritmos autorais e modelos de inteligência artificial para analisar gatilhos, identificar padrões e destacar comportamentos que exigem atenção"
+              },
+              {
+                "title": "Gestão e decisão",
+                "description": "Organizamos a informação em análises claras que apoiam decisões mais rápidas, precisas e estratégicas"
+              }
+            ],
+            "step_suffix": "{{step}}ª etapa"
+          }
         }
       }
     },

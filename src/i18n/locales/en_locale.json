@@ -71,6 +71,43 @@
               "description": "of alerts generated to ensure safety"
             }
           ]
+        },
+        "about_us": {
+          "title": "The developer that understands your business",
+          "subtitle": "Axios Insights specializes in data engineering and software development<br />Our mission is to create the bridge between technological complexity and operational efficiency",
+          "pillars": [
+            {
+              "title": "Security",
+              "description": "Rigorous governance and full compliance with LGPD<br />and the best data security practices"
+            },
+            {
+              "title": "Scalability",
+              "description": "Systems designed with elastic cloud-ready architecture<br />and ready to grow according to your demand"
+            },
+            {
+              "title": "Continuous evolution",
+              "description": "Research and development aligned with market advances<br />and technological trends"
+            }
+          ],
+          "flow": {
+            "title": "Data-driven security and operational efficiency",
+            "description": "We act in the extraction of value in complex operations. Our technology transforms data into strategic decisions through a three-step operational flow designed for maximum efficiency",
+            "steps": [
+              {
+                "title": "Integration and collection",
+                "description": "We centralize data from multiple sources for subsequent treatment that is safe, intelligent, and sustainable"
+              },
+              {
+                "title": "Intelligent processing",
+                "description": "We apply proprietary algorithms and artificial intelligence models to analyze triggers, identify patterns, and highlight behaviors that require attention"
+              },
+              {
+                "title": "Management and decision",
+                "description": "We organize information into clear analyses that support faster, more accurate, and strategic decisions"
+              }
+            ],
+            "step_suffix": "Step {{step}}"
+          }
         }
       }
     },

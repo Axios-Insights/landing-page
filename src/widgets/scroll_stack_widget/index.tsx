@@ -59,6 +59,7 @@ export const ScrollStackWidget = ({
     offset: ["start start", "end end"],
   });
 
+  const childrenArray = Children.toArray(children);
   const childrenCount = Children.count(children);
 
   return (
@@ -70,7 +71,7 @@ export const ScrollStackWidget = ({
       {...props}
     >
       {children &&
-        Children.toArray(children).map((value, index) => {
+        childrenArray.map((value, index) => {
           const targetScale = 1 - (childrenCount - index) * 0.05;
           const rangeStart = index * (1 / childrenCount);
           const rangeEnd = 1;
