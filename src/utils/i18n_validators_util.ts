@@ -1,10 +1,18 @@
-import type { TranslationObject } from "@i18n";
+import type { TranslationObject } from "@i18n/types";
+
+const isPlainObject = (value: unknown): value is TranslationObject =>
+  typeof value === "object" && value !== null && !Array.isArray(value);
 
 const deepKeys = (obj: TranslationObject, prefix = ""): string[] => {
   return Object.keys(obj).flatMap((key) => {
     const value = obj[key];
     const fullKey = prefix ? `${prefix}.${key}` : key;
-    return typeof value === "object" ? deepKeys(value, fullKey) : fullKey;
+
+    if (isPlainObject(value)) {
+      return deepKeys(value, fullKey);
+    }
+
+    return fullKey;
   });
 };
 
