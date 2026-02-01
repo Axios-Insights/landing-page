@@ -15,6 +15,7 @@ export default defineConfig({
       "@i18n": path.resolve(__dirname, "src/i18n"),
       "@utils": path.resolve(__dirname, "src/utils"),
       "@pages": path.resolve(__dirname, "src/pages"),
+      "@styled-system": path.resolve(__dirname, "styled-system"),
     },
   },
 });
