@@ -1,0 +1,12 @@
+---
+import { DropdownWidget } from ".";
+import type { DropdownWidgetPropsType } from "./types";
+
+type Props = DropdownWidgetPropsType;
+---
+
+<DropdownWidget client:load {...Astro.props}>
+  {Astro.slots.has("trigger") && <slot name="trigger" slot="trigger" />}
+
+  <slot />
+</DropdownWidget>

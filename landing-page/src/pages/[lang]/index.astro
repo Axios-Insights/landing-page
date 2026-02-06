@@ -1,0 +1,17 @@
+---
+import Base from "@base/base.astro";
+import { supportedLangs, type Lang } from "@i18n";
+import HomeView from "@views/home_view/index.astro";
+
+export const getStaticPaths = () => {
+  return supportedLangs.map((lang) => ({
+    params: { lang },
+  }));
+};
+
+const { lang } = Astro.params as { lang: Lang };
+---
+
+<Base lang={lang}>
+  <HomeView lang={lang} />
+</Base>

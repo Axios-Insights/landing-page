@@ -1,0 +1,126 @@
+{
+  "languages": {
+    "en": {
+      "label": "Inglés"
+    },
+    "pt": {
+      "label": "Portugués"
+    },
+    "es": {
+      "label": "Español"
+    }
+  },
+  "pages": {
+    "home": {
+      "header": {
+        "navigation": {
+          "about_us": "Sobre nosotros",
+          "results": "Resultados",
+          "get_in_touch": "Contáctenos"
+        }
+      },
+      "sections": {
+        "hero": {
+          "title": "El futuro comienza <br/> con <1>tu</1> imaginación.",
+          "subtitle": "Su excelencia, nuestra tecnología"
+        },
+        "results": {
+          "title": "Resultados que transforman operaciones",
+          "cards": [
+            {
+              "metric": {
+                "prefix": "-",
+                "amount": 75,
+                "suffix": "%"
+              },
+              "description": "en accidentes de vuelco"
+            },
+            {
+              "metric": {
+                "prefix": "-",
+                "amount": 90,
+                "suffix": "%"
+              },
+              "description": "en casos de somnolencia y distracción"
+            },
+            {
+              "metric": {
+                "prefix": "-",
+                "amount": 40,
+                "suffix": "%"
+              },
+              "description": "en sucesos con vehículos"
+            },
+            {
+              "metric": {
+                "prefix": "-",
+                "amount": 96,
+                "suffix": "%"
+              },
+              "description": "en eventos de telemetría"
+            },
+            {
+              "metric": {
+                "prefix": "+",
+                "amount": 40,
+                "suffix": "Millions"
+              },
+              "description": "de alertas generadas para garantizar la seguridad"
+            }
+          ]
+        },
+        "about_us": {
+          "title": "El desarrollador que entiende tu negocio",
+          "subtitle": "Axios Insights se especializa en ingeniería de datos y desarrollo de software<br />Nuestra misión es crear el puente entre la complejidad tecnológica y la eficiencia operativa",
+          "pillars": [
+            {
+              "title": "Seguridad",
+              "description": "Gobernanza rigurosa y pleno cumplimiento de la LGPD<br />y las mejores prácticas de seguridad de datos"
+            },
+            {
+              "title": "Escalabilidad",
+              "description": "Sistemas diseñados con arquitectura elástica cloud-ready<br />y listos para crecer según su demanda"
+            },
+            {
+              "title": "Evolución continua",
+              "description": "Investigación y desarrollo alineados con los avances del mercado<br />y las tendencias tecnológicas"
+            }
+          ],
+          "flow": {
+            "title": "Seguridad y eficiencia operativa basadas en datos",
+            "description": "Actuamos en la extracción de valor en operaciones complejas. Nuestra tecnología transforma los datos en decisiones estratégicas a través de un flujo operativo de tres pasos diseñado para la máxima eficiencia.",
+            "steps": [
+              {
+                "title": "Integración y recopilación",
+                "description": "Centralizamos datos de múltiples fuentes para un tratamiento posterior que sea seguro, inteligente y sostenible"
+              },
+              {
+                "title": "Procesamiento inteligente",
+                "description": "Aplicamos algoritmos patentados y modelos de inteligencia artificial para analizar desencadenantes, identificar patrones y resaltar comportamientos que requieren atención"
+              },
+              {
+                "title": "Gestión y decisión",
+                "description": "Organizamos la información en análisis claros que respaldan decisiones más rápidas, precisas y estratégicas."
+              }
+            ],
+            "step_suffix": "Paso {{step}}"
+          }
+        },
+        "get_in_touch": {
+          "title": "Construyamos el futuro, juntos.",
+          "subtitle": "Ponte en contacto y descubre cómo nuestras soluciones pueden impulsar tus resultados."
+        }
+      }
+    },
+    "not_found": {
+      "sections": {
+        "hero": {
+          "title": "Página no encontrada",
+          "buttons": {
+            "redirect": "Volver"
+          }
+        }
+      }
+    }
+  }
+}

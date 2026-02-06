@@ -1,0 +1,57 @@
+---
+import { getTranslations } from "@i18n";
+import HeaderWidget from "@widgets/header_widget/index.astro";
+import { LayoutWidget } from "@widgets/layout_widget";
+import { LogoWidget } from "@widgets/logo_widget";
+import type { HomeViewPropsType } from "./types";
+import DropdownWidget from "@widgets/dropdown_widget/index.astro";
+
+type Props = HomeViewPropsType;
+
+const { lang, ...props } = Astro.props;
+
+const t = await getTranslations(lang);
+
+const navigationItems = [
+  { href: "#hero", key: "about_us" },
+  { href: "#about-us", key: "about_us" },
+  { href: "#results", key: "results" },
+  { href: "#get-in-touch", key: "get_in_touch" },
+] as const;
+---
+
+<LayoutWidget {...props}>
+  <HeaderWidget>
+    <a slot="brand" href="#hero">
+      <LogoWidget />
+    </a>
+
+    {
+      navigationItems.map((value) => (
+        <a slot="navigation" href={value.href}>
+          {t.pages.home.header.navigation[value.key]}
+        </a>
+      ))
+    }
+
+    <DropdownWidget slot="actions">
+      <span slot="trigger">MENU</span>
+
+      <button>A</button>
+      <span>B</span>
+      <span>C</span>
+    </DropdownWidget>
+  </HeaderWidget>
+
+  <div
+    id="hero"
+    style={{ width: "100%", height: "100dvh", backgroundColor: "red" }}
+  >
+  </div>
+
+  <div
+    id="results"
+    style={{ width: "100%", height: "100dvh", backgroundColor: "green" }}
+  >
+  </div>
+</LayoutWidget>

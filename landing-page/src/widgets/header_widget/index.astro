@@ -1,0 +1,18 @@
+---
+import { HeaderWidget } from ".";
+import type { HeaderWidgetPropsType } from "./types";
+
+type Props = HeaderWidgetPropsType;
+---
+
+<HeaderWidget client:load {...Astro.props}>
+  {Astro.slots.has("brand") && <slot name="brand" slot="brand" />}
+
+  {
+    Astro.slots.has("navigation") && (
+      <slot name="navigation" slot="navigation" />
+    )
+  }
+
+  {Astro.slots.has("actions") && <slot name="actions" slot="actions" />}
+</HeaderWidget>

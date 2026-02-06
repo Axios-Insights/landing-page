@@ -1,0 +1,36 @@
+---
+import "@fontsource/source-sans-3/200.css";
+import "@fontsource/source-sans-3/300.css";
+import "@fontsource/source-sans-3/400.css";
+import "@fontsource/source-sans-3/500.css";
+import "@fontsource/source-sans-3/600.css";
+import "@fontsource/source-sans-3/700.css";
+import "@fontsource/source-sans-3/800.css";
+import "@fontsource/source-sans-3/900.css";
+
+import "./styles.css";
+
+import type { BasePropsType } from "./types";
+
+type Props = BasePropsType;
+
+const { lang, title } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta name="generator" content={Astro.generator} />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <title>{title ?? "Axios Insights"}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
