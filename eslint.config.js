@@ -65,17 +65,22 @@ export default tseslint.config([
               position: "after",
             },
             {
-              pattern: "@modules/**",
-              group: "internal",
-              position: "after",
-            },
-            {
               pattern: "@i18n/**",
               group: "internal",
               position: "after",
             },
             {
               pattern: "@utils/**",
+              group: "internal",
+              position: "after",
+            },
+            {
+              pattern: "@pages/**",
+              group: "internal",
+              position: "after",
+            },
+            {
+              pattern: "@styled-system/**",
               group: "internal",
               position: "after",
             },
