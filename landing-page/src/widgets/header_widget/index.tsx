@@ -1,4 +1,4 @@
-import { Children, useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import type { HeaderWidgetPropsType } from "./types";
 import { Flex, HStack, Stack } from "@styled-system/jsx";
@@ -65,7 +65,7 @@ export const HeaderWidget = ({
     right: 0,
     zIndex: 50,
     transition: "color 0.3s ease-in-out",
-    color: triggered ? "text.light" : "text.dark",
+    color: triggered ? "text.dark" : "text.light",
     backgroundColor: "transparent",
 
     _before: {
@@ -99,9 +99,8 @@ export const HeaderWidget = ({
     bottom: 0,
     width: "80%",
     maxWidth: "300px",
-    bg: "white",
-    p: 6,
-    boxShadow: "lg",
+    backgroundColor: "white",
+    padding: 6,
     transition: "transform 0.3s ease-in-out",
     transform: drawerOpen ? "translateX(0)" : "translateX(100%)",
   });
@@ -135,9 +134,10 @@ export const HeaderWidget = ({
       >
         <Flex
           width="100%"
-          justify="space-between"
+          justifyContent="space-between"
           alignItems="center"
-          padding="16px 32px"
+          paddingBlock={2}
+          paddingInline={4}
           minHeight="auto"
         >
           <styled.div>{brand}</styled.div>
@@ -165,7 +165,7 @@ export const HeaderWidget = ({
             className={drawerContentStyles}
             onClick={(e) => e.stopPropagation()}
           >
-            <Flex justify="flex-end" marginBottom={4}>
+            <Flex justifyContent="flex-end" marginBottom={4}>
               <styled.button
                 onClick={() => setDrawerOpen(false)}
                 cursor="pointer"

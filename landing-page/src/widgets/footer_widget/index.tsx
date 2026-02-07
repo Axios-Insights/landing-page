@@ -30,10 +30,10 @@ export const FooterWidget = ({
       as="footer"
       width="100%"
       height="auto"
-      padding={8}
-      gap={8}
-      color="text.light"
-      backgroundColor="background.dark"
+      padding={4}
+      gap={4}
+      color="text.dark"
+      backgroundColor="background.light"
       className={className}
       {...props}
     >
@@ -57,8 +57,8 @@ export const FooterWidget = ({
         <FontAwesomeIcon
           icon={faSquareLinkedin}
           className={css({
-            width: 8,
-            height: 8,
+            width: 4,
+            aspectRatio: 1 / 1,
           })}
         />
       </Link>

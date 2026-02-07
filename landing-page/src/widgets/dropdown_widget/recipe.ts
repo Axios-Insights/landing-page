@@ -14,32 +14,15 @@ export const dropdownRecipe = defineSlotRecipe({
       _focus: { outline: "none" },
     },
     content: {
-      zIndex: 999,
+      zIndex: 100,
       minWidth: "max-content",
       whiteSpace: "nowrap",
+      padding: 1,
+
+      borderRadius: 0.5,
       backgroundColor: "background.light",
 
-      rounded: "md",
-
-      padding: [2],
-
       willChange: "transform, opacity",
-
-      "&[data-placement^=bottom]": {
-        transformOrigin: "top center",
-      },
-
-      "&[data-placement^=top]": {
-        transformOrigin: "bottom center",
-      },
-
-      "&[data-placement^=left]": {
-        transformOrigin: "right center",
-      },
-
-      "&[data-placement^=right]": {
-        transformOrigin: "left center",
-      },
     },
   },
 });
