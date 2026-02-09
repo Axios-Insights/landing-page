@@ -1,58 +1,69 @@
 import js from "@eslint/js";
-import globals from "globals";
-import tseslint from "typescript-eslint";
-import astro from "eslint-plugin-astro";
+import eslintPluginAstro from "eslint-plugin-astro";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
-import eslintPluginImport from "eslint-plugin-import";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
+import globals from "globals";
+import tseslint from "typescript-eslint";
 
-export default [
+export default tseslint.config(
   {
-    ignores: [".astro", "dist", "node_modules", "styled-system"],
+    ignores: ["dist", ".astro", ".output", "node_modules", "styled-system"],
   },
+
   js.configs.recommended,
   ...tseslint.configs.recommended,
-  ...astro.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
+
   {
-    files: ["**/*.{ts,tsx,mts,astro}"],
-
-    plugins: {
-      import: eslintPluginImport,
-    },
-
     languageOptions: {
+      ecmaVersion: 2020,
       globals: globals.browser,
     },
+  },
 
-    extends: [
-      reactHooks.configs["recommended-latest"],
-      reactRefresh.configs.vite,
-    ],
-
+  {
+    files: ["**/*.cjs"],
+    languageOptions: {
+      globals: globals.node,
+    },
     rules: {
-      "import/order": [
-        "error",
-        {
-          groups: [
-            "builtin",
-            "external",
-            "internal",
-            "parent",
-            "sibling",
-            "index",
-            "object",
-            "type",
-            "unknown",
-          ],
-          pathGroupsExcludedImportTypes: ["builtin"],
-          alphabetize: {
-            order: "asc",
-            caseInsensitive: true,
-          },
-          "newlines-between": "always",
-        },
+      "@typescript-eslint/no-require-imports": "off",
+    },
+  },
+
+  ...eslintPluginAstro.configs.recommended,
+  {
+    files: ["**/*.astro"],
+    languageOptions: {
+      parserOptions: {
+        parser: tseslint.parser,
+        extraFileExtensions: [".astro"],
+      },
+    },
+  },
+
+  {
+    files: ["**/*.{tsx}"],
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
+    },
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
       ],
     },
   },
-];
+
+  {
+    plugins: {
+      "simple-import-sort": simpleImportSort,
+    },
+    rules: {
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error",
+    },
+  },
+);

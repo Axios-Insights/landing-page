@@ -1,5 +1,5 @@
-import type { HTMLStyledProps } from "@styled-system/jsx";
 import type { FooterWidgetVariantProps } from "@styled-system/recipes";
+import type { HTMLStyledProps } from "@styled-system/types";
 
 export interface FooterWidgetPropsType
   extends FooterWidgetVariantProps,

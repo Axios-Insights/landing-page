@@ -1,11 +1,12 @@
 import { faSquareLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { styled } from "@styled-system/jsx";
 import { cx } from "@styled-system/css";
+import { styled } from "@styled-system/jsx";
+import { footerWidget } from "@styled-system/recipes";
 import { LogoWidget } from "@widgets/logo_widget";
 
 import type { FooterWidgetPropsType } from "./types";
-import { footerWidget } from "@styled-system/recipes";
+
 
 const Link = styled("a", {
   base: {

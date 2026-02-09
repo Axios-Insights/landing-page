@@ -1,9 +1,10 @@
+
+import { cx } from "@styled-system/css";
+import { styled } from "@styled-system/jsx";
+import { navWidget } from "@styled-system/recipes";
 import { useEffect, useRef, useState } from "react";
 
 import type { HeaderWidgetPropsType } from "./types";
-import { cx } from "@styled-system/css";
-import { styled } from "@styled-system/jsx";
-import { headerWidget } from "@styled-system/recipes";
 
 const useScrollPosition = (threshold = 10) => {
   const [triggered, setTriggered] = useState(false);
@@ -26,27 +27,31 @@ export const HeaderWidget = ({
 
   ...props
 }: HeaderWidgetPropsType) => {
-  const styles = headerWidget();
+  const styles = navWidget();
 
-  const headerRef = useRef<HTMLDivElement | null>(null);
+  const navRef = useRef<HTMLDivElement | null>(null);
 
-  const [headerHeight, setHeaderHeight] = useState(0);
+  const [navHeight, setNavHeight] = useState(0);
 
   useEffect(() => {
-    if (!headerRef.current) return;
+    if (!navRef.current) return;
 
     const measure = () => {
-      const hHeight = headerRef.current?.offsetHeight || 0;
-      setHeaderHeight(hHeight);
+      const hHeight = navRef.current?.offsetHeight || 0;
+
+      setNavHeight(hHeight);
+
       document.documentElement.style.setProperty(
-        "--header-height",
+        "--nav-height",
         `${hHeight}px`,
       );
     };
 
     const resizeObserver = new ResizeObserver(measure);
-    resizeObserver.observe(headerRef.current);
+
+    resizeObserver.observe(navRef.current);
     window.addEventListener("resize", measure);
+
     measure();
 
     return () => {
@@ -56,7 +61,7 @@ export const HeaderWidget = ({
   }, []);
 
   const threshold =
-    typeof window !== "undefined" ? window.innerHeight - headerHeight : 10;
+    typeof window !== "undefined" ? window.innerHeight - navHeight : 10;
   const triggered = useScrollPosition(threshold > 0 ? threshold : 10);
 
   const subcontent = (
@@ -70,8 +75,8 @@ export const HeaderWidget = ({
   const { className, ...restProps } = props;
 
   return (
-    <styled.header
-      ref={headerRef}
+    <styled.nav
+      ref={navRef}
       className={cx(styles.root, className)}
       color={triggered ? "text.dark" : "text.light"}
       {...restProps}
@@ -83,6 +88,6 @@ export const HeaderWidget = ({
 
         <styled.button className={styles.menuButton}>MenuIcon</styled.button>
       </styled.div>
-    </styled.header>
+    </styled.nav>
   );
 };

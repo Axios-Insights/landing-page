@@ -1,4 +1,52 @@
 {
-  "files": [],
-  "references": [{ "path": "./tsconfig.app.json" }]
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "plugins": [{ "name": "@astrojs/ts-plugin" }],
+
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "noUncheckedIndexedAccess": true,
+
+    "paths": {
+      "@themes": ["./src/themes"],
+      "@themes/*": ["./src/themes/*"],
+      "@widgets": ["./src/widgets"],
+      "@widgets/*": ["./src/widgets/*"],
+      "@i18n": ["./src/i18n"],
+      "@i18n/*": ["./src/i18n/*"],
+      "@utils": ["./src/utils"],
+      "@utils/*": ["./src/utils/*"],
+      "@pages": ["./src/pages"],
+      "@pages/*": ["./src/pages/*"],
+      "@base": ["./src/base"],
+      "@base/*": ["./src/base/*"],
+      "@views": ["./src/views"],
+      "@views/*": ["./src/views/*"],
+      "@recipes": ["./src/recipes"],
+      "@recipes/*": ["./src/recipes/*"],
+      "@styled-system": ["./styled-system"],
+      "@styled-system/*": ["./styled-system/*"]
+    }
+  },
+  "include": [".astro/types.d.ts", "src/**/*"],
+  "exclude": ["dist", "node_modules", "styled-system"]
 }

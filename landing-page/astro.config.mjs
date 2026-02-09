@@ -3,7 +3,6 @@ import { fileURLToPath } from "node:url";
 
 import react from "@astrojs/react";
 import { defineConfig } from "astro/config";
-
 import icon from "astro-icon";
 
 const srcDir = fileURLToPath(new URL("./src", import.meta.url));

@@ -1,4 +1,4 @@
-import { defineTokens, defineGlobalStyles } from "@pandacss/dev";
+import { defineGlobalStyles,defineTokens } from "@pandacss/dev";
 
 export const fonts = defineTokens.fonts({
   body: {

@@ -1,7 +1,7 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 
-export const headerWidgetRecipe = defineSlotRecipe({
-  className: "header-widget",
+export const navWidgetRecipe = defineSlotRecipe({
+  className: "nav-widget",
   slots: [
     "root",
     "content",

@@ -12,7 +12,7 @@
   },
   "pages": {
     "home": {
-      "header": {
+      "nav": {
         "navigation": {
           "about_us": "About us",
           "results": "Results",
@@ -21,7 +21,7 @@
       },
       "sections": {
         "hero": {
-          "title": "The future begins <br/> with <1>your</1> imagination.",
+          "title": "The future begins <br/> with <strong>your</strong> imagination.",
           "subtitle": "Your excellence, our technology"
         },
         "results": {

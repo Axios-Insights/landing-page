@@ -1,4 +1,5 @@
 import { styled } from "@styled-system/jsx";
+
 import type { LogoWidgetPropsType } from "./types";
 
 export const LogoWidget = ({

@@ -1,17 +1,18 @@
-import { styled } from "@styled-system/jsx";
-import { useEffect, useState } from "react";
-import { type DropdownWidgetPropsType } from "./types";
-import { dropdowWidget } from "@styled-system/recipes";
-import { cx } from "@styled-system/css";
 import {
   autoUpdate,
   flip,
+  FloatingPortal,
   offset,
   shift,
   useFloating,
   useTransitionStyles,
-  FloatingPortal,
 } from "@floating-ui/react";
+import { cx } from "@styled-system/css";
+import { styled } from "@styled-system/jsx";
+import { dropdowWidget } from "@styled-system/recipes";
+import { useEffect, useState } from "react";
+
+import { type DropdownWidgetPropsType } from "./types";
 
 export const DropdownWidget = ({
   trigger,

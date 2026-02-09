@@ -1,10 +1,10 @@
+import { cx } from "@styled-system/css";
+import { styled } from "@styled-system/jsx";
+import { layoutWidget } from "@styled-system/recipes";
 import { FooterWidget } from "@widgets/footer_widget";
 
-import { styled } from "@styled-system/jsx";
-
 import type { LayoutWidgetPropsType } from "./types";
-import { cx } from "@styled-system/css";
-import { layoutWidget } from "@styled-system/recipes";
+
 
 export const LayoutWidget = ({
   children,
