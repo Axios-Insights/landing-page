@@ -1,3 +1,6 @@
-import type { VstackProps } from "@styled-system/jsx";
+import type { HTMLStyledProps } from "@styled-system/jsx";
+import type { FooterWidgetVariantProps } from "@styled-system/recipes";
 
-export type FooterWidgetPropsType = VstackProps;
+export interface FooterWidgetPropsType
+  extends FooterWidgetVariantProps,
+    HTMLStyledProps<"footer"> {}

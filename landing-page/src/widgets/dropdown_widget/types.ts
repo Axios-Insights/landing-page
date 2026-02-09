@@ -1,11 +1,11 @@
 import type { ReactNode } from "react";
 
-import type { DropdownVariantProps } from "@styled-system/recipes";
+import type { DropdowWidgetVariantProps } from "@styled-system/recipes";
 import type { UseFloatingOptions } from "@floating-ui/react";
 import type { HTMLStyledProps } from "@styled-system/types";
 
 export interface DropdownWidgetPropsType
-  extends DropdownVariantProps,
+  extends DropdowWidgetVariantProps,
     HTMLStyledProps<"div"> {
   trigger?: ReactNode;
   triggerStyled?: Omit<HTMLStyledProps<"button">, "ref" | "onClick" | "type">;

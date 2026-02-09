@@ -1,5 +1,8 @@
-import type { VstackProps } from "@styled-system/jsx";
+import type { HTMLStyledProps } from "@styled-system/jsx";
+import type { LayoutWidgetVariantProps } from "@styled-system/recipes";
 
-export interface LayoutWidgetPropsType extends VstackProps {
+export interface LayoutWidgetPropsType
+  extends LayoutWidgetVariantProps,
+    HTMLStyledProps<"div"> {
   activeFooter?: boolean;
 }

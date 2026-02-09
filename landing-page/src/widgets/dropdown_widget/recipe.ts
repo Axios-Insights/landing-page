@@ -1,7 +1,7 @@
 import { defineSlotRecipe } from "@pandacss/dev";
 
-export const dropdownRecipe = defineSlotRecipe({
-  className: "dropdown",
+export const dropdownWidgetRecipe = defineSlotRecipe({
+  className: "dropdown-widget",
   slots: ["root", "trigger", "content"],
   base: {
     root: {

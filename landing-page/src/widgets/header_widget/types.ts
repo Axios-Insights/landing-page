@@ -1,8 +1,13 @@
 import type { ReactNode } from "react";
-import type { HstackProps } from "@styled-system/jsx";
+import type { HTMLStyledProps } from "@styled-system/jsx";
+import type { HeaderWidgetVariantProps } from "@styled-system/recipes";
 
-export interface HeaderWidgetPropsType extends HstackProps {
+export interface HeaderWidgetPropsType
+  extends HeaderWidgetVariantProps,
+    HTMLStyledProps<"header"> {
   brand?: ReactNode;
+
   navigation?: ReactNode;
+
   actions?: ReactNode;
 }

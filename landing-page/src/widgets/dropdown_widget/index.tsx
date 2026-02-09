@@ -1,7 +1,7 @@
 import { styled } from "@styled-system/jsx";
 import { useEffect, useState } from "react";
 import { type DropdownWidgetPropsType } from "./types";
-import { dropdown } from "@styled-system/recipes";
+import { dropdowWidget } from "@styled-system/recipes";
 import { cx } from "@styled-system/css";
 import {
   autoUpdate,
@@ -24,7 +24,7 @@ export const DropdownWidget = ({
 
   ...props
 }: DropdownWidgetPropsType) => {
-  const styles = dropdown();
+  const styles = dropdowWidget();
 
   const [isOpen, setIsOpen] = useState(false);
 

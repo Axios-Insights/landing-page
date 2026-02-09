@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
 import type { HeaderWidgetPropsType } from "./types";
-import { Flex, HStack, Stack } from "@styled-system/jsx";
-import { css, cx } from "@styled-system/css";
+import { cx } from "@styled-system/css";
 import { styled } from "@styled-system/jsx";
+import { headerWidget } from "@styled-system/recipes";
 
 const useScrollPosition = (threshold = 10) => {
   const [triggered, setTriggered] = useState(false);
@@ -23,13 +23,14 @@ export const HeaderWidget = ({
   brand,
   navigation,
   actions,
-  className,
+
   ...props
 }: HeaderWidgetPropsType) => {
+  const styles = headerWidget();
+
   const headerRef = useRef<HTMLDivElement | null>(null);
 
   const [headerHeight, setHeaderHeight] = useState(0);
-  const [drawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
     if (!headerRef.current) return;
@@ -58,125 +59,30 @@ export const HeaderWidget = ({
     typeof window !== "undefined" ? window.innerHeight - headerHeight : 10;
   const triggered = useScrollPosition(threshold > 0 ? threshold : 10);
 
-  const headerStyle = css({
-    position: "fixed",
-    top: 0,
-    left: 0,
-    right: 0,
-    zIndex: 50,
-    transition: "color 0.3s ease-in-out",
-    color: triggered ? "text.dark" : "text.light",
-    backgroundColor: "transparent",
+  const subcontent = (
+    <styled.div className={styles.subcontent}>
+      <styled.div className={styles.navigation}>{navigation}</styled.div>
 
-    _before: {
-      content: '""',
-      position: "absolute",
-      inset: 0,
-      zIndex: -1,
-      backgroundColor: "transparent",
-      backdropFilter: "blur(4px)",
-      maskImage: "linear-gradient(to bottom, black 50%, transparent 100%)",
-      WebkitMaskImage:
-        "linear-gradient(to bottom, black 50%, transparent 100%)",
-      transition: "backdrop-filter 0.3s ease-in-out",
-    },
-  });
-
-  const drawerOverlayStyles = css({
-    position: "fixed",
-    inset: 0,
-    zIndex: 100,
-    bg: "black/50",
-    backdropFilter: "blur(4px)",
-    display: drawerOpen ? "block" : "none",
-    md: { display: "none" },
-  });
-
-  const drawerContentStyles = css({
-    position: "absolute",
-    right: 0,
-    top: 0,
-    bottom: 0,
-    width: "80%",
-    maxWidth: "300px",
-    backgroundColor: "white",
-    padding: 6,
-    transition: "transform 0.3s ease-in-out",
-    transform: drawerOpen ? "translateX(0)" : "translateX(100%)",
-  });
-
-  const content = (
-    <Stack
-      direction={{ base: "column", md: "row" }}
-      gap={{ base: 4, md: 8 }}
-      alignItems="center"
-    >
-      <Stack
-        direction={{ base: "column", md: "row" }}
-        gap={{ base: 1.5, md: 3 }}
-      >
-        {navigation}
-      </Stack>
-
-      <styled.div className={css({ display: { base: "none", md: "block" } })}>
-        {actions}
-      </styled.div>
-    </Stack>
+      <styled.div className={styles.actions}>{actions}</styled.div>
+    </styled.div>
   );
 
+  const { className, ...restProps } = props;
+
   return (
-    <>
-      <HStack
-        as="header"
-        ref={headerRef}
-        className={cx(headerStyle, className)}
-        {...props}
-      >
-        <Flex
-          width="100%"
-          justifyContent="space-between"
-          alignItems="center"
-          paddingBlock={2}
-          paddingInline={4}
-          minHeight="auto"
-        >
-          <styled.div>{brand}</styled.div>
+    <styled.header
+      ref={headerRef}
+      className={cx(styles.root, className)}
+      color={triggered ? "text.dark" : "text.light"}
+      {...restProps}
+    >
+      <styled.div className={styles.content}>
+        <styled.div>{brand}</styled.div>
 
-          <styled.div display={{ base: "none", md: "block" }}>
-            {content}
-          </styled.div>
+        <styled.div className={styles.flatContent}>{subcontent}</styled.div>
 
-          <styled.button
-            onClick={() => setDrawerOpen(true)}
-            display={{ base: "block", md: "none" }}
-            cursor="pointer"
-          >
-            MenuIcon
-          </styled.button>
-        </Flex>
-      </HStack>
-
-      {drawerOpen && (
-        <styled.div
-          className={drawerOverlayStyles}
-          onClick={() => setDrawerOpen(false)}
-        >
-          <styled.div
-            className={drawerContentStyles}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <Flex justifyContent="flex-end" marginBottom={4}>
-              <styled.button
-                onClick={() => setDrawerOpen(false)}
-                cursor="pointer"
-              >
-                CloseIcon
-              </styled.button>
-            </Flex>
-          </styled.div>
-          {content}
-        </styled.div>
-      )}
-    </>
+        <styled.button className={styles.menuButton}>MenuIcon</styled.button>
+      </styled.div>
+    </styled.header>
   );
 };

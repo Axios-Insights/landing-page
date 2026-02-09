@@ -6,7 +6,10 @@ import { spacing } from "./src/themes/spacing_theme";
 import { sizes } from "./src/themes/sizes_theme";
 import { radii } from "./src/themes/radii_theme";
 
-import { dropdownRecipe } from "./src/widgets/dropdown_widget/recipe";
+import { dropdownWidgetRecipe } from "./src/widgets/dropdown_widget/recipe";
+import { footerWidgetRecipe } from "./src/widgets/footer_widget/recipe";
+import { headerWidgetRecipe } from "./src/widgets/header_widget/recipe";
+import { layoutWidgetRecipe } from "./src/widgets/layout_widget/recipe";
 
 export default defineConfig({
   preflight: true,
@@ -34,7 +37,10 @@ export default defineConfig({
         colors: semanticColors,
       },
       slotRecipes: {
-        dropdown: dropdownRecipe,
+        dropdowWidget: dropdownWidgetRecipe,
+        footerWidget: footerWidgetRecipe,
+        headerWidget: headerWidgetRecipe,
+        layoutWidget: layoutWidgetRecipe,
       },
     },
   },

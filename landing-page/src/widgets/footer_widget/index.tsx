@@ -1,11 +1,11 @@
 import { faSquareLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Divider, VStack } from "@styled-system/jsx";
 import { styled } from "@styled-system/jsx";
-import { css } from "@styled-system/css";
+import { cx } from "@styled-system/css";
 import { LogoWidget } from "@widgets/logo_widget";
 
 import type { FooterWidgetPropsType } from "./types";
+import { footerWidget } from "@styled-system/recipes";
 
 const Link = styled("a", {
   base: {
@@ -19,34 +19,20 @@ const Link = styled("a", {
   },
 });
 
-export const FooterWidget = ({
-  className,
-  ...props
-}: FooterWidgetPropsType) => {
+export const FooterWidget = (props: FooterWidgetPropsType) => {
+  const styles = footerWidget();
+
   const currentYear = new Date().getFullYear();
 
+  const { className, ...restProps } = props;
+
   return (
-    <VStack
-      as="footer"
-      width="100%"
-      height="auto"
-      padding={4}
-      gap={4}
-      color="text.dark"
-      backgroundColor="background.light"
-      className={className}
-      {...props}
-    >
+    <styled.footer className={cx(styles.root, className)} {...restProps}>
       <Link alignSelf="center" href="/">
         <LogoWidget fontSize={32} />
       </Link>
 
-      <Divider
-        width="100%"
-        alignSelf="center"
-        color="currentColor"
-        opacity={0.25}
-      />
+      <styled.hr className={styles.divider} />
 
       <Link
         alignSelf="center"
@@ -54,19 +40,13 @@ export const FooterWidget = ({
         target="_blank"
         aria-label="LinkedIn"
       >
-        <FontAwesomeIcon
-          icon={faSquareLinkedin}
-          className={css({
-            width: 4,
-            aspectRatio: 1 / 1,
-          })}
-        />
+        <FontAwesomeIcon icon={faSquareLinkedin} className={styles.linkIcon} />
       </Link>
 
-      <styled.p alignSelf="center" color="inherit">
+      <styled.p className={styles.copyrightNotice}>
         {"Copyright © "}
         {currentYear}
       </styled.p>
-    </VStack>
+    </styled.footer>
   );
 };
