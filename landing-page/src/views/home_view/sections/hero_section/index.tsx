@@ -1,4 +1,4 @@
-import { styled,VStack } from "@styled-system/jsx";
+import { styled, VStack } from "@styled-system/jsx";
 import { SectionWidget } from "@widgets/section_widget";
 
 import { SECTIONS } from "../constants";

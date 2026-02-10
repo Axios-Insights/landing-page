@@ -5,6 +5,7 @@ import { radii } from "./src/themes/radii_theme";
 import { sizes } from "./src/themes/sizes_theme";
 import { spacing } from "./src/themes/spacing_theme";
 import { fonts, typographyCss } from "./src/themes/typography_theme";
+import { cardWidgetRecipe } from "./src/widgets/card_widget/recipe";
 import { dropdownWidgetRecipe } from "./src/widgets/dropdown_widget/recipe";
 import { footerWidgetRecipe } from "./src/widgets/footer_widget/recipe";
 import { layoutWidgetRecipe } from "./src/widgets/layout_widget/recipe";
@@ -42,6 +43,7 @@ export default defineConfig({
         navWidget: navWidgetRecipe,
         layoutWidget: layoutWidgetRecipe,
         sectionWidget: sectionWidgetRecipe,
+        cardWidget: cardWidgetRecipe,
       },
     },
   },

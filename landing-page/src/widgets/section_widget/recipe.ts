@@ -10,6 +10,8 @@ export const sectionWidgetRecipe = defineSlotRecipe({
 
       padding: 4,
 
+      backgroundColor: "background.light",
+
       transition: "padding-top 0.1s ease",
 
       md: {

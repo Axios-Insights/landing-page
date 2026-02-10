@@ -5,6 +5,7 @@ import { LayoutWidget } from "@widgets/layout_widget";
 import { LogoWidget } from "@widgets/logo_widget";
 import HeaderWidget from "@widgets/nav_widget/index.astro";
 
+import { AboutUsSection } from "./sections/about_us_section";
 import { HeroSection } from "./sections/hero_section";
 import type { HomeViewPropsType } from "./types";
 
@@ -15,7 +16,6 @@ const { lang, ...props } = Astro.props;
 const t = await getTranslations(lang);
 
 const navigationItems = [
-  { href: "#hero", key: "about_us" },
   { href: "#about-us", key: "about_us" },
   { href: "#results", key: "results" },
   { href: "#get-in-touch", key: "get_in_touch" },
@@ -48,5 +48,16 @@ const navigationItems = [
   <HeroSection
     title={t.pages.home.sections.hero.title}
     subtitle={t.pages.home.sections.hero.subtitle}
+  />
+
+  <AboutUsSection
+    title={t.pages.home.sections.about_us.title}
+    subtitle={t.pages.home.sections.about_us.subtitle}
+    pillars={t.pages.home.sections.about_us.pillars}
+    workflow={{
+      title: t.pages.home.sections.about_us.workflow.title,
+      description: t.pages.home.sections.about_us.workflow.description,
+      steps: t.pages.home.sections.about_us.workflow.steps,
+    }}
   />
 </LayoutWidget>
