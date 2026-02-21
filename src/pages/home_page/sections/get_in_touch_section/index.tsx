@@ -1,5 +1,5 @@
 import { faSquareWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { faSquarePhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faSquarePhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconButton, Stack, Typography, useTheme } from "@mui/material";
 import { Trans, useTranslation } from "react-i18next";
@@ -11,7 +11,7 @@ import { buildPhoneLink, buildWhatsappLink } from "@utils/contact_util";
 
 import { SECTIONS } from "../constants";
 
-import { contactPhoneNumber } from "./constants";
+import { contactEmailAddress, contactPhoneNumber } from "./constants";
 
 export const GetInTouchSection = () => {
   const { t } = useTranslation();
@@ -59,6 +59,9 @@ export const GetInTouchSection = () => {
               color="inherit"
             >
               <FontAwesomeIcon icon={faSquarePhone} fontSize={64} />
+            </IconButton>
+            <IconButton href={`mailto:${contactEmailAddress}`} color="inherit">
+              <FontAwesomeIcon icon={faEnvelope} fontSize={56} />
             </IconButton>
           </Stack>
         </Stack>
