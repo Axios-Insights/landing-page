@@ -1,10 +1,17 @@
-import { Stack, Typography, useTheme } from "@mui/material";
+import { faSquareWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faSquarePhone } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconButton, Stack, Typography, useTheme } from "@mui/material";
 import { Trans, useTranslation } from "react-i18next";
 
 import { SectionWidget } from "@widgets/section_widget";
 import { SpotlightCardWidget } from "@widgets/spotlight_card";
 
+import { buildPhoneLink, buildWhatsappLink } from "@utils/contact_util";
+
 import { SECTIONS } from "../constants";
+
+import { contactEmailAddress, contactPhoneNumber } from "./constants";
 
 export const GetInTouchSection = () => {
   const { t } = useTranslation();
@@ -35,13 +42,28 @@ export const GetInTouchSection = () => {
             </Typography>
           </Stack>
 
-          {/* <Box alignSelf="center">
-            <Button variant="contained">
-              <Typography color="text.secondary" fontSize={24} fontWeight={600}>
-                Entre em contato
-              </Typography>
-            </Button>
-          </Box> */}
+          <Stack alignSelf="center" flexDirection="row" gap={2}>
+            <IconButton
+              href={buildWhatsappLink(
+                contactPhoneNumber,
+                t("pages.home.sections.get_in_touch.whatsapp_message"),
+              )}
+              target="_blank"
+              color="inherit"
+            >
+              <FontAwesomeIcon icon={faSquareWhatsapp} fontSize={64} />
+            </IconButton>
+            <IconButton
+              href={buildPhoneLink(contactPhoneNumber)}
+              target="_blank"
+              color="inherit"
+            >
+              <FontAwesomeIcon icon={faSquarePhone} fontSize={64} />
+            </IconButton>
+            <IconButton href={`mailto:${contactEmailAddress}`} color="inherit">
+              <FontAwesomeIcon icon={faEnvelope} fontSize={56} />
+            </IconButton>
+          </Stack>
         </Stack>
       </SpotlightCardWidget>
     </SectionWidget>

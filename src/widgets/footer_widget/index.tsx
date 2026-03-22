@@ -1,6 +1,14 @@
 import { faSquareLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Box, Button, Divider, Link, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Divider,
+  IconButton,
+  Link,
+  Stack,
+  Typography,
+} from "@mui/material";
 import { Link as RouterLink } from "react-router";
 
 import { LogoWidget } from "@widgets/logo_widget";
@@ -37,14 +45,13 @@ export const FooterWidget = ({ sx, ...props }: FooterWidgetPropsType) => {
         sx={{ borderColor: "currentColor", opacity: 0.25 }}
       />
       <Box alignSelf="center">
-        <Button
-          variant="clear"
+        <IconButton
           href="https://www.linkedin.com/company/axios-insights"
           target="_blank"
           color="inherit"
         >
           <FontAwesomeIcon icon={faSquareLinkedin} fontSize={32} />
-        </Button>
+        </IconButton>
       </Box>
 
       <Typography align="center" color="inherit">

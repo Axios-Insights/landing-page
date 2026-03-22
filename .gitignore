@@ -25,4 +25,6 @@ dist-ssr
 
 # Panda CSS
 styled-system
-styled-system-studio
+
+# NPM
+package-lock.json

@@ -24,6 +24,43 @@
           "title": "O futuro começa <br/> com a <1>sua</1> imaginação.",
           "subtitle": "Sua excelência, nossa tecnologia"
         },
+        "about_us": {
+          "title": "A desenvolvedora que entende seu negócio",
+          "subtitle": "A Axios Insights é especialista em engenharia de dados e desenvolvimento de software<br />Nossa missão é criar a ponte entre a complexidade tecnológica e a eficiência operacional",
+          "pillars": [
+            {
+              "title": "Segurança",
+              "description": "Governança rigorosa e conformidade total com LGPD<br />e as melhores práticas de segurança de dados"
+            },
+            {
+              "title": "Escalabilidade",
+              "description": "Sistemas projetados com arquitetura cloud-ready elásticas<br />e prontas para crescer conforme sua demanda"
+            },
+            {
+              "title": "Evolução contínua",
+              "description": "Pesquisa e desenvolvimento alinhados aos avanços<br />e tendencias técnologicas do mercado"
+            }
+          ],
+          "flow": {
+            "title": "Segurança e eficiência operacional guiadas por dados",
+            "description": "Atuamos na extração de valor em operações complexas. Nossa tecnologia transforma dados em decisões estratégicas por meio de um fluxo operacional estruturado em três etapas, projetado para máxima eficiência",
+            "steps": [
+              {
+                "title": "Integração e coleta",
+                "description": "Centralizamos dados de múltiplas fontes para uma posterior tratativa que seja segura, inteligente e sustentável"
+              },
+              {
+                "title": "Processamento inteligente",
+                "description": "Aplicamos algoritmos autorais e modelos de inteligência artificial para analisar gatilhos, identificar padrões e destacar comportamentos que exigem atenção"
+              },
+              {
+                "title": "Gestão e decisão",
+                "description": "Organizamos a informação em análises claras que apoiam decisões mais rápidas, precisas e estratégicas"
+              }
+            ],
+            "step_suffix": "{{step}}ª etapa"
+          }
+        },
         "results": {
           "title": "Resultados que transformam operações",
           "cards": [
@@ -69,46 +106,11 @@
             }
           ]
         },
-        "about_us": {
-          "title": "A desenvolvedora que entende seu negócio",
-          "subtitle": "A Axios Insights é especialista em engenharia de dados e desenvolvimento de software<br />Nossa missão é criar a ponte entre a complexidade tecnológica e a eficiência operacional",
-          "pillars": [
-            {
-              "title": "Segurança",
-              "description": "Governança rigorosa e conformidade total com LGPD<br />e as melhores práticas de segurança de dados"
-            },
-            {
-              "title": "Escalabilidade",
-              "description": "Sistemas projetados com arquitetura cloud-ready elásticas<br />e prontas para crescer conforme sua demanda"
-            },
-            {
-              "title": "Evolução contínua",
-              "description": "Pesquisa e desenvolvimento alinhados aos avanços<br />e tendencias técnologicas do mercado"
-            }
-          ],
-          "flow": {
-            "title": "Segurança e eficiência operacional guiadas por dados",
-            "description": "Atuamos na extração de valor em operações complexas. Nossa tecnologia transforma dados em decisões estratégicas por meio de um fluxo operacional estruturado em três etapas, projetado para máxima eficiência",
-            "steps": [
-              {
-                "title": "Integração e coleta",
-                "description": "Centralizamos dados de múltiplas fontes para uma posterior tratativa que seja segura, inteligente e sustentável"
-              },
-              {
-                "title": "Processamento inteligente",
-                "description": "Aplicamos algoritmos autorais e modelos de inteligência artificial para analisar gatilhos, identificar padrões e destacar comportamentos que exigem atenção"
-              },
-              {
-                "title": "Gestão e decisão",
-                "description": "Organizamos a informação em análises claras que apoiam decisões mais rápidas, precisas e estratégicas"
-              }
-            ],
-            "step_suffix": "{{step}}ª etapa"
-          }
-        },
+
         "get_in_touch": {
           "title": "Vamos construir o futuro, juntos.",
-          "subtitle": "Entre em contato e descubra como nossas soluções podem impulsionar seus resultados."
+          "subtitle": "Entre em contato e descubra como nossas soluções podem impulsionar seus resultados.",
+          "whatsapp_message": "Olá! Acessei o site e gostaria de entender melhor como os serviços funcionam e como podem atender às minhas necessidades. Poderia me fornecer mais informações, por favor?"
         }
       }
     },
