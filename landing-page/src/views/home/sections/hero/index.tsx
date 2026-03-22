@@ -1,5 +1,5 @@
 import { styled, VStack } from "@styled-system/jsx";
-import { SectionWidget } from "@widgets/section_widget";
+import { SectionWidget } from "@widgets/section";
 
 import { SECTIONS } from "../constants";
 import { backgroundImage } from "./assets";

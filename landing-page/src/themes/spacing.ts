@@ -1,4 +1,4 @@
-import { generateScale } from "../utils/theme_util";
+import { generateScale } from "../utils/theme";
 
 export const spacing = generateScale({
   range: 20,

@@ -1,6 +1,6 @@
 import { Grid, GridItem, styled, VStack } from "@styled-system/jsx";
-import { CardWidget } from "@widgets/card_widget";
-import { SectionWidget } from "@widgets/section_widget";
+import { CardWidget } from "@widgets/card";
+import { SectionWidget } from "@widgets/section";
 
 import { SECTIONS } from "../constants";
 import type { AboutUsSectionPropsType } from "./types";
