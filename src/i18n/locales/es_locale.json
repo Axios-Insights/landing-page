@@ -14,103 +14,170 @@
     "home": {
       "header": {
         "navigation": {
-          "about_us": "Sobre nosotros",
-          "results": "Resultados",
-          "get_in_touch": "Contáctenos"
+          "about_us": "El problema",
+          "results": "Plataforma",
+          "get_in_touch": "Hablar con Axios"
         }
       },
       "sections": {
         "hero": {
-          "title": "El futuro comienza <br/> con <1>tu</1> imaginación.",
-          "subtitle": "Su excelencia, nuestra tecnología"
+          "eyebrow": "INTELIGENCIA OPERATIVA PARA TRANSPORTE",
+          "title": "Datos dispersos. <1>Una sola decisión.</1>",
+          "subtitle": "Axios integra telemetría, video telemática, fatiga, ubicación y otras señales de la flota para identificar lo que importa ahora, priorizar la criticidad operativa y orientar la intervención adecuada.",
+          "primary_cta": "Ver cómo funciona",
+          "secondary_cta": "Hablar con Axios",
+          "trust": [
+            "Integración de fuentes",
+            "Criticidad operativa",
+            "Intervenciones auditables"
+          ],
+          "demo": {
+            "label": "EJEMPLO ILUSTRATIVO",
+            "title": "Intervención prioritaria",
+            "priority": "ALTA PRIORIDAD",
+            "context": "Señales convergentes en la misma ventana temporal",
+            "signals": [
+              "Somnolencia recurrente",
+              "Exceso de velocidad",
+              "Distracción"
+            ],
+            "action_label": "ACCIÓN RECOMENDADA",
+            "action": "Activar al responsable y orientar una parada segura.",
+            "audit": "El origen de las señales, la regla aplicada y la decisión del operador quedan registrados."
+          }
         },
         "about_us": {
-          "title": "El desarrollador que entiende tu negocio",
-          "subtitle": "Axios Insights se especializa en ingeniería de datos y desarrollo de software<br />Nuestra misión es crear el puente entre la complejidad tecnológica y la eficiencia operativa",
-          "pillars": [
+          "eyebrow": "EL PROBLEMA QUE RESOLVEMOS",
+          "title": "Ya tienes los datos. El cuello de botella es convertir señales en acción.",
+          "description": "Cámaras, telemetría, detectores de fatiga y sistemas de ubicación ven partes distintas de la misma operación. Cuando viven en plataformas separadas, el equipo debe reconstruir el contexto antes de actuar. Axios crea la capa entre las señales y la intervención.",
+          "pain_points": [
             {
-              "title": "Seguridad",
-              "description": "Gobernanza rigurosa y pleno cumplimiento de la LGPD<br />y las mejores prácticas de seguridad de datos"
+              "title": "Fuentes fragmentadas",
+              "description": "El contexto operativo queda repartido entre múltiples plataformas, obligando a cambiar de pantalla y reconstruir manualmente lo que está ocurriendo."
             },
             {
-              "title": "Escalabilidad",
-              "description": "Sistemas diseñados con arquitectura elástica cloud-ready<br />y listos para crecer según su demanda"
+              "title": "Demasiadas alertas, poco contexto",
+              "description": "Un evento aislado puede decir muy poco. La criticidad cambia cuando fatiga, velocidad, distracción, ruta e historial convergen en la misma ventana."
             },
             {
-              "title": "Evolución continua",
-              "description": "Investigación y desarrollo alineados con los avances del mercado<br />y las tendencias tecnológicas"
+              "title": "Decisiones sin trazabilidad",
+              "description": "Sin un flujo único, es difícil saber qué se priorizó, quién intervino, qué acción se tomó y si resolvió el riesgo operativo."
             }
           ],
           "flow": {
-            "title": "Seguridad y eficiencia operativa basadas en datos",
-            "description": "Actuamos en la extracción de valor en operaciones complejas. Nuestra tecnología transforma los datos en decisiones estratégicas a través de un flujo operativo de tres pasos diseñado para la máxima eficiencia.",
+            "eyebrow": "DE LA FUENTE A LA INTERVENCIÓN",
+            "title": "Cuatro etapas, un mismo flujo de decisión.",
+            "description": "La propuesta no es crear otra pantalla para cada tecnología. Es transformar señales dispersas en una cola operativa priorizada, explicable y accionable.",
             "steps": [
               {
-                "title": "Integración y recopilación",
-                "description": "Centralizamos datos de múltiples fuentes para un tratamiento posterior que sea seguro, inteligente y sostenible"
+                "title": "Integra",
+                "description": "Conecta las fuentes que la operación ya utiliza y normaliza las señales necesarias para el flujo de decisión."
               },
               {
-                "title": "Procesamiento inteligente",
-                "description": "Aplicamos algoritmos patentados y modelos de inteligencia artificial para analizar desencadenantes, identificar patrones y resaltar comportamientos que requieren atención"
+                "title": "Contextualiza",
+                "description": "Agrupa eventos por conductor, vehículo, jornada, ubicación y ventana temporal para reconstruir el contexto operativo."
               },
               {
-                "title": "Gestión y decisión",
-                "description": "Organizamos la información en análisis claros que respaldan decisiones más rápidas, precisas y estratégicas."
+                "title": "Prioriza",
+                "description": "Combina reglas, modelos y contexto para estimar criticidad operativa y ordenar lo que requiere atención primero."
+              },
+              {
+                "title": "Orquesta",
+                "description": "Recomienda la siguiente acción, registra la intervención y conserva una trazabilidad auditable para análisis y mejora continua."
               }
-            ],
-            "step_suffix": "Paso {{step}}"
+            ]
           }
         },
         "results": {
-          "title": "Resultados que transforman operaciones",
-          "cards": [
-            {
-              "metric": {
-                "prefix": "-",
-                "amount": 75,
-                "suffix": "%"
-              },
-              "description": "en accidentes de vuelco"
+          "eyebrow": "PLATAFORMA UNIFICADA",
+          "title": "Una capa de decisión sobre las tecnologías que tu operación ya utiliza.",
+          "description": "Axios reúne señales, contexto y reglas en un solo flujo para que el operador sepa qué merece atención y qué hacer a continuación.",
+          "platform": {
+            "sources": {
+              "title": "Señales y sistemas",
+              "items": [
+                "Video telemática",
+                "Telemetría",
+                "Fatiga",
+                "GPS y rutas",
+                "APIs internas"
+              ]
             },
-            {
-              "metric": {
-                "prefix": "-",
-                "amount": 90,
-                "suffix": "%"
-              },
-              "description": "en casos de somnolencia y distracción"
+            "intelligence": {
+              "title": "Axios Intelligence Layer",
+              "description": "La inteligencia está en combinar las señales y transformar ese contexto en una decisión operativa trazable.",
+              "items": [
+                "Fusión de señales en la misma ventana",
+                "Criticidad por conductor, vehículo y contexto",
+                "Reglas y modelos versionados",
+                "Recomendación de intervención"
+              ]
             },
-            {
-              "metric": {
-                "prefix": "-",
-                "amount": 40,
-                "suffix": "%"
-              },
-              "description": "en sucesos con vehículos"
-            },
-            {
-              "metric": {
-                "prefix": "-",
-                "amount": 96,
-                "suffix": "%"
-              },
-              "description": "en eventos de telemetría"
-            },
-            {
-              "metric": {
-                "prefix": "+",
-                "amount": 40,
-                "suffix": "Millions"
-              },
-              "description": "de alertas generadas para garantizar la seguridad"
+            "outputs": {
+              "title": "Decisión operativa",
+              "items": [
+                "Cola priorizada",
+                "Intervenciones",
+                "Historial auditable",
+                "Rankings y jornadas",
+                "Informes y análisis"
+              ]
             }
-          ]
+          },
+          "score": {
+            "eyebrow": "SCORE AXIOS",
+            "title": "Criticidad que puede explicarse.",
+            "description": "Axios Score organiza la prioridad dentro de una ventana operativa combinando señales y contexto. La interpretación depende de la operación, la ventana y los datos disponibles, por lo que cada cálculo debe ser trazable.",
+            "principles": [
+              "Origen y calidad de las señales visibles",
+              "Ventana temporal y contexto explícitos",
+              "Reglas, modelos y versiones registrados",
+              "Seguimiento de falsas alertas y alertas perdidas"
+            ],
+            "visual_label": "EJEMPLO CONCEPTUAL",
+            "signals": [
+              "Fatiga",
+              "Telemetría",
+              "Distracción",
+              "Contexto de la jornada"
+            ],
+            "output_label": "Síntesis operativa",
+            "priority_label": "PRIORIDAD",
+            "priority_value": "Alta criticidad"
+          },
+          "measurement": {
+            "eyebrow": "CÓMO DEMOSTRAMOS VALOR",
+            "title": "Un piloto debe mejorar decisiones, no solo producir más alertas.",
+            "description": "La implantación solo crea valor si cambia el trabajo de la operación. Por eso medimos respuesta, calidad de la intervención y recurrencia con períodos y denominadores explícitos.",
+            "cards": [
+              {
+                "title": "Tiempo hasta la intervención",
+                "description": "Cuánto tiempo pasa desde una señal relevante hasta su priorización y la acción efectiva del equipo."
+              },
+              {
+                "title": "Tasa de alerta útil",
+                "description": "Qué proporción de las alertas realmente conduce a una decisión o intervención considerada relevante por la operación."
+              },
+              {
+                "title": "Intervención innecesaria",
+                "description": "Cuántas acciones se activaron sin necesidad, generando costo o fricción operativa evitable."
+              },
+              {
+                "title": "Alerta perdida",
+                "description": "Qué situaciones importantes no fueron priorizadas y solo se identificaron posteriormente."
+              }
+            ]
+          }
         },
-
         "get_in_touch": {
-          "title": "Construyamos el futuro, juntos.",
-          "subtitle": "Ponte en contacto y descubre cómo nuestras soluciones pueden impulsar tus resultados.",
-          "whatsapp_message": "Hola, visité el sitio web y me gustaría entender mejor cómo funcionan los servicios y cómo podrían adaptarse a mis necesidades. ¿Podría brindarme más información, por favor?"
+          "eyebrow": "EMPIEZA POR EL PROBLEMA",
+          "title": "¿Quieres ver tus propios datos convertidos en una cola de decisión?",
+          "subtitle": "En una conversación breve, mapeamos las fuentes disponibles, el problema operativo, quién necesita decidir y el primer flujo de intervención que vale la pena probar.",
+          "note": "Empezamos por las tecnologías que ya tienes y por el flujo más pequeño capaz de demostrar valor en la operación.",
+          "whatsapp_cta": "Hablar por WhatsApp",
+          "email_cta": "Enviar un correo",
+          "phone_cta": "Llamar a Axios",
+          "whatsapp_message": "Hola. Visité el sitio de Axios Insights y me gustaría entender cómo pueden integrar los datos de nuestra operación y transformar alertas en decisiones e intervenciones. ¿Podemos conversar?"
         }
       }
     },
