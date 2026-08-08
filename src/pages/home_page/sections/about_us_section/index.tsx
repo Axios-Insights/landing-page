@@ -70,7 +70,7 @@ export const AboutUsSection = () => {
             <Typography
               component="h2"
               fontSize={{ xs: 36, md: 48 }}
-              fontWeight={650}
+              fontWeight={600}
               lineHeight={1}
               maxWidth={820}
             >
@@ -128,7 +128,7 @@ export const AboutUsSection = () => {
               </Stack>
 
               <Stack gap={1.5}>
-                <Typography fontSize={24} fontWeight={650} lineHeight={1.05}>
+                <Typography fontSize={24} fontWeight={600} lineHeight={1.05}>
                   {point.title}
                 </Typography>
                 <Typography
@@ -180,7 +180,7 @@ export const AboutUsSection = () => {
               <Typography
                 color="inherit"
                 fontSize={{ xs: 32, md: 40 }}
-                fontWeight={650}
+                fontWeight={600}
                 lineHeight={1}
               >
                 {t("pages.home.sections.about_us.flow.title")}
@@ -226,7 +226,7 @@ export const AboutUsSection = () => {
                 <Typography
                   color="inherit"
                   fontSize={22}
-                  fontWeight={650}
+                  fontWeight={600}
                   lineHeight={1.05}
                 >
                   {step.title}
