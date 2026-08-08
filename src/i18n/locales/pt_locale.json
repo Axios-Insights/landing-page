@@ -23,12 +23,13 @@
         "hero": {
           "eyebrow": "INTELIGÊNCIA OPERACIONAL PARA TRANSPORTES",
           "title": "Dados dispersos. <1>Uma única decisão.</1>",
-          "subtitle": "A Axios integra telemetria, vídeo telemetria, fadiga, localização e outros sinais da frota para identificar o que importa agora, priorizar criticidade e orientar a intervenção adequada.",
+          "subtitle": "A Axios integra telemetria, vídeo telemetria, fadiga, localização e regras geográficas para transformar sinais em decisões: priorizar criticidade, acompanhar zonas e orientar a ação adequada.",
           "primary_cta": "Ver como funciona",
           "secondary_cta": "Falar com a Axios",
           "trust": [
-            "Integração de fontes",
+            "Integração multi-fonte",
             "Criticidade operacional",
+            "Geocercas e localização",
             "Intervenções auditáveis"
           ],
           "demo": {
@@ -88,18 +89,56 @@
             ]
           }
         },
+        "use_cases": {
+          "eyebrow": "DOIS EIXOS DE ATUAÇÃO",
+          "title": "A mesma camada de integração para segurança e operação geográfica.",
+          "description": "A Axios não depende de câmeras ou detectores de fadiga para criar valor. Em operações baseadas em telemetria e localização, a mesma arquitetura unifica fontes e transforma posição em eventos, tempos, histórico e relatórios.",
+          "axes": [
+            {
+              "eyebrow": "SEGURANÇA E INTERVENÇÃO",
+              "title": "Criticidade operacional",
+              "description": "Quando a operação possui câmeras, fadiga, telemetria e outros sinais de risco, a Axios combina contexto para identificar o que exige atenção e coordenar uma intervenção rastreável.",
+              "items": [
+                "Fusão de sinais na mesma janela",
+                "Criticidade por motorista, veículo e contexto",
+                "Fila priorizada e recomendação de ação",
+                "Histórico auditável de intervenções"
+              ]
+            },
+            {
+              "eyebrow": "TELEMETRIA E LOCALIZAÇÃO",
+              "title": "Geocercas e operação geográfica",
+              "description": "Para operações sem câmera ou sensor de fadiga, a Axios pode integrar telemetrias de diferentes fornecedores e transformar localização em um fluxo operacional único.",
+              "items": [
+                "Entrada e saída em zonas definidas pela operação",
+                "Tempo de permanência por veículo, zona e período",
+                "Mapa com posição em tempo real da frota",
+                "Histórico recente e última posição do veículo",
+                "Relatórios de circulação e permanência",
+                "Múltiplas telemetrias em uma única visão"
+              ]
+            }
+          ],
+          "geo_visual": {
+            "metrics": [
+              "Entrada / saída",
+              "Tempo na zona",
+              "Posição ao vivo"
+            ]
+          }
+        },
         "results": {
           "eyebrow": "PLATAFORMA UNIFICADA",
           "title": "Uma camada de decisão sobre as tecnologias que sua operação já possui.",
-          "description": "A Axios reúne sinais, contexto e regras em um fluxo único para que o operador saiba o que merece atenção e o que fazer em seguida.",
+          "description": "A Axios reúne sinais, localização, contexto e regras em um fluxo único para que o operador saiba o que merece atenção, onde está acontecendo e o que fazer em seguida.",
           "platform": {
             "sources": {
               "title": "Sinais e sistemas",
               "items": [
                 "Vídeo telemetria",
-                "Telemetria",
+                "Telemetrias diversas",
                 "Fadiga",
-                "GPS e rotas",
+                "GPS, rotas e geocercas",
                 "APIs internas"
               ]
             },
@@ -109,6 +148,7 @@
               "items": [
                 "Fusão de sinais na mesma janela",
                 "Criticidade por motorista, veículo e contexto",
+                "Eventos de entrada, saída e permanência em zonas",
                 "Regras e modelos versionados",
                 "Recomendação de intervenção"
               ]
@@ -118,9 +158,10 @@
               "items": [
                 "Fila priorizada",
                 "Intervenções",
+                "Mapa em tempo real",
                 "Histórico auditável",
                 "Rankings e jornadas",
-                "Relatórios e análises"
+                "Relatórios por zona e período"
               ]
             }
           },
@@ -171,13 +212,13 @@
         },
         "get_in_touch": {
           "eyebrow": "COMECE PELO PROBLEMA",
-          "title": "Quer ver seus próprios dados virarem uma fila de decisão?",
-          "subtitle": "Em uma conversa curta, mapeamos as fontes disponíveis, o problema operacional, quem precisa decidir e o primeiro fluxo de intervenção que vale testar.",
-          "note": "Começamos pelas tecnologias que você já possui e pelo menor fluxo capaz de provar valor em operação.",
+          "title": "Quer ver seus próprios dados virarem decisões operacionais?",
+          "subtitle": "Em uma conversa curta, mapeamos as fontes disponíveis e o primeiro fluxo que vale testar — criticidade, geocercas, rastreamento, integração multi-fonte ou outra dor operacional repetível.",
+          "note": "Começamos pelas tecnologias que você já possui e pelo menor fluxo capaz de provar valor em operação, mesmo sem câmeras ou sensores de fadiga.",
           "whatsapp_cta": "Conversar no WhatsApp",
           "email_cta": "Enviar um e-mail",
           "phone_cta": "Ligar para a Axios",
-          "whatsapp_message": "Olá! Acessei o site da Axios Insights e gostaria de entender como vocês podem integrar os dados da nossa operação e transformar alertas em decisões e intervenções. Podemos conversar?"
+          "whatsapp_message": "Olá! Acessei o site da Axios Insights e gostaria de entender como vocês podem integrar os dados da nossa operação — incluindo telemetria, localização e geocercas — e transformá-los em decisões operacionais. Podemos conversar?"
         }
       }
     },
