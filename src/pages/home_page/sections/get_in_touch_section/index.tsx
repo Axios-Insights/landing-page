@@ -53,7 +53,7 @@ export const GetInTouchSection = () => {
           <Stack gap={3} maxWidth={850}>
             <Typography
               fontSize={12}
-              fontWeight={850}
+              fontWeight={800}
               color="rgba(21,21,21,0.62)"
               sx={{ letterSpacing: "0.12em" }}
             >
