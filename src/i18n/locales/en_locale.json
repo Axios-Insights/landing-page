@@ -23,12 +23,13 @@
         "hero": {
           "eyebrow": "OPERATIONAL INTELLIGENCE FOR TRANSPORTATION",
           "title": "Scattered data. <1>One decision.</1>",
-          "subtitle": "Axios integrates telemetry, video telematics, fatigue, location and other fleet signals to identify what matters now, prioritize operational criticality and guide the appropriate intervention.",
+          "subtitle": "Axios integrates telemetry, video telematics, fatigue, location and geographic rules to turn signals into decisions: prioritize criticality, monitor zones and guide the right operational action.",
           "primary_cta": "See how it works",
           "secondary_cta": "Talk to Axios",
           "trust": [
-            "Data-source integration",
+            "Multi-source integration",
             "Operational criticality",
+            "Geofencing and location",
             "Auditable interventions"
           ],
           "demo": {
@@ -88,18 +89,56 @@
             ]
           }
         },
+        "use_cases": {
+          "eyebrow": "TWO OPERATIONAL AXES",
+          "title": "The same integration layer for safety and geographic operations.",
+          "description": "Axios does not depend on cameras or fatigue detectors to create value. In telemetry- and location-driven operations, the same architecture unifies sources and turns position into events, dwell times, history and reports.",
+          "axes": [
+            {
+              "eyebrow": "SAFETY AND INTERVENTION",
+              "title": "Operational criticality",
+              "description": "When an operation has cameras, fatigue data, telemetry and other risk signals, Axios combines context to identify what needs attention and coordinate a traceable intervention.",
+              "items": [
+                "Signal fusion within the same time window",
+                "Criticality by driver, vehicle and context",
+                "Prioritized queue and recommended action",
+                "Auditable intervention history"
+              ]
+            },
+            {
+              "eyebrow": "TELEMETRY AND LOCATION",
+              "title": "Geofencing and geographic operations",
+              "description": "For operations without cameras or fatigue sensors, Axios can integrate telemetry from different providers and turn location into one operational workflow.",
+              "items": [
+                "Entry and exit events for operation-defined zones",
+                "Dwell time by vehicle, zone and period",
+                "Real-time fleet position map",
+                "Recent history and latest vehicle position",
+                "Movement and dwell-time reports",
+                "Multiple telemetry providers in one view"
+              ]
+            }
+          ],
+          "geo_visual": {
+            "metrics": [
+              "Entry / exit",
+              "Time in zone",
+              "Live position"
+            ]
+          }
+        },
         "results": {
           "eyebrow": "UNIFIED PLATFORM",
           "title": "A decision layer on top of the technologies your operation already uses.",
-          "description": "Axios brings signals, context and rules into one workflow so the operator knows what deserves attention and what to do next.",
+          "description": "Axios brings signals, location, context and rules into one workflow so the operator knows what deserves attention, where it is happening and what to do next.",
           "platform": {
             "sources": {
               "title": "Signals and systems",
               "items": [
                 "Video telematics",
-                "Telemetry",
+                "Multiple telemetry sources",
                 "Fatigue",
-                "GPS and routes",
+                "GPS, routes and geofences",
                 "Internal APIs"
               ]
             },
@@ -109,6 +148,7 @@
               "items": [
                 "Signal fusion within the same time window",
                 "Criticality by driver, vehicle and context",
+                "Zone entry, exit and dwell events",
                 "Versioned rules and models",
                 "Intervention recommendation"
               ]
@@ -118,9 +158,10 @@
               "items": [
                 "Prioritized queue",
                 "Interventions",
+                "Real-time map",
                 "Auditable history",
                 "Rankings and journeys",
-                "Reports and analytics"
+                "Reports by zone and period"
               ]
             }
           },
@@ -171,13 +212,13 @@
         },
         "get_in_touch": {
           "eyebrow": "START WITH THE PROBLEM",
-          "title": "Want to see your own data become a decision queue?",
-          "subtitle": "In a short conversation, we map the available sources, the operational problem, who needs to decide and the first intervention workflow worth testing.",
-          "note": "We start with the technologies you already have and the smallest workflow capable of proving value in operation.",
+          "title": "Want to see your own data become operational decisions?",
+          "subtitle": "In a short conversation, we map the available sources and the first workflow worth testing — criticality, geofencing, tracking, multi-source integration or another repeatable operational problem.",
+          "note": "We start with the technologies you already have and the smallest workflow capable of proving value in operation, even without cameras or fatigue sensors.",
           "whatsapp_cta": "Talk on WhatsApp",
           "email_cta": "Send an email",
           "phone_cta": "Call Axios",
-          "whatsapp_message": "Hello! I visited the Axios Insights website and would like to understand how you can integrate our operational data and turn alerts into decisions and interventions. Can we talk?"
+          "whatsapp_message": "Hello! I visited the Axios Insights website and would like to understand how you can integrate our operational data — including telemetry, location and geofencing — and turn it into operational decisions. Can we talk?"
         }
       }
     },
