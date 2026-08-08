@@ -12,6 +12,7 @@ import { SECTIONS } from "./sections/constants";
 import { GetInTouchSection } from "./sections/get_in_touch_section";
 import { HeroSection } from "./sections/hero_section";
 import { ResultsSection } from "./sections/results_section";
+import { UseCasesSection } from "./sections/use_cases_section";
 
 export const HomePage = () => {
   const { t } = useTranslation();
@@ -141,6 +142,8 @@ export const HomePage = () => {
       <HeroSection />
 
       <AboutUsSection />
+
+      <UseCasesSection />
 
       <ResultsSection />
 
