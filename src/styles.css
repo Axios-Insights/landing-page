@@ -45,6 +45,13 @@ a {
   outline-offset: 3px;
 }
 
+/* Keep the brand geometry inside product surfaces instead of letting
+   oversized decorative rings compete with the page hierarchy. */
+#hero > [aria-hidden="true"],
+#about-us > [aria-hidden="true"] {
+  display: none;
+}
+
 @keyframes axios-float {
   0%,
   100% {
