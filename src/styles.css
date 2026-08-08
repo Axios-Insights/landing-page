@@ -1,13 +1,114 @@
 @layer reset, base, tokens, recipes, utilities;
 
-body {
-  /*size - position*/
+:root {
+  color-scheme: light;
+  background: #151515;
+  scroll-behavior: smooth;
+  scrollbar-color: #5c5c5c #151515;
+  scrollbar-width: thin;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
   margin: 0;
   padding: 0;
- 
-  /*style*/
- 
-  /*grid*/
- 
-  /*var*/
+  background: #151515;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background: #fafafa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  color: #151515;
+  background: #ff8034;
+}
+
+:focus-visible {
+  outline: 2px solid #ff6e00;
+  outline-offset: 3px;
+}
+
+@keyframes axios-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+@keyframes axios-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-18deg);
+  }
+
+  50% {
+    transform: translate3d(-8px, 10px, 0) rotate(-13deg);
+  }
+}
+
+@keyframes axios-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
+@keyframes axios-scan {
+  0% {
+    opacity: 0;
+    transform: translateY(-140%);
+  }
+
+  12% {
+    opacity: 0.45;
+  }
+
+  45%,
+  100% {
+    opacity: 0;
+    transform: translateY(520%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root,
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
