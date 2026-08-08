@@ -65,7 +65,7 @@ export const HomePage = () => {
                   : undefined
               }
             >
-              <Typography color="inherit" fontWeight={isContact ? 650 : 500}>
+              <Typography color="inherit" fontWeight={isContact ? 600 : 500}>
                 {t(`pages.home.header.navigation.${value.replaceAll("-", "_")}`)}
               </Typography>
             </Button>
