@@ -70,7 +70,7 @@ export const ResultsSection = () => {
             <Typography
               component="h2"
               fontSize={{ xs: 36, md: 48 }}
-              fontWeight={650}
+              fontWeight={600}
               lineHeight={1}
               maxWidth={900}
             >
@@ -117,7 +117,7 @@ export const ResultsSection = () => {
               >
                 01
               </Typography>
-              <Typography fontSize={24} fontWeight={650}>
+              <Typography fontSize={24} fontWeight={600}>
                 {t("pages.home.sections.results.platform.sources.title")}
               </Typography>
             </Stack>
@@ -224,7 +224,7 @@ export const ResultsSection = () => {
                     <Typography
                       color="inherit"
                       fontSize={15}
-                      fontWeight={550}
+                      fontWeight={500}
                       lineHeight={1.25}
                     >
                       {item}
@@ -256,7 +256,7 @@ export const ResultsSection = () => {
               >
                 03
               </Typography>
-              <Typography fontSize={24} fontWeight={650}>
+              <Typography fontSize={24} fontWeight={600}>
                 {t("pages.home.sections.results.platform.outputs.title")}
               </Typography>
             </Stack>
@@ -282,7 +282,7 @@ export const ResultsSection = () => {
                       backgroundColor: "#FF6E00",
                     }}
                   />
-                  <Typography fontWeight={550}>{output}</Typography>
+                  <Typography fontWeight={500}>{output}</Typography>
                 </Stack>
               ))}
             </Stack>
@@ -317,7 +317,7 @@ export const ResultsSection = () => {
               <Typography
                 color="inherit"
                 fontSize={{ xs: 32, md: 40 }}
-                fontWeight={650}
+                fontWeight={600}
                 lineHeight={1}
               >
                 {t("pages.home.sections.results.score.title")}
@@ -351,7 +351,7 @@ export const ResultsSection = () => {
                   />
                   <Typography
                     color="rgba(250,250,250,0.78)"
-                    fontWeight={550}
+                    fontWeight={500}
                     lineHeight={1.25}
                   >
                     {principle}
@@ -468,7 +468,7 @@ export const ResultsSection = () => {
               </Typography>
               <Typography
                 fontSize={{ xs: 32, md: 40 }}
-                fontWeight={650}
+                fontWeight={600}
                 lineHeight={1}
               >
                 {t("pages.home.sections.results.measurement.title")}
@@ -507,7 +507,7 @@ export const ResultsSection = () => {
                 >
                   0{index + 1}
                 </Typography>
-                <Typography fontSize={20} fontWeight={650} lineHeight={1.1}>
+                <Typography fontSize={20} fontWeight={600} lineHeight={1.1}>
                   {card.title}
                 </Typography>
                 <Typography
