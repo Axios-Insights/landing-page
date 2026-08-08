@@ -23,12 +23,13 @@
         "hero": {
           "eyebrow": "INTELIGENCIA OPERATIVA PARA TRANSPORTE",
           "title": "Datos dispersos. <1>Una sola decisión.</1>",
-          "subtitle": "Axios integra telemetría, video telemática, fatiga, ubicación y otras señales de la flota para identificar lo que importa ahora, priorizar la criticidad operativa y orientar la intervención adecuada.",
+          "subtitle": "Axios integra telemetría, video telemática, fatiga, ubicación y reglas geográficas para convertir señales en decisiones: priorizar criticidad, monitorear zonas y orientar la acción operativa adecuada.",
           "primary_cta": "Ver cómo funciona",
           "secondary_cta": "Hablar con Axios",
           "trust": [
-            "Integración de fuentes",
+            "Integración multifuente",
             "Criticidad operativa",
+            "Geocercas y ubicación",
             "Intervenciones auditables"
           ],
           "demo": {
@@ -88,18 +89,56 @@
             ]
           }
         },
+        "use_cases": {
+          "eyebrow": "DOS EJES DE ACTUACIÓN",
+          "title": "La misma capa de integración para seguridad y operación geográfica.",
+          "description": "Axios no depende de cámaras o detectores de fatiga para crear valor. En operaciones basadas en telemetría y ubicación, la misma arquitectura unifica fuentes y convierte la posición en eventos, tiempos de permanencia, historial e informes.",
+          "axes": [
+            {
+              "eyebrow": "SEGURIDAD E INTERVENCIÓN",
+              "title": "Criticidad operativa",
+              "description": "Cuando la operación cuenta con cámaras, datos de fatiga, telemetría y otras señales de riesgo, Axios combina el contexto para identificar lo que requiere atención y coordinar una intervención trazable.",
+              "items": [
+                "Fusión de señales en la misma ventana",
+                "Criticidad por conductor, vehículo y contexto",
+                "Cola priorizada y acción recomendada",
+                "Historial auditable de intervenciones"
+              ]
+            },
+            {
+              "eyebrow": "TELEMETRÍA Y UBICACIÓN",
+              "title": "Geocercas y operación geográfica",
+              "description": "Para operaciones sin cámaras o sensores de fatiga, Axios puede integrar telemetría de distintos proveedores y convertir la ubicación en un único flujo operativo.",
+              "items": [
+                "Eventos de entrada y salida en zonas definidas por la operación",
+                "Tiempo de permanencia por vehículo, zona y período",
+                "Mapa en tiempo real con la posición de la flota",
+                "Historial reciente y última posición del vehículo",
+                "Informes de circulación y permanencia",
+                "Múltiples proveedores de telemetría en una sola vista"
+              ]
+            }
+          ],
+          "geo_visual": {
+            "metrics": [
+              "Entrada / salida",
+              "Tiempo en zona",
+              "Posición en vivo"
+            ]
+          }
+        },
         "results": {
           "eyebrow": "PLATAFORMA UNIFICADA",
           "title": "Una capa de decisión sobre las tecnologías que tu operación ya utiliza.",
-          "description": "Axios reúne señales, contexto y reglas en un solo flujo para que el operador sepa qué merece atención y qué hacer a continuación.",
+          "description": "Axios reúne señales, ubicación, contexto y reglas en un solo flujo para que el operador sepa qué merece atención, dónde ocurre y qué hacer a continuación.",
           "platform": {
             "sources": {
               "title": "Señales y sistemas",
               "items": [
                 "Video telemática",
-                "Telemetría",
+                "Múltiples telemetrías",
                 "Fatiga",
-                "GPS y rutas",
+                "GPS, rutas y geocercas",
                 "APIs internas"
               ]
             },
@@ -109,6 +148,7 @@
               "items": [
                 "Fusión de señales en la misma ventana",
                 "Criticidad por conductor, vehículo y contexto",
+                "Eventos de entrada, salida y permanencia en zonas",
                 "Reglas y modelos versionados",
                 "Recomendación de intervención"
               ]
@@ -118,9 +158,10 @@
               "items": [
                 "Cola priorizada",
                 "Intervenciones",
+                "Mapa en tiempo real",
                 "Historial auditable",
                 "Rankings y jornadas",
-                "Informes y análisis"
+                "Informes por zona y período"
               ]
             }
           },
@@ -171,13 +212,13 @@
         },
         "get_in_touch": {
           "eyebrow": "EMPIEZA POR EL PROBLEMA",
-          "title": "¿Quieres ver tus propios datos convertidos en una cola de decisión?",
-          "subtitle": "En una conversación breve, mapeamos las fuentes disponibles, el problema operativo, quién necesita decidir y el primer flujo de intervención que vale la pena probar.",
-          "note": "Empezamos por las tecnologías que ya tienes y por el flujo más pequeño capaz de demostrar valor en la operación.",
+          "title": "¿Quieres ver tus propios datos convertidos en decisiones operativas?",
+          "subtitle": "En una conversación breve, mapeamos las fuentes disponibles y el primer flujo que vale la pena probar: criticidad, geocercas, rastreo, integración multifuente u otro problema operativo repetible.",
+          "note": "Empezamos por las tecnologías que ya tienes y por el flujo más pequeño capaz de demostrar valor en la operación, incluso sin cámaras o sensores de fatiga.",
           "whatsapp_cta": "Hablar por WhatsApp",
           "email_cta": "Enviar un correo",
           "phone_cta": "Llamar a Axios",
-          "whatsapp_message": "Hola. Visité el sitio de Axios Insights y me gustaría entender cómo pueden integrar los datos de nuestra operación y transformar alertas en decisiones e intervenciones. ¿Podemos conversar?"
+          "whatsapp_message": "Hola. Visité el sitio de Axios Insights y me gustaría entender cómo pueden integrar los datos de nuestra operación —incluyendo telemetría, ubicación y geocercas— y convertirlos en decisiones operativas. ¿Podemos conversar?"
         }
       }
     },
