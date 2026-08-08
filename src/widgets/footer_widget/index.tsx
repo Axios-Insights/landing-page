@@ -9,7 +9,7 @@ import type { FooterWidgetPropsType } from "./types";
 
 export const FooterWidget = ({ sx, ...props }: FooterWidgetPropsType) => {
   return (
-    <Box
+    <Stack
       component="footer"
       width="100%"
       color="#FAFAFA"
@@ -130,6 +130,6 @@ export const FooterWidget = ({ sx, ...props }: FooterWidgetPropsType) => {
           </IconButton>
         </Stack>
       </Stack>
-    </Box>
+    </Stack>
   );
 };
