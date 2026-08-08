@@ -97,7 +97,7 @@ export const HeroSection = () => {
                 component="h1"
                 color="inherit"
                 fontSize={{ xs: 44, sm: 52, md: 64 }}
-                fontWeight={650}
+                fontWeight={600}
                 lineHeight={0.96}
                 maxWidth={720}
               >
@@ -229,7 +229,7 @@ export const HeroSection = () => {
                   <Typography
                     color="inherit"
                     fontSize={{ xs: 24, md: 28 }}
-                    fontWeight={650}
+                    fontWeight={600}
                   >
                     {t("pages.home.sections.hero.demo.title")}
                   </Typography>
@@ -328,7 +328,7 @@ export const HeroSection = () => {
                 <Typography
                   color="inherit"
                   fontSize={{ xs: 17, md: 19 }}
-                  fontWeight={650}
+                  fontWeight={600}
                   lineHeight={1.25}
                 >
                   {t("pages.home.sections.hero.demo.action")}
