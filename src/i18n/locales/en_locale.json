@@ -14,103 +14,211 @@
     "home": {
       "header": {
         "navigation": {
-          "about_us": "About us",
-          "results": "Results",
-          "get_in_touch": "Get in touch"
+          "about_us": "The problem",
+          "results": "Platform",
+          "get_in_touch": "Talk to Axios"
         }
       },
       "sections": {
         "hero": {
-          "title": "The future begins <br/> with <1>your</1> imagination.",
-          "subtitle": "Your excellence, our technology"
+          "eyebrow": "OPERATIONAL INTELLIGENCE FOR TRANSPORTATION",
+          "title": "Scattered data. <1>One decision.</1>",
+          "subtitle": "Axios integrates telemetry, video telematics, fatigue, location and geographic rules to turn signals into decisions: prioritize criticality, monitor zones and guide the right operational action.",
+          "primary_cta": "See how it works",
+          "secondary_cta": "Talk to Axios",
+          "trust": [
+            "Multi-source integration",
+            "Operational criticality",
+            "Geofencing and location",
+            "Auditable interventions"
+          ],
+          "demo": {
+            "label": "ILLUSTRATIVE EXAMPLE",
+            "title": "Priority intervention",
+            "priority": "HIGH PRIORITY",
+            "context": "Converging signals in the same time window",
+            "signals": [
+              "Recurring drowsiness",
+              "Speeding",
+              "Distraction"
+            ],
+            "action_label": "RECOMMENDED ACTION",
+            "action": "Escalate to the responsible team and guide a safe stop.",
+            "audit": "Signal provenance, the applied rule and the operator decision remain recorded."
+          }
         },
-
         "about_us": {
-          "title": "The developer that understands your business",
-          "subtitle": "Axios Insights specializes in data engineering and software development<br />Our mission is to create the bridge between technological complexity and operational efficiency",
-          "pillars": [
+          "eyebrow": "THE PROBLEM WE SOLVE",
+          "title": "You already have the data. The bottleneck is turning signals into action.",
+          "description": "Cameras, telemetry, fatigue detectors and location systems each see a different part of the same operation. When they live in separate platforms, the team must rebuild context before acting. Axios creates the layer between signals and intervention.",
+          "pain_points": [
             {
-              "title": "Security",
-              "description": "Rigorous governance and full compliance with LGPD<br />and the best data security practices"
+              "title": "Fragmented sources",
+              "description": "Operational context is spread across multiple platforms, forcing constant screen switching and manual reconstruction of what is happening."
             },
             {
-              "title": "Scalability",
-              "description": "Systems designed with elastic cloud-ready architecture<br />and ready to grow according to your demand"
+              "title": "Too many alerts, too little context",
+              "description": "A single event may say very little. Criticality changes when fatigue, speed, distraction, route and history converge in the same window."
             },
             {
-              "title": "Continuous evolution",
-              "description": "Research and development aligned with market advances<br />and technological trends"
+              "title": "Decisions without traceability",
+              "description": "Without a single workflow, it is hard to know what was prioritized, who intervened, which action was taken and whether it resolved the operational risk."
             }
           ],
           "flow": {
-            "title": "Data-driven security and operational efficiency",
-            "description": "We act in the extraction of value in complex operations. Our technology transforms data into strategic decisions through a three-step operational flow designed for maximum efficiency",
+            "eyebrow": "FROM SOURCE TO INTERVENTION",
+            "title": "Four stages, one decision flow.",
+            "description": "The goal is not another screen for every technology. It is to turn scattered signals into a prioritized, explainable and actionable operational queue.",
             "steps": [
               {
-                "title": "Integration and collection",
-                "description": "We centralize data from multiple sources for subsequent treatment that is safe, intelligent, and sustainable"
+                "title": "Integrate",
+                "description": "Connect the sources the operation already uses and normalize the signals required by the decision workflow."
               },
               {
-                "title": "Intelligent processing",
-                "description": "We apply proprietary algorithms and artificial intelligence models to analyze triggers, identify patterns, and highlight behaviors that require attention"
+                "title": "Contextualize",
+                "description": "Group events by driver, vehicle, journey, location and time window to reconstruct operational context."
               },
               {
-                "title": "Management and decision",
-                "description": "We organize information into clear analyses that support faster, more accurate, and strategic decisions"
+                "title": "Prioritize",
+                "description": "Combine rules, models and context to estimate operational criticality and order what needs attention first."
+              },
+              {
+                "title": "Orchestrate",
+                "description": "Recommend the next action, record the intervention and preserve an auditable trail for analysis and continuous improvement."
               }
-            ],
-            "step_suffix": "Step {{step}}"
+            ]
+          }
+        },
+        "use_cases": {
+          "eyebrow": "TWO OPERATIONAL AXES",
+          "title": "The same integration layer for safety and geographic operations.",
+          "description": "Axios does not depend on cameras or fatigue detectors to create value. In telemetry- and location-driven operations, the same architecture unifies sources and turns position into events, dwell times, history and reports.",
+          "axes": [
+            {
+              "eyebrow": "SAFETY AND INTERVENTION",
+              "title": "Operational criticality",
+              "description": "When an operation has cameras, fatigue data, telemetry and other risk signals, Axios combines context to identify what needs attention and coordinate a traceable intervention.",
+              "items": [
+                "Signal fusion within the same time window",
+                "Criticality by driver, vehicle and context",
+                "Prioritized queue and recommended action",
+                "Auditable intervention history"
+              ]
+            },
+            {
+              "eyebrow": "TELEMETRY AND LOCATION",
+              "title": "Geofencing and geographic operations",
+              "description": "For operations without cameras or fatigue sensors, Axios can integrate telemetry from different providers and turn location into one operational workflow.",
+              "items": [
+                "Entry and exit events for operation-defined zones",
+                "Dwell time by vehicle, zone and period",
+                "Real-time fleet position map",
+                "Recent history and latest vehicle position",
+                "Movement and dwell-time reports",
+                "Multiple telemetry providers in one view"
+              ]
+            }
+          ],
+          "geo_visual": {
+            "metrics": [
+              "Entry / exit",
+              "Time in zone",
+              "Live position"
+            ]
           }
         },
         "results": {
-          "title": "Results that transform operations",
-          "cards": [
-            {
-              "metric": {
-                "prefix": "-",
-                "amount": 75,
-                "suffix": "%"
-              },
-              "description": "in rollover accidents"
+          "eyebrow": "UNIFIED PLATFORM",
+          "title": "A decision layer on top of the technologies your operation already uses.",
+          "description": "Axios brings signals, location, context and rules into one workflow so the operator knows what deserves attention, where it is happening and what to do next.",
+          "platform": {
+            "sources": {
+              "title": "Signals and systems",
+              "items": [
+                "Video telematics",
+                "Multiple telemetry sources",
+                "Fatigue",
+                "GPS, routes and geofences",
+                "Internal APIs"
+              ]
             },
-            {
-              "metric": {
-                "prefix": "-",
-                "amount": 90,
-                "suffix": "%"
-              },
-              "description": "in cases of drowsiness and distraction"
+            "intelligence": {
+              "title": "Axios Intelligence Layer",
+              "description": "The intelligence lies in combining signals and turning that context into a traceable operational decision.",
+              "items": [
+                "Signal fusion within the same time window",
+                "Criticality by driver, vehicle and context",
+                "Zone entry, exit and dwell events",
+                "Versioned rules and models",
+                "Intervention recommendation"
+              ]
             },
-            {
-              "metric": {
-                "prefix": "-",
-                "amount": 40,
-                "suffix": "%"
-              },
-              "description": "in occurrences with vehicles"
-            },
-            {
-              "metric": {
-                "prefix": "-",
-                "amount": 96,
-                "suffix": "%"
-              },
-              "description": "in telemetry events"
-            },
-            {
-              "metric": {
-                "prefix": "+",
-                "amount": 40,
-                "suffix": "Millions"
-              },
-              "description": "of alerts generated to ensure safety"
+            "outputs": {
+              "title": "Operational decision",
+              "items": [
+                "Prioritized queue",
+                "Interventions",
+                "Real-time map",
+                "Auditable history",
+                "Rankings and journeys",
+                "Reports by zone and period"
+              ]
             }
-          ]
+          },
+          "score": {
+            "eyebrow": "AXIOS SCORE",
+            "title": "Criticality that can be explained.",
+            "description": "Axios Score organizes priority within an operational time window by combining signals and context. Interpretation depends on the operation, the window and the available data, so every calculation should be traceable.",
+            "principles": [
+              "Visible signal provenance and quality",
+              "Explicit time window and context",
+              "Recorded rules, models and versions",
+              "Tracking of false alerts and missed alerts"
+            ],
+            "visual_label": "CONCEPTUAL EXAMPLE",
+            "signals": [
+              "Fatigue",
+              "Telemetry",
+              "Distraction",
+              "Journey context"
+            ],
+            "output_label": "Operational synthesis",
+            "priority_label": "PRIORITY",
+            "priority_value": "High criticality"
+          },
+          "measurement": {
+            "eyebrow": "HOW WE PROVE VALUE",
+            "title": "A pilot should improve decisions, not merely produce more alerts.",
+            "description": "Deployment creates value only if it changes how the operation works. We therefore measure response, intervention quality and recurrence with explicit periods and denominators.",
+            "cards": [
+              {
+                "title": "Time to intervention",
+                "description": "How long it takes from a relevant signal to prioritization and effective action by the team."
+              },
+              {
+                "title": "Useful-alert rate",
+                "description": "What share of alerts actually led to a decision or intervention considered relevant by the operation."
+              },
+              {
+                "title": "False intervention",
+                "description": "How many actions were triggered unnecessarily, creating avoidable operational cost or friction."
+              },
+              {
+                "title": "Missed alert",
+                "description": "Which important situations were not prioritized and were only identified later."
+              }
+            ]
+          }
         },
         "get_in_touch": {
-          "title": "Let's build the future, together.",
-          "subtitle": "Get in touch and discover how our solutions can boost your results.",
-          "whatsapp_message": "Hello! I visited your website and would like to better understand how your services work and how they could fit my needs. Could you please provide more information?"
+          "eyebrow": "START WITH THE PROBLEM",
+          "title": "Want to see your own data become operational decisions?",
+          "subtitle": "In a short conversation, we map the available sources and the first workflow worth testing — criticality, geofencing, tracking, multi-source integration or another repeatable operational problem.",
+          "note": "We start with the technologies you already have and the smallest workflow capable of proving value in operation, even without cameras or fatigue sensors.",
+          "whatsapp_cta": "Talk on WhatsApp",
+          "email_cta": "Send an email",
+          "phone_cta": "Call Axios",
+          "whatsapp_message": "Hello! I visited the Axios Insights website and would like to understand how you can integrate our operational data — including telemetry, location and geofencing — and turn it into operational decisions. Can we talk?"
         }
       }
     },
