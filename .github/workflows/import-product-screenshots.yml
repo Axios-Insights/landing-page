@@ -1,0 +1,38 @@
+name: Import sanitized product screenshots
+
+on:
+  push:
+    branches:
+      - feat/product-proof-commercial-flow-2026-09
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v6
+        with:
+          ref: feat/product-proof-commercial-flow-2026-09
+
+      - name: Download selected sanitized screenshots
+        run: |
+          curl -fL 'https://sdmntprbrazilsouth.oaiusercontent.com/files/00000000-f57c-820e-b00f-d69d0c1a5c30/raw?se=2026-09-10T22%3A14%3A25Z&sp=r&sv=2026-02-06&sr=b&scid=382eed3c-446e-5e9c-9d4f-14d33427a81e&skoid=68f37fa7-4e08-478b-93f3-c72d563a0ab3&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-10T11%3A17%3A22Z&ske=2026-09-11T11%3A17%3A22Z&sks=b&skv=2026-02-06&sig=DPBGpsYd1HwCI0tvfWbeX5y9NgfomzOBCTAU52g2D7w%3D' -o /tmp/product-screenshots.zip
+          mkdir -p /tmp/product-screenshots public/product
+          unzip -o /tmp/product-screenshots.zip -d /tmp/product-screenshots
+          cp /tmp/product-screenshots/product-alert-queue-map.png public/product/
+          cp /tmp/product-screenshots/product-case-map-evidence.png public/product/
+          cp /tmp/product-screenshots/product-risk-rankings.png public/product/
+          cp /tmp/product-screenshots/product-journeys-timeline.png public/product/
+
+      - name: Commit imported screenshots
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/product
+          git diff --cached --quiet && exit 0
+          git commit -m 'assets: add sanitized real product screenshots'
+          git push origin HEAD:feat/product-proof-commercial-flow-2026-09
