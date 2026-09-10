@@ -6,11 +6,11 @@ import {
   AppBar,
   Drawer,
   IconButton,
+  Stack,
   Toolbar,
   useMediaQuery,
   useScrollTrigger,
   useTheme,
-  Stack,
 } from "@mui/material";
 
 import type { HeaderWidgetPropsType } from "./types";
@@ -86,7 +86,7 @@ export const HeaderWidget = ({
           md: "row",
         }}
         spacing={{
-          xs: 4,
+          xs: 3.5,
           md: 8,
         }}
       >
@@ -95,8 +95,9 @@ export const HeaderWidget = ({
             xs: "column",
             md: "row",
           }}
+          alignItems={{ xs: "stretch", md: "center" }}
           spacing={{
-            xs: 1.5,
+            xs: 2,
             md: 3,
           }}
         >
@@ -164,8 +165,18 @@ export const HeaderWidget = ({
           {!isMobile && content}
 
           {isMobile && hasNavigation && (
-            <IconButton color="inherit" onClick={() => setDrawerOpen(true)}>
-              <MenuIcon sx={{ fontSize: 32 }} />
+            <IconButton
+              color="inherit"
+              onClick={() => setDrawerOpen(true)}
+              sx={{
+                width: 40,
+                height: 40,
+                borderRadius: "8px",
+                border: "1px solid rgba(250,250,250,0.10)",
+                backgroundColor: "rgba(250,250,250,0.025)",
+              }}
+            >
+              <MenuIcon sx={{ fontSize: 28 }} />
             </IconButton>
           )}
         </Toolbar>
@@ -176,19 +187,38 @@ export const HeaderWidget = ({
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
         sx={{
-          backgroundColor: triggered
-            ? "rgba(250, 250, 250, .1)"
-            : "transparent",
-          backdropFilter: "blur(4px)",
+          backgroundColor: "rgba(21,21,21,0.18)",
+          backdropFilter: "blur(8px)",
+          "& .MuiDrawer-paper": {
+            width: "min(84vw, 360px)",
+            color: "#FAFAFA",
+            backgroundColor: "#151515",
+            backgroundImage:
+              "radial-gradient(circle at 100% 0%, rgba(255,110,0,0.13), transparent 28%), linear-gradient(rgba(250,250,250,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(250,250,250,0.025) 1px, transparent 1px)",
+            backgroundSize: "auto, 40px 40px, 40px 40px",
+            borderLeft: "1px solid rgba(250,250,250,0.09)",
+            boxShadow: "-24px 0 48px -28px rgba(0,0,0,0.88)",
+          },
         }}
       >
         <Stack
-          padding="16px 32px"
+          padding="20px 24px 32px"
           spacing={4}
+          minHeight="100%"
           onClick={() => setDrawerOpen(false)}
         >
-          <IconButton color="inherit" onClick={() => setDrawerOpen(false)}>
-            <CloseIcon sx={{ fontSize: 32 }} />
+          <IconButton
+            color="inherit"
+            onClick={() => setDrawerOpen(false)}
+            sx={{
+              alignSelf: "flex-end",
+              width: 40,
+              height: 40,
+              borderRadius: "8px",
+              border: "1px solid rgba(250,250,250,0.10)",
+            }}
+          >
+            <CloseIcon sx={{ fontSize: 26 }} />
           </IconButton>
 
           {content}
