@@ -51,7 +51,7 @@ export const UseCasesSection = () => {
               <Stack direction="row" alignItems="center" gap={1.5}>
                 <Box
                   aria-hidden
-                  sx={{ width: 34, height: 1, backgroundColor: "#FF6E00" }}
+                  sx={{ width: 34, height: "1px", backgroundColor: "#FF6E00" }}
                 />
                 <Typography
                   component="p"

@@ -64,7 +64,7 @@ export const HeroSection = () => {
           left: "8%",
           right: "8%",
           bottom: 0,
-          height: 1,
+          height: "1px",
           background:
             "linear-gradient(90deg, transparent, rgba(255,110,0,0.45), transparent)",
         },
@@ -122,7 +122,7 @@ export const HeroSection = () => {
                     aria-hidden
                     sx={{
                       width: 34,
-                      height: 1,
+                      height: "1px",
                       backgroundColor: "#FF6E00",
                       boxShadow: "0 0 14px rgba(255,110,0,0.45)",
                     }}

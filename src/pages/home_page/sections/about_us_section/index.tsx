@@ -71,7 +71,7 @@ export const AboutUsSection = () => {
               <Stack direction="row" alignItems="center" gap={1.5}>
                 <Box
                   aria-hidden
-                  sx={{ width: 34, height: 1, backgroundColor: "#FF6E00" }}
+                  sx={{ width: 34, height: "1px", backgroundColor: "#FF6E00" }}
                 />
                 <Typography
                   component="p"
@@ -172,7 +172,7 @@ export const AboutUsSection = () => {
                   <Box
                     sx={{
                       width: 42,
-                      height: 1,
+                      height: "1px",
                       backgroundColor: "#CACACA",
                     }}
                   />
@@ -241,7 +241,7 @@ export const AboutUsSection = () => {
                 <Stack direction="row" alignItems="center" gap={1.5}>
                   <Box
                     aria-hidden
-                    sx={{ width: 34, height: 1, backgroundColor: "#FF6E00" }}
+                    sx={{ width: 34, height: "1px", backgroundColor: "#FF6E00" }}
                   />
                   <Typography
                     color="#FF8034"
@@ -310,7 +310,7 @@ export const AboutUsSection = () => {
                       sx={{
                         display: { xs: "none", md: index === flowSteps.length - 1 ? "none" : "block" },
                         flex: 1,
-                        height: 1,
+                        height: "1px",
                         background:
                           "linear-gradient(90deg, rgba(255,110,0,0.62), rgba(250,250,250,0.10))",
                       }}

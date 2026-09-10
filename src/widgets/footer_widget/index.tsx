@@ -100,7 +100,7 @@ export const FooterWidget = ({ sx, ...props }: FooterWidgetPropsType) => {
             aria-hidden
             sx={{
               display: { xs: "none", sm: "block" },
-              width: 1,
+              width: "1px",
               height: 20,
               backgroundColor: "rgba(250,250,250,0.12)",
             }}

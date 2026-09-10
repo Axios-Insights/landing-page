@@ -43,7 +43,7 @@ export const HomePage = () => {
             left: "12%",
             right: "12%",
             bottom: 0,
-            height: 1,
+            height: "1px",
             opacity: 0.6,
             background:
               "linear-gradient(90deg, transparent, rgba(255,110,0,0.72), transparent)",
@@ -119,7 +119,7 @@ export const HomePage = () => {
                         left: "50%",
                         bottom: 2,
                         width: 0,
-                        height: 1,
+                        height: "1px",
                         backgroundColor: "#FF6E00",
                         transform: "translateX(-50%)",
                         transition: "width 180ms ease",

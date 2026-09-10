@@ -88,7 +88,7 @@ export const ResultsSection = () => {
               <Stack direction="row" alignItems="center" gap={1.5}>
                 <Box
                   aria-hidden
-                  sx={{ width: 34, height: 1, backgroundColor: "#FF6E00" }}
+                  sx={{ width: 34, height: "1px", backgroundColor: "#FF6E00" }}
                 />
                 <Typography
                   component="p"
@@ -462,7 +462,7 @@ export const ResultsSection = () => {
                 <Stack direction="row" alignItems="center" gap={1.5}>
                   <Box
                     aria-hidden
-                    sx={{ width: 34, height: 1, backgroundColor: "#FF6E00" }}
+                    sx={{ width: 34, height: "1px", backgroundColor: "#FF6E00" }}
                   />
                   <Typography
                     color="#FF8034"
@@ -598,7 +598,7 @@ export const ResultsSection = () => {
               <Box
                 sx={{
                   position: "relative",
-                  height: 1,
+                  height: "1px",
                   background:
                     "linear-gradient(90deg, rgba(255,110,0,0), rgba(255,110,0,0.82), rgba(255,110,0,0))",
                   "&::after": {
@@ -674,7 +674,7 @@ export const ResultsSection = () => {
                 <Stack direction="row" alignItems="center" gap={1.5}>
                   <Box
                     aria-hidden
-                    sx={{ width: 34, height: 1, backgroundColor: "#FF6E00" }}
+                    sx={{ width: 34, height: "1px", backgroundColor: "#FF6E00" }}
                   />
                   <Typography
                     color="#C65500"

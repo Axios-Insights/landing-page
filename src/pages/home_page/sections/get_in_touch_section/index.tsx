@@ -92,7 +92,7 @@ export const GetInTouchSection = () => {
                   aria-hidden
                   sx={{
                     width: 34,
-                    height: 1,
+                    height: "1px",
                     backgroundColor: "rgba(21,21,21,0.72)",
                   }}
                 />
