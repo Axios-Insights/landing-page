@@ -11,7 +11,6 @@ type Capability = {
 };
 
 type ProductScreen = {
-  eyebrow: string;
   title: string;
   description: string;
   alt: string;
@@ -30,9 +29,25 @@ export const ProductTodaySection = () => {
     returnObjects: true,
   }) as Capability[];
 
-  const screens = t("pages.home.sections.product_today.screens", {
-    returnObjects: true,
-  }) as ProductScreen[];
+  const screens: ProductScreen[] = [
+    {
+      title: t("pages.home.sections.product_today.demo.queue_title"),
+      description: t("pages.home.sections.product_today.demo.queue_subtitle"),
+      alt: `${t("pages.home.sections.product_today.demo.queue_title")} — ${t(
+        "pages.home.sections.product_today.demo.queue_subtitle",
+      )}`,
+    },
+    {
+      title: t("pages.home.sections.product_today.demo.case_title"),
+      description: capabilities[2]?.description ?? "",
+      alt: t("pages.home.sections.product_today.demo.case_title"),
+    },
+    {
+      title: capabilities[4]?.title ?? "",
+      description: capabilities[4]?.description ?? "",
+      alt: capabilities[4]?.title ?? "",
+    },
+  ];
 
   return (
     <SectionWidget
@@ -113,7 +128,7 @@ export const ProductTodaySection = () => {
                   }}
                 />
                 <Chip
-                  label={t("pages.home.sections.product_today.capture_label")}
+                  label={t("pages.home.sections.product_today.demo.data_label")}
                   size="small"
                   variant="outlined"
                   sx={{
@@ -203,14 +218,14 @@ export const ProductTodaySection = () => {
                       fontWeight={800}
                       sx={{ letterSpacing: "0.10em" }}
                     >
-                      {screens[0]?.eyebrow}
+                      01 · {t("pages.home.sections.product_today.status")}
                     </Typography>
                     <Typography color="inherit" fontSize={20} fontWeight={650}>
-                      {screens[0]?.title}
+                      {screens[0].title}
                     </Typography>
                   </Stack>
                   <Chip
-                    label={t("pages.home.sections.product_today.sanitized_label")}
+                    label={t("pages.home.sections.product_today.demo.data_label")}
                     size="small"
                     sx={{
                       borderRadius: "6px",
@@ -224,7 +239,7 @@ export const ProductTodaySection = () => {
                 <Box
                   component="img"
                   src={screenshotPaths[0]}
-                  alt={screens[0]?.alt ?? ""}
+                  alt={screens[0].alt}
                   loading="lazy"
                   decoding="async"
                   sx={{
@@ -241,12 +256,12 @@ export const ProductTodaySection = () => {
                   lineHeight={1.45}
                   sx={{ px: { xs: 2.5, md: 3 }, py: 2 }}
                 >
-                  {screens[0]?.description}
+                  {screens[0].description}
                 </Typography>
               </Stack>
 
               <Grid container spacing={2.5}>
-                {screens.slice(1, 3).map((screen, index) => {
+                {screens.slice(1).map((screen, index) => {
                   const path = screenshotPaths[index + 1];
 
                   return (
@@ -297,7 +312,7 @@ export const ProductTodaySection = () => {
                             fontWeight={800}
                             sx={{ letterSpacing: "0.09em" }}
                           >
-                            {screen.eyebrow}
+                            0{index + 2}
                           </Typography>
                           <Typography color="inherit" fontSize={18} fontWeight={650}>
                             {screen.title}
@@ -319,29 +334,14 @@ export const ProductTodaySection = () => {
           </Grid>
         </Grid>
 
-        <Stack
-          direction={{ xs: "column", md: "row" }}
-          justifyContent="space-between"
-          gap={2}
-          sx={{
-            p: { xs: 2.5, md: 3 },
-            borderRadius: "12px",
-            border: "1px solid rgba(250,250,250,0.08)",
-            backgroundColor: "rgba(250,250,250,0.025)",
-          }}
+        <Typography
+          color="rgba(250,250,250,0.44)"
+          fontSize={12.5}
+          lineHeight={1.5}
+          maxWidth={960}
         >
-          <Typography color="rgba(250,250,250,0.62)" fontSize={14} lineHeight={1.45}>
-            {t("pages.home.sections.product_today.capture_note")}
-          </Typography>
-          <Typography
-            color="rgba(250,250,250,0.36)"
-            fontSize={12}
-            lineHeight={1.45}
-            maxWidth={470}
-          >
-            {t("pages.home.sections.product_today.public_note")}
-          </Typography>
-        </Stack>
+          {t("pages.home.sections.product_today.demo.note")}
+        </Typography>
       </Box>
     </SectionWidget>
   );
