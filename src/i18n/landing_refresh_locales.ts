@@ -80,7 +80,7 @@ export const landingRefreshLocales: Record<"en" | "es" | "pt", TranslationObject
             ],
             demo: {
               window_label: "AXIOS · CENTRAL OPERACIONAL",
-              data_label: "DADOS DEMONSTRATIVOS",
+              data_label: "DADOS SANITIZADOS",
               queue_title: "Agora",
               queue_subtitle: "Fila priorizada",
               queue_count: "3 casos",
@@ -125,7 +125,7 @@ export const landingRefreshLocales: Record<"en" | "es" | "pt", TranslationObject
                 "Desfecho",
               ],
               note:
-                "Visualização demonstrativa do fluxo implementado, construída com dados fictícios. Não reproduz dados de cliente nem parâmetros reais de scoring.",
+                "Capturas da plataforma real. Identificadores e informações de cliente foram ocultados ou sanitizados para exposição pública; não exibimos parâmetros reais de scoring.",
             },
           },
           use_cases: {
@@ -294,7 +294,7 @@ export const landingRefreshLocales: Record<"en" | "es" | "pt", TranslationObject
             ],
             demo: {
               window_label: "AXIOS · OPERATIONS CENTER",
-              data_label: "DEMO DATA",
+              data_label: "SANITIZED DATA",
               queue_title: "Now",
               queue_subtitle: "Prioritized queue",
               queue_count: "3 cases",
@@ -335,7 +335,7 @@ export const landingRefreshLocales: Record<"en" | "es" | "pt", TranslationObject
                 "Outcome",
               ],
               note:
-                "Demonstrative view of the implemented workflow, built with fictional data. It contains no client data or real scoring parameters.",
+                "Screenshots from the real platform. Client identifiers and information were hidden or sanitized for public display; real scoring parameters are not shown.",
             },
           },
           use_cases: {
@@ -504,7 +504,7 @@ export const landingRefreshLocales: Record<"en" | "es" | "pt", TranslationObject
             ],
             demo: {
               window_label: "AXIOS · CENTRAL OPERATIVA",
-              data_label: "DATOS DEMOSTRATIVOS",
+              data_label: "DATOS SANITIZADOS",
               queue_title: "Ahora",
               queue_subtitle: "Cola priorizada",
               queue_count: "3 casos",
@@ -549,7 +549,7 @@ export const landingRefreshLocales: Record<"en" | "es" | "pt", TranslationObject
                 "Resultado",
               ],
               note:
-                "Vista demostrativa del flujo implementado, construida con datos ficticios. No contiene datos de clientes ni parámetros reales de scoring.",
+                "Capturas de la plataforma real. Los identificadores y la información del cliente fueron ocultados o sanitizados para exposición pública; no mostramos parámetros reales de scoring.",
             },
           },
           use_cases: {
