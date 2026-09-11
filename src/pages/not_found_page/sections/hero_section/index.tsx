@@ -28,7 +28,7 @@ export const HeroSection = () => {
         textAlign="center"
         alignItems="center"
         justifyContent="center"
-        color="primary.contrastText"
+        color="rgba(250,250,250,0.16)"
         fontSize="100vmax"
         fontWeight={900}
         letterSpacing={backgroundLetterSpacing}
@@ -47,7 +47,7 @@ export const HeroSection = () => {
         alignItems="center"
         textAlign="center"
         zIndex={1}
-        color="text.primary"
+        color="#FAFAFA"
       >
         <Stack>
           <Typography fontSize={64} fontWeight={900} color="inherit">

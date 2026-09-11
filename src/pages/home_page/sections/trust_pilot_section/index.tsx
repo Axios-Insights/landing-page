@@ -129,8 +129,8 @@ export const TrustPilotSection = () => {
                   sx={{
                     alignSelf: "flex-start",
                     borderRadius: "6px",
-                    color: "#151515",
-                    backgroundColor: "#FF8034",
+                    color: "#FAFAFA",
+                    backgroundColor: "#FF6E00",
                     fontWeight: 800,
                     letterSpacing: "0.05em",
                   }}

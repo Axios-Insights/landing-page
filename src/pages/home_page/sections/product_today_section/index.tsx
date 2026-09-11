@@ -56,7 +56,8 @@ export const ProductTodaySection = () => {
       paddingBottom={{ xs: 10, md: 14 }}
       sx={{
         position: "relative",
-        overflow: "hidden",
+        // "clip" instead of "hidden" so the sticky capability list still works.
+        overflow: "clip",
         color: "#FAFAFA",
         backgroundColor: "#151515",
         backgroundImage:
@@ -121,8 +122,8 @@ export const ProductTodaySection = () => {
                   size="small"
                   sx={{
                     borderRadius: "6px",
-                    color: "#151515",
-                    backgroundColor: "#FF8034",
+                    color: "#FAFAFA",
+                    backgroundColor: "#FF6E00",
                     fontWeight: 800,
                     letterSpacing: "0.05em",
                   }}
@@ -145,51 +146,78 @@ export const ProductTodaySection = () => {
 
         <Grid container spacing={{ xs: 4, lg: 5 }} alignItems="stretch">
           <Grid size={{ xs: 12, lg: 4 }}>
-            <Grid container spacing={2} height="100%">
+            {/* One hairline-divided panel sized to its content: 1 column on
+                phones, 2 on tablets and a sticky sidebar next to the
+                screenshots on large screens, instead of cards stretched to
+                the screenshots' height. */}
+            <Box
+              component="ol"
+              sx={{
+                m: 0,
+                p: 0,
+                listStyle: "none",
+                display: "grid",
+                gridTemplateColumns: {
+                  xs: "1fr",
+                  sm: "repeat(2, minmax(0, 1fr))",
+                  lg: "1fr",
+                },
+                gap: "1px",
+                overflow: "hidden",
+                borderRadius: "14px",
+                border: "1px solid rgba(250,250,250,0.10)",
+                backgroundColor: "rgba(250,250,250,0.08)",
+                "@media (min-width: 1200px) and (min-height: 760px)": {
+                  position: "sticky",
+                  top: "calc(var(--header-height, 72px) + 32px)",
+                },
+              }}
+            >
               {capabilities.map((capability, index) => (
-                <Grid key={capability.title} size={{ xs: 12, sm: 6, lg: 12 }}>
-                  <Stack
-                    direction="row"
-                    gap={2}
-                    sx={{
-                      height: "100%",
-                      p: 2.5,
-                      borderRadius: "12px",
-                      border: "1px solid rgba(250,250,250,0.09)",
-                      backgroundColor: "rgba(250,250,250,0.035)",
-                      transition:
-                        "transform 180ms ease, border-color 180ms ease, background-color 180ms ease",
-                      "&:hover": {
-                        transform: "translateX(3px)",
-                        borderColor: "rgba(255,110,0,0.30)",
-                        backgroundColor: "rgba(255,110,0,0.045)",
-                      },
-                    }}
+                <Stack
+                  key={capability.title}
+                  component="li"
+                  direction="row"
+                  gap={2}
+                  sx={{
+                    px: { xs: 2.25, md: 2.5 },
+                    py: { xs: 2, md: 2.25, lg: 2 },
+                    backgroundColor: "#1A1A1A",
+                    transition: "background-color 180ms ease",
+                    "&:hover": {
+                      backgroundColor: "#211B17",
+                    },
+                  }}
+                >
+                  <Typography
+                    color="#FF8034"
+                    fontSize={12}
+                    fontWeight={800}
+                    lineHeight={1.6}
+                    sx={{ fontVariantNumeric: "tabular-nums" }}
                   >
+                    0{index + 1}
+                  </Typography>
+                  <Stack gap={0.4} minWidth={0}>
                     <Typography
-                      color="#FF8034"
-                      fontSize={12}
-                      fontWeight={800}
-                      lineHeight={1.4}
+                      color="inherit"
+                      fontSize={16}
+                      fontWeight={650}
+                      lineHeight={1.3}
                     >
-                      0{index + 1}
+                      {capability.title}
                     </Typography>
-                    <Stack gap={0.5}>
-                      <Typography color="inherit" fontSize={17} fontWeight={650}>
-                        {capability.title}
-                      </Typography>
-                      <Typography
-                        color="rgba(250,250,250,0.50)"
-                        fontSize={14}
-                        lineHeight={1.4}
-                      >
-                        {capability.description}
-                      </Typography>
-                    </Stack>
+                    <Typography
+                      color="rgba(250,250,250,0.56)"
+                      fontSize={13.5}
+                      lineHeight={1.45}
+                    >
+                      {capability.description}
+                    </Typography>
                   </Stack>
-                </Grid>
+                </Stack>
               ))}
-            </Grid>
+            </Box>
           </Grid>
 
           <Grid size={{ xs: 12, lg: 8 }}>
@@ -229,8 +257,8 @@ export const ProductTodaySection = () => {
                     size="small"
                     sx={{
                       borderRadius: "6px",
-                      color: "#151515",
-                      backgroundColor: "#FFB17A",
+                      color: "#FAFAFA",
+                      backgroundColor: "#FF6E00",
                       fontWeight: 800,
                     }}
                   />

@@ -1,3 +1,5 @@
 import { type BoxProps } from "@mui/material";
 
-export type LanguageSwitcherWidgetPropsType = BoxProps;
+export type LanguageSwitcherWidgetPropsType = BoxProps & {
+  variant?: "menu" | "inline";
+};

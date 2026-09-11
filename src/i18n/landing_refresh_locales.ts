@@ -1,6 +1,9 @@
 import type { TranslationObject } from "./types";
 
-export const landingRefreshLocales: Record<"en" | "es" | "pt", TranslationObject> = {
+export const landingRefreshLocales: Record<
+  "en" | "es" | "fr" | "it" | "pt",
+  TranslationObject
+> = {
   pt: {
     pages: {
       home: {
@@ -634,6 +637,426 @@ export const landingRefreshLocales: Record<"en" | "es" | "pt", TranslationObject
             phone_cta: "Llamar a Axios",
             whatsapp_message:
               "Hola. Visité el sitio de Axios Insights y me gustaría mapear nuestras fuentes de datos y diseñar un piloto operativo con alcance y métricas claros. ¿Podemos conversar?",
+          },
+        },
+      },
+    },
+  },
+  fr: {
+    pages: {
+      home: {
+        header: {
+          navigation: {
+            product_today: "Produit actuel",
+          },
+        },
+        sections: {
+          hero: {
+            primary_cta: "Comprendre le flux",
+            secondary_cta: "Concevoir un pilote",
+          },
+          real_problems: {
+            eyebrow: "PROBLÈMES OBSERVÉS DANS DES OPÉRATIONS RÉELLES",
+            title: "La plateforme est née de questions auxquelles un seul écran ne pouvait pas répondre.",
+            description:
+              "Les détails ci-dessous sont anonymisés, mais le schéma se répète : l'information existe ; la difficulté est de reconstituer assez de contexte pour décider.",
+            cards: [
+              {
+                eyebrow: "OPÉRATION DE SÉCURITÉ",
+                title: "Une question, plusieurs plateformes.",
+                description:
+                  "Pour comprendre la récurrence, la localisation et la criticité, les équipes devaient passer d'un fournisseur à l'autre et reconstituer manuellement le contexte du conducteur et du véhicule.",
+                tag: "INTÉGRATION + CONTEXTE",
+              },
+              {
+                eyebrow: "OPÉRATION GÉOGRAPHIQUE",
+                title: "Plusieurs télémétries, aucune vue unifiée.",
+                description:
+                  "Entrées et sorties de zones, temps de présence, position récente et rapports exigeaient de combiner des données de sources différentes dans un même flux opérationnel.",
+                tag: "FUSION DE SOURCES",
+              },
+              {
+                eyebrow: "TRI OPÉRATIONNEL",
+                title: "Beaucoup d'alertes, une reconstitution manuelle.",
+                description:
+                  "Lorsque les signaux arrivent séparément, des personnes examinent les événements un par un, cherchent des preuves et décident quels cas méritent réellement une intervention.",
+                tag: "PRIORISATION",
+              },
+            ],
+            note_label: "EXEMPLES ANONYMISÉS",
+            note:
+              "Il ne s'agit ni d'études de cas ni de promesses d'impact, mais de situations observées lors des phases de découverte et de déploiement, qui ont orienté la conception du produit.",
+          },
+          product_today: {
+            eyebrow: "LE PRODUIT AUJOURD'HUI",
+            title: "Le centre de supervision reçoit un cas opérationnel — pas simplement une alerte de plus.",
+            description:
+              "Le socle déjà en place regroupe signaux proches, preuves et traitement dans une file priorisée. L'opérateur peut agir et reporter le résultat dans l'historique.",
+            status: "FLUX DÉJÀ EN PLACE",
+            capabilities: [
+              {
+                title: "File opérationnelle",
+                description: "Les événements arrivent organisés par cas et par priorité.",
+              },
+              {
+                title: "Alertes cumulées",
+                description: "Des signaux proches peuvent être regroupés en un même incident.",
+              },
+              {
+                title: "Preuves associées",
+                description: "Photos, vidéos, localisation et métadonnées accompagnent le cas.",
+              },
+              {
+                title: "Traitement enregistré",
+                description: "Contact, notes, actions et clôture restent dans le flux.",
+              },
+              {
+                title: "Historique et tendances",
+                description: "Trajets, classements et récurrences alimentent la revue de gestion.",
+              },
+              {
+                title: "Paramétrage",
+                description: "Pondérations, seuils et protocoles peuvent varier selon l'opération.",
+              },
+            ],
+            demo: {
+              window_label: "AXIOS · CENTRE OPÉRATIONNEL",
+              data_label: "DONNÉES MASQUÉES",
+              queue_title: "Maintenant",
+              queue_subtitle: "File priorisée",
+              queue_count: "3 cas",
+              queue: [
+                {
+                  title: "Fatigue + vitesse",
+                  subtitle: "AXI-2048 · il y a 2 min",
+                  status: "Élevée",
+                },
+                {
+                  title: "Excès de vitesse",
+                  subtitle: "AXI-1182 · il y a 6 min",
+                  status: "À vérifier",
+                },
+                {
+                  title: "Entrée en géozone",
+                  subtitle: "AXI-9074 · il y a 11 min",
+                  status: "Opérations",
+                },
+              ],
+              case_label: "CAS SÉLECTIONNÉ",
+              case_title: "Intervention prioritaire",
+              priority: "PRIORITÉ ÉLEVÉE",
+              vehicle: "Véhicule · AXI-2048",
+              journey: "Trajet · en cours",
+              location: "Contexte · Autoroute Démo",
+              signals_label: "SIGNAUX REGROUPÉS DANS LA MÊME FENÊTRE",
+              signals: ["Somnolence récurrente", "Excès de vitesse", "Distraction"],
+              evidence_label: "PREUVES + LOCALISATION",
+              action_label: "ACTION RECOMMANDÉE",
+              action: "Alerter l'équipe responsable et évaluer un arrêt sécurisé.",
+              action_detail:
+                "L'opérateur confirme le traitement, consigne ses notes et suit le cas jusqu'à son dénouement.",
+              audit_items: [
+                "Provenance des signaux",
+                "Règle appliquée",
+                "Traitement",
+                "Résultat",
+              ],
+              note:
+                "Captures de la plateforme réelle. Les identifiants et informations clients ont été masqués ou neutralisés pour une diffusion publique ; les paramètres de scoring réels ne sont pas affichés.",
+            },
+          },
+          use_cases: {
+            eyebrow: "OÙ LA COUCHE CRÉE DE LA VALEUR",
+            title: "Sécurité et opérations géographiques partagent le même socle.",
+            description:
+              "L'élément différenciant n'est pas une fonctionnalité isolée de caméra ou de géorepérage. C'est la normalisation de sources fragmentées et la transformation des signaux en contexte, en événements et en flux opérationnels.",
+          },
+          trust_pilot: {
+            eyebrow: "PILOTE + GOUVERNANCE",
+            title: "Testez à petite échelle. Mesurez le processus. Étendez sur preuves.",
+            description:
+              "L'étape suivante n'a pas besoin d'être un déploiement complet. Un périmètre limité permet de valider les données, le flux et la valeur avant d'étendre l'opération.",
+            pilot: {
+              label: "STRUCTURE PROPOSÉE · JUSQU'À 90 JOURS",
+              title: "Du premier accès au premier cycle de décision mesurable.",
+              phases: [
+                {
+                  range: "0–30 JOURS",
+                  title: "Connecter",
+                  description:
+                    "Sources, accès, événements, responsables et situation de référence opérationnelle.",
+                },
+                {
+                  range: "31–60 JOURS",
+                  title: "Calibrer",
+                  description:
+                    "Échantillons, règles, priorités, protocole et charge opérationnelle.",
+                },
+                {
+                  range: "61–90 JOURS",
+                  title: "Opérer",
+                  description:
+                    "Périmètre limité, traitements, résultats et décision d'extension.",
+                },
+              ],
+              success_label: "ÉTENDRE QUAND",
+              success:
+                "Le centre de supervision priorise mieux, reconstitue moins de contexte manuellement et consigne des résultats utiles.",
+            },
+            governance: {
+              eyebrow: "CONFIANCE OPÉRATIONNELLE",
+              title: "Des contrôles concrets pour une opération traçable.",
+              description:
+                "La plateforme sépare clients, rôles et configurations au lieu de réduire la sécurité à un argument marketing.",
+              controls: [
+                {
+                  title: "Isolation par client",
+                  description:
+                    "Contexte, données et backend sont cloisonnés par tenant dans l'architecture de production.",
+                },
+                {
+                  title: "Accès par rôle",
+                  description:
+                    "Lecteurs, opérateurs, administrateurs et équipe Axios disposent de droits adaptés à leur fonction.",
+                },
+                {
+                  title: "Configuration versionnée",
+                  description:
+                    "Les règles effectives de chaque client sont conservées par révision au lieu de changer silencieusement avec un modèle global.",
+                },
+                {
+                  title: "Traitement et résultat",
+                  description:
+                    "Actions, notes et évolution du cas restent associées à l'historique opérationnel.",
+                },
+              ],
+              note:
+                "Nous décrivons des contrôles qui existent aujourd'hui ; les exigences juridiques et de conservation sont traitées selon le contexte de chaque déploiement.",
+            },
+            cta: "Concevoir un pilote",
+          },
+          get_in_touch: {
+            eyebrow: "PROCHAINE ÉTAPE",
+            title: "Et si nous concevions un pilote adapté à votre opération ?",
+            subtitle:
+              "Lors d'un court échange, nous cartographions les sources dont vous disposez déjà et définissons le plus petit flux capable de prouver sa valeur — criticité, géorepérage, suivi, intégration multi-sources ou tout autre problème opérationnel récurrent.",
+            note:
+              "Le pilote part des technologies déjà en place. Périmètre, données, responsables et indicateurs sont définis avant toute extension.",
+            whatsapp_cta: "Concevoir un pilote sur WhatsApp",
+            email_cta: "Envoyer un e-mail",
+            phone_cta: "Appeler Axios",
+            whatsapp_message:
+              "Bonjour ! J'ai consulté le site d'Axios Insights et j'aimerais cartographier nos sources de données et concevoir un pilote opérationnel avec un périmètre et des indicateurs clairement définis. Pouvons-nous en discuter ?",
+          },
+        },
+      },
+    },
+  },
+  it: {
+    pages: {
+      home: {
+        header: {
+          navigation: {
+            product_today: "Il prodotto oggi",
+          },
+        },
+        sections: {
+          hero: {
+            primary_cta: "Scopra il flusso",
+            secondary_cta: "Definiamo un progetto pilota",
+          },
+          real_problems: {
+            eyebrow: "PROBLEMI OSSERVATI IN CONTESTI OPERATIVI REALI",
+            title: "La piattaforma è nata da domande a cui una sola schermata non sapeva rispondere.",
+            description:
+              "I dettagli qui sotto sono anonimizzati, ma lo schema si ripete: l'informazione esiste; la parte difficile è ricostruire abbastanza contesto per decidere.",
+            cards: [
+              {
+                eyebrow: "OPERAZIONI DI SICUREZZA",
+                title: "Una domanda, più piattaforme.",
+                description:
+                  "Per capire ricorrenza, posizione e criticità, i team dovevano passare da un fornitore all'altro e ricostruire manualmente il contesto del conducente e del veicolo.",
+                tag: "INTEGRAZIONE + CONTESTO",
+              },
+              {
+                eyebrow: "OPERAZIONI GEOGRAFICHE",
+                title: "Più fonti di telemetria, nessuna vista unificata.",
+                description:
+                  "Ingressi e uscite dalle zone, tempo di permanenza, posizione recente e report richiedevano di combinare dati di fonti diverse in un unico flusso operativo.",
+                tag: "FUSIONE DELLE FONTI",
+              },
+              {
+                eyebrow: "TRIAGE OPERATIVO",
+                title: "Molti alert, ricostruzione manuale.",
+                description:
+                  "Quando i segnali arrivano separati, le persone esaminano gli eventi uno per uno, cercano evidenze e decidono quali casi meritano davvero un intervento.",
+                tag: "PRIORITIZZAZIONE",
+              },
+            ],
+            note_label: "ESEMPI ANONIMIZZATI",
+            note:
+              "Non sono casi di studio né dichiarazioni di impatto. Sono situazioni osservate in fase di discovery e implementazione che hanno orientato la progettazione del prodotto.",
+          },
+          product_today: {
+            eyebrow: "IL PRODOTTO OGGI",
+            title: "La centrale riceve un caso operativo — non soltanto un altro alert.",
+            description:
+              "Il nucleo già implementato raggruppa segnali vicini, evidenze e gestione in una coda prioritizzata. Gli operatori possono agire e riportare l'esito nello storico.",
+            status: "FLUSSO IMPLEMENTATO OGGI",
+            capabilities: [
+              {
+                title: "Coda operativa",
+                description: "Gli eventi arrivano organizzati per caso e priorità.",
+              },
+              {
+                title: "Alert accumulati",
+                description: "Segnali vicini possono essere raggruppati nella stessa occorrenza.",
+              },
+              {
+                title: "Evidenze collegate",
+                description: "Foto, video, posizione e metadati restano associati al caso.",
+              },
+              {
+                title: "Gestione registrata",
+                description: "Contatto, note, azioni e chiusura restano nel flusso.",
+              },
+              {
+                title: "Storico e pattern",
+                description: "Viaggi, classifiche e ricorrenze supportano la revisione gestionale.",
+              },
+              {
+                title: "Configurazione",
+                description: "Pesi, soglie e protocolli possono variare in base all'operatività.",
+              },
+            ],
+            demo: {
+              window_label: "AXIOS · CENTRALE OPERATIVA",
+              data_label: "DATI SANIFICATI",
+              queue_title: "Ora",
+              queue_subtitle: "Coda prioritizzata",
+              queue_count: "3 casi",
+              queue: [
+                {
+                  title: "Affaticamento + velocità",
+                  subtitle: "AXI-2048 · 2 min fa",
+                  status: "Alta",
+                },
+                {
+                  title: "Eccesso di velocità",
+                  subtitle: "AXI-1182 · 6 min fa",
+                  status: "Verifica",
+                },
+                {
+                  title: "Ingresso in geofence",
+                  subtitle: "AXI-9074 · 11 min fa",
+                  status: "Operativo",
+                },
+              ],
+              case_label: "CASO SELEZIONATO",
+              case_title: "Intervento prioritario",
+              priority: "PRIORITÀ ALTA",
+              vehicle: "Veicolo · AXI-2048",
+              journey: "Viaggio · in corso",
+              location: "Contesto · Autostrada Demo",
+              signals_label: "SEGNALI RAGGRUPPATI NELLA STESSA FINESTRA",
+              signals: ["Sonnolenza ricorrente", "Eccesso di velocità", "Distrazione"],
+              evidence_label: "EVIDENZE + POSIZIONE",
+              action_label: "AZIONE CONSIGLIATA",
+              action: "Inoltrare il caso al team responsabile e valutare una sosta sicura.",
+              action_detail:
+                "L'operatore conferma la gestione, registra le note e segue il caso fino all'esito.",
+              audit_items: [
+                "Origine dei segnali",
+                "Regola applicata",
+                "Gestione",
+                "Esito",
+              ],
+              note:
+                "Schermate della piattaforma reale. Identificativi e informazioni dei clienti sono stati nascosti o sanificati per la pubblicazione; i parametri reali di scoring non vengono mostrati.",
+            },
+          },
+          use_cases: {
+            eyebrow: "DOVE IL LIVELLO CREA VALORE",
+            title: "Sicurezza e operazioni geografiche condividono le stesse fondamenta.",
+            description:
+              "L'elemento distintivo non è una funzionalità isolata di telecamera o geofence, ma la normalizzazione di fonti frammentate per trasformare i segnali in contesto, eventi e flussi operativi.",
+          },
+          trust_pilot: {
+            eyebrow: "FASE PILOTA + GOVERNANCE",
+            title: "Testare in piccolo. Misurare il processo. Crescere con le evidenze.",
+            description:
+              "Il passo successivo non deve essere per forza un rollout completo. Un perimetro limitato permette di validare dati, flusso e valore prima di estendere l'adozione.",
+            pilot: {
+              label: "STRUTTURA SUGGERITA · FINO A 90 GIORNI",
+              title: "Dal primo accesso al primo ciclo decisionale misurabile.",
+              phases: [
+                {
+                  range: "0–30 GIORNI",
+                  title: "Collegare",
+                  description:
+                    "Fonti, accessi, eventi, responsabili e baseline operativa.",
+                },
+                {
+                  range: "31–60 GIORNI",
+                  title: "Calibrare",
+                  description:
+                    "Campioni, regole, priorità, protocollo e carico operativo.",
+                },
+                {
+                  range: "61–90 GIORNI",
+                  title: "Operare",
+                  description:
+                    "Perimetro limitato, casi gestiti, esiti e decisione sull'estensione.",
+                },
+              ],
+              success_label: "ESTENDERE QUANDO",
+              success:
+                "La centrale assegna meglio le priorità, ricostruisce meno contesto a mano e registra esiti utili.",
+            },
+            governance: {
+              eyebrow: "FIDUCIA OPERATIVA",
+              title: "Controlli concreti per un'operatività tracciabile.",
+              description:
+                "La piattaforma separa clienti, ruoli e configurazioni invece di ridurre la sicurezza a uno slogan di marketing.",
+              controls: [
+                {
+                  title: "Isolamento per cliente",
+                  description:
+                    "Contesto, dati e backend sono separati per tenant nell'architettura di produzione.",
+                },
+                {
+                  title: "Accesso basato sui ruoli",
+                  description:
+                    "Viewer, operatori, admin e team Axios dispongono di funzionalità coerenti con il proprio ruolo.",
+                },
+                {
+                  title: "Configurazione versionata",
+                  description:
+                    "Le regole effettive del cliente vengono conservate per revisione, invece di cambiare silenziosamente con un template globale.",
+                },
+                {
+                  title: "Gestione ed esito",
+                  description:
+                    "Azioni, note ed evoluzione del caso restano associate allo storico operativo.",
+                },
+              ],
+              note:
+                "Descriviamo controlli che esistono oggi; i requisiti legali e di conservazione dei dati sono gestiti in base al contesto di ciascuna implementazione.",
+            },
+            cta: "Definiamo un progetto pilota",
+          },
+          get_in_touch: {
+            eyebrow: "PROSSIMO PASSO",
+            title: "Definiamo insieme un progetto pilota per la sua realtà operativa?",
+            subtitle:
+              "In una breve conversazione mappiamo le fonti già disponibili e definiamo il flusso più piccolo in grado di dimostrare valore — criticità, geofencing, tracciamento, integrazione multi-sorgente o un altro problema operativo ricorrente.",
+            note:
+              "Il progetto pilota parte dalle tecnologie già in uso. Perimetro, dati, responsabili e metriche vengono definiti prima di qualsiasi estensione.",
+            whatsapp_cta: "Progetto pilota su WhatsApp",
+            email_cta: "Invii un'e-mail",
+            phone_cta: "Chiami Axios",
+            whatsapp_message:
+              "Salve! Ho visitato il sito di Axios Insights e vorrei mappare le nostre fonti di dati e definire un progetto pilota operativo con perimetro e metriche chiari. Possiamo parlarne?",
           },
         },
       },

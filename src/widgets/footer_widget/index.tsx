@@ -5,6 +5,8 @@ import { Link as RouterLink } from "react-router";
 
 import { LogoWidget } from "@widgets/logo_widget";
 
+import { companyLegalName, companyLocation, companyTaxId } from "./constants";
+
 import type { FooterWidgetPropsType } from "./types";
 
 export const FooterWidget = ({ sx, ...props }: FooterWidgetPropsType) => {
@@ -42,74 +44,36 @@ export const FooterWidget = ({ sx, ...props }: FooterWidgetPropsType) => {
         mx="auto"
         px={{ xs: 2, sm: 3, md: 4, lg: 6 }}
         py={{ xs: 4, md: 5 }}
-        direction={{ xs: "column", md: "row" }}
-        alignItems={{ xs: "flex-start", md: "center" }}
-        justifyContent="space-between"
-        gap={{ xs: 3, md: 4 }}
+        gap={{ xs: 3, md: 3.5 }}
         sx={{ position: "relative", zIndex: 1 }}
       >
-        <Button
-          component={RouterLink}
-          variant="clear"
-          to={{
-            pathname: "/",
-          }}
-          sx={{
-            transition: "transform 180ms ease",
-            "&:hover": {
-              transform: "translateY(-1px)",
-            },
-          }}
-        >
-          <LogoWidget
-            fontSize={28}
-            sx={{
-              color: "#FAFAFA",
-              "& b": {
-                color: "#FF6E00",
-                fontWeight: 800,
-              },
-            }}
-          />
-        </Button>
-
         <Stack
           direction="row"
           alignItems="center"
-          flexWrap="wrap"
-          gap={{ xs: 1.5, md: 2.5 }}
+          justifyContent="space-between"
+          gap={2}
         >
-          <Typography color="rgba(250,250,250,0.48)" fontSize={14}>
-            {"Copyright © "}
-            <Link
-              color="inherit"
-              href="https://axiosinsights.com/"
-              sx={{
-                textDecoration: "none",
-                transition: "color 180ms ease",
-                "&:hover": { color: "#FAFAFA" },
-              }}
-            >
-              axios insights
-            </Link>{" "}
-            {new Date().getFullYear()}
-            {"."}
-          </Typography>
-
-          <Box
-            aria-hidden
-            sx={{
-              display: { xs: "none", sm: "block" },
-              width: "1px",
-              height: 20,
-              backgroundColor: "rgba(250,250,250,0.12)",
+          <Button
+            component={RouterLink}
+            variant="clear"
+            to={{
+              pathname: "/",
             }}
-          />
+            sx={{
+              transition: "transform 180ms ease",
+              "&:hover": {
+                transform: "translateY(-1px)",
+              },
+            }}
+          >
+            <LogoWidget fontSize={28} color="#FAFAFA" />
+          </Button>
 
           <IconButton
             href="https://www.linkedin.com/company/axios-insights"
             target="_blank"
             color="inherit"
+            aria-label="LinkedIn"
             sx={{
               width: 40,
               height: 40,
@@ -128,6 +92,56 @@ export const FooterWidget = ({ sx, ...props }: FooterWidgetPropsType) => {
           >
             <FontAwesomeIcon icon={faSquareLinkedin} fontSize={22} />
           </IconButton>
+        </Stack>
+
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          alignItems={{ xs: "flex-start", md: "center" }}
+          justifyContent="space-between"
+          gap={{ xs: 1, md: 3 }}
+          sx={{
+            pt: { xs: 2.5, md: 3 },
+            borderTop: "1px solid rgba(250,250,250,0.08)",
+          }}
+        >
+          <Typography color="rgba(250,250,250,0.48)" fontSize={13}>
+            {"Copyright © "}
+            <Link
+              color="inherit"
+              href="https://axiosinsights.com/"
+              sx={{
+                textDecoration: "none",
+                transition: "color 180ms ease",
+                "&:hover": { color: "#FAFAFA" },
+              }}
+            >
+              axios insights
+            </Link>{" "}
+            {new Date().getFullYear()}
+            {"."}
+          </Typography>
+
+          <Typography
+            color="rgba(250,250,250,0.48)"
+            fontSize={13}
+            sx={{
+              display: "flex",
+              flexDirection: { xs: "column", sm: "row" },
+              flexWrap: "wrap",
+              columnGap: 1,
+              rowGap: 0.25,
+              "& > span + span::before": {
+                display: { xs: "none", sm: "inline" },
+                content: '"·"',
+                mr: 1,
+                color: "rgba(250,250,250,0.24)",
+              },
+            }}
+          >
+            <span>{companyLegalName}</span>
+            <span>CNPJ {companyTaxId}</span>
+            <span>{companyLocation}</span>
+          </Typography>
         </Stack>
       </Stack>
     </Stack>

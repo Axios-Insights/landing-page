@@ -1,0 +1,242 @@
+{
+  "languages": {
+    "en": {
+      "label": "Anglais"
+    },
+    "pt": {
+      "label": "Portugais"
+    },
+    "es": {
+      "label": "Espagnol"
+    },
+    "fr": {
+      "label": "Français"
+    },
+    "it": {
+      "label": "Italien"
+    }
+  },
+  "pages": {
+    "home": {
+      "header": {
+        "navigation": {
+          "about_us": "Le problème",
+          "results": "Plateforme",
+          "get_in_touch": "Parler à Axios"
+        }
+      },
+      "sections": {
+        "hero": {
+          "eyebrow": "INTELLIGENCE OPÉRATIONNELLE POUR LE TRANSPORT",
+          "title": "Des données dispersées. <1>Une seule décision.</1>",
+          "subtitle": "Axios intègre télémétrie, télématique vidéo, fatigue, localisation et règles géographiques pour transformer les signaux en décisions : prioriser la criticité, surveiller les zones et orienter la bonne action opérationnelle.",
+          "primary_cta": "Découvrir le fonctionnement",
+          "secondary_cta": "Parler à Axios",
+          "trust": [
+            "Intégration multi-sources",
+            "Criticité opérationnelle",
+            "Géorepérage et localisation",
+            "Interventions auditables"
+          ],
+          "demo": {
+            "label": "EXEMPLE ILLUSTRATIF",
+            "title": "Intervention prioritaire",
+            "priority": "PRIORITÉ ÉLEVÉE",
+            "context": "Signaux convergents dans la même fenêtre temporelle",
+            "signals": [
+              "Somnolence récurrente",
+              "Excès de vitesse",
+              "Distraction"
+            ],
+            "action_label": "ACTION RECOMMANDÉE",
+            "action": "Alerter l'équipe responsable et guider vers un arrêt sécurisé.",
+            "audit": "La provenance des signaux, la règle appliquée et la décision de l'opérateur restent enregistrées."
+          }
+        },
+        "about_us": {
+          "eyebrow": "LE PROBLÈME QUE NOUS RÉSOLVONS",
+          "title": "Vous avez déjà les données. Le point de blocage : passer du signal à l'action.",
+          "description": "Caméras, télémétrie, détecteurs de fatigue et systèmes de localisation voient chacun une partie différente de la même opération. Lorsqu'ils vivent dans des plateformes séparées, l'équipe doit reconstituer le contexte avant d'agir. Axios crée la couche entre les signaux et l'intervention.",
+          "pain_points": [
+            {
+              "title": "Sources fragmentées",
+              "description": "Le contexte opérationnel est dispersé sur plusieurs plateformes, ce qui oblige à passer sans cesse d'un écran à l'autre et à reconstituer manuellement ce qui se passe."
+            },
+            {
+              "title": "Trop d'alertes, trop peu de contexte",
+              "description": "Un événement isolé en dit souvent peu. La criticité change lorsque fatigue, vitesse, distraction, itinéraire et historique convergent dans la même fenêtre."
+            },
+            {
+              "title": "Des décisions sans traçabilité",
+              "description": "Sans flux unique, il est difficile de savoir ce qui a été priorisé, qui est intervenu, quelle action a été menée et si elle a résolu le risque opérationnel."
+            }
+          ],
+          "flow": {
+            "eyebrow": "DE LA SOURCE À L'INTERVENTION",
+            "title": "Quatre étapes, un seul flux de décision.",
+            "description": "L'objectif n'est pas d'ajouter un écran pour chaque technologie, mais de transformer des signaux dispersés en une file opérationnelle priorisée, explicable et actionnable.",
+            "steps": [
+              {
+                "title": "Intégrer",
+                "description": "Connecter les sources que l'opération utilise déjà et normaliser les signaux nécessaires au flux de décision."
+              },
+              {
+                "title": "Contextualiser",
+                "description": "Regrouper les événements par conducteur, véhicule, trajet, lieu et fenêtre temporelle pour reconstituer le contexte opérationnel."
+              },
+              {
+                "title": "Prioriser",
+                "description": "Combiner règles, modèles et contexte pour estimer la criticité opérationnelle et ordonner ce qui doit être traité en premier."
+              },
+              {
+                "title": "Orchestrer",
+                "description": "Recommander la prochaine action, enregistrer l'intervention et conserver une piste d'audit pour l'analyse et l'amélioration continue."
+              }
+            ]
+          }
+        },
+        "use_cases": {
+          "eyebrow": "DEUX AXES OPÉRATIONNELS",
+          "title": "La même couche d'intégration pour la sécurité et les opérations géographiques.",
+          "description": "Axios ne dépend pas de caméras ou de détecteurs de fatigue pour créer de la valeur. Dans les opérations fondées sur la télémétrie et la localisation, la même architecture unifie les sources et transforme la position en événements, temps de présence, historique et rapports.",
+          "axes": [
+            {
+              "eyebrow": "SÉCURITÉ ET INTERVENTION",
+              "title": "Criticité opérationnelle",
+              "description": "Lorsque l'opération dispose de caméras, de données de fatigue, de télémétrie et d'autres signaux de risque, Axios combine le contexte pour identifier ce qui requiert une attention et coordonner une intervention traçable.",
+              "items": [
+                "Fusion des signaux dans une même fenêtre temporelle",
+                "Criticité par conducteur, véhicule et contexte",
+                "File priorisée et action recommandée",
+                "Historique auditable des interventions"
+              ]
+            },
+            {
+              "eyebrow": "TÉLÉMÉTRIE ET LOCALISATION",
+              "title": "Géorepérage et opérations géographiques",
+              "description": "Pour les opérations sans caméras ni capteurs de fatigue, Axios peut intégrer la télémétrie de différents fournisseurs et transformer la localisation en un flux opérationnel unique.",
+              "items": [
+                "Entrées et sorties des zones définies par l'opération",
+                "Temps de présence par véhicule, zone et période",
+                "Carte de la position de la flotte en temps réel",
+                "Historique récent et dernière position du véhicule",
+                "Rapports de déplacements et de temps de présence",
+                "Plusieurs fournisseurs de télémétrie dans une seule vue"
+              ]
+            }
+          ],
+          "geo_visual": {
+            "metrics": [
+              "Entrée / sortie",
+              "Temps en zone",
+              "Position en direct"
+            ]
+          }
+        },
+        "results": {
+          "eyebrow": "PLATEFORME UNIFIÉE",
+          "title": "Une couche de décision au-dessus des technologies que votre opération utilise déjà.",
+          "description": "Axios réunit signaux, localisation, contexte et règles dans un flux unique pour que l'opérateur sache ce qui mérite son attention, où cela se passe et quoi faire ensuite.",
+          "platform": {
+            "sources": {
+              "title": "Signaux et systèmes",
+              "items": [
+                "Télématique vidéo",
+                "Sources de télémétrie multiples",
+                "Fatigue",
+                "GPS, itinéraires et géorepérage",
+                "API internes"
+              ]
+            },
+            "intelligence": {
+              "title": "Axios Intelligence Layer",
+              "description": "L'intelligence réside dans la combinaison des signaux et dans la transformation de ce contexte en décision opérationnelle traçable.",
+              "items": [
+                "Fusion des signaux dans une même fenêtre temporelle",
+                "Criticité par conducteur, véhicule et contexte",
+                "Événements d'entrée, de sortie et de présence en zone",
+                "Règles et modèles versionnés",
+                "Recommandation d'intervention"
+              ]
+            },
+            "outputs": {
+              "title": "Décision opérationnelle",
+              "items": [
+                "File priorisée",
+                "Interventions",
+                "Carte en temps réel",
+                "Historique auditable",
+                "Classements et trajets",
+                "Rapports par zone et période"
+              ]
+            }
+          },
+          "score": {
+            "eyebrow": "SCORE AXIOS",
+            "title": "Une criticité explicable.",
+            "description": "Le Score Axios organise la priorité au sein d'une fenêtre temporelle opérationnelle en combinant signaux et contexte. L'interprétation dépend de l'opération, de la fenêtre et des données disponibles : chaque calcul doit donc être traçable.",
+            "principles": [
+              "Provenance et qualité des signaux visibles",
+              "Fenêtre temporelle et contexte explicites",
+              "Règles, modèles et versions enregistrés",
+              "Suivi des fausses alertes et des alertes manquées"
+            ],
+            "visual_label": "EXEMPLE CONCEPTUEL",
+            "signals": [
+              "Fatigue",
+              "Télémétrie",
+              "Distraction",
+              "Contexte du trajet"
+            ],
+            "output_label": "Synthèse opérationnelle",
+            "priority_label": "PRIORITÉ",
+            "priority_value": "Criticité élevée"
+          },
+          "measurement": {
+            "eyebrow": "COMMENT NOUS PROUVONS LA VALEUR",
+            "title": "Un pilote doit améliorer les décisions, pas seulement produire plus d'alertes.",
+            "description": "Un déploiement ne crée de la valeur que s'il change la façon dont l'opération travaille. Nous mesurons donc la réactivité, la qualité des interventions et la récurrence, avec des périodes et des dénominateurs explicites.",
+            "cards": [
+              {
+                "title": "Délai d'intervention",
+                "description": "Le temps écoulé entre un signal pertinent, sa priorisation et l'action effective de l'équipe."
+              },
+              {
+                "title": "Taux d'alertes utiles",
+                "description": "La part des alertes ayant réellement conduit à une décision ou à une intervention jugée pertinente par l'opération."
+              },
+              {
+                "title": "Intervention injustifiée",
+                "description": "Le nombre d'actions déclenchées inutilement, générant un coût ou une friction opérationnelle évitable."
+              },
+              {
+                "title": "Alerte manquée",
+                "description": "Les situations importantes qui n'ont pas été priorisées et n'ont été identifiées qu'après coup."
+              }
+            ]
+          }
+        },
+        "get_in_touch": {
+          "eyebrow": "PARTIR DU PROBLÈME",
+          "title": "Envie de voir vos propres données devenir des décisions opérationnelles ?",
+          "subtitle": "Lors d'un court échange, nous cartographions les sources disponibles et le premier flux qui mérite d'être testé — criticité, géorepérage, suivi, intégration multi-sources ou tout autre problème opérationnel récurrent.",
+          "note": "Nous partons des technologies dont vous disposez déjà et du plus petit flux capable de prouver sa valeur en opération, même sans caméras ni capteurs de fatigue.",
+          "whatsapp_cta": "Échanger sur WhatsApp",
+          "email_cta": "Envoyer un e-mail",
+          "phone_cta": "Appeler Axios",
+          "whatsapp_message": "Bonjour ! J'ai consulté le site d'Axios Insights et j'aimerais comprendre comment vous pouvez intégrer nos données opérationnelles — notamment la télémétrie, la localisation et le géorepérage — et les transformer en décisions opérationnelles. Pouvons-nous en discuter ?"
+        }
+      }
+    },
+    "not_found": {
+      "sections": {
+        "hero": {
+          "title": "Page introuvable",
+          "buttons": {
+            "redirect": "Retour"
+          }
+        }
+      }
+    }
+  }
+}

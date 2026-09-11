@@ -71,15 +71,7 @@ export const HomePage = () => {
               },
             }}
           >
-            <LogoWidget
-              fontSize={26}
-              sx={{
-                "& b": {
-                  color: "#FF6E00",
-                  fontWeight: 800,
-                },
-              }}
-            />
+            <LogoWidget fontSize={26} />
           </Button>
         }
         navigation={[
@@ -140,6 +132,7 @@ export const HomePage = () => {
           );
         })}
         actions={<LanguageSwitcherWidget />}
+        drawerActions={<LanguageSwitcherWidget variant="inline" />}
       />
 
       <HeroSection />

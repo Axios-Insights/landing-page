@@ -187,8 +187,8 @@ export const RealProblemsSection = () => {
                       size="small"
                       sx={{
                         borderRadius: "6px",
-                        color: highlighted ? "#151515" : "#FAFAFA",
-                        backgroundColor: highlighted ? "#FF8034" : "#151515",
+                        color: "#FAFAFA",
+                        backgroundColor: highlighted ? "#FF6E00" : "#151515",
                         fontWeight: 750,
                         letterSpacing: "0.04em",
                       }}

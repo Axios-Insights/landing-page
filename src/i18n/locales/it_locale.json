@@ -1,0 +1,242 @@
+{
+  "languages": {
+    "en": {
+      "label": "Inglese"
+    },
+    "pt": {
+      "label": "Portoghese"
+    },
+    "es": {
+      "label": "Spagnolo"
+    },
+    "fr": {
+      "label": "Francese"
+    },
+    "it": {
+      "label": "Italiano"
+    }
+  },
+  "pages": {
+    "home": {
+      "header": {
+        "navigation": {
+          "about_us": "Il problema",
+          "results": "Piattaforma",
+          "get_in_touch": "Parli con Axios"
+        }
+      },
+      "sections": {
+        "hero": {
+          "eyebrow": "INTELLIGENZA OPERATIVA PER I TRASPORTI",
+          "title": "Dati dispersi. <1>Una decisione.</1>",
+          "subtitle": "Axios integra telemetria, telematica video, affaticamento, localizzazione e regole geografiche per trasformare i segnali in decisioni: dare priorità alle criticità, monitorare le zone e guidare l'azione operativa corretta.",
+          "primary_cta": "Scopra come funziona",
+          "secondary_cta": "Parli con Axios",
+          "trust": [
+            "Integrazione multi-sorgente",
+            "Criticità operativa",
+            "Geofencing e localizzazione",
+            "Interventi verificabili"
+          ],
+          "demo": {
+            "label": "ESEMPIO ILLUSTRATIVO",
+            "title": "Intervento prioritario",
+            "priority": "PRIORITÀ ALTA",
+            "context": "Segnali convergenti nella stessa finestra temporale",
+            "signals": [
+              "Sonnolenza ricorrente",
+              "Eccesso di velocità",
+              "Distrazione"
+            ],
+            "action_label": "AZIONE CONSIGLIATA",
+            "action": "Inoltrare il caso al team responsabile e guidare verso una sosta sicura.",
+            "audit": "Origine dei segnali, regola applicata e decisione dell'operatore restano registrate."
+          }
+        },
+        "about_us": {
+          "eyebrow": "IL PROBLEMA CHE RISOLVIAMO",
+          "title": "I dati ci sono già. Il collo di bottiglia è trasformare i segnali in azione.",
+          "description": "Telecamere, telemetria, rilevatori di affaticamento e sistemi di localizzazione vedono ciascuno una parte diversa della stessa operatività. Quando risiedono su piattaforme separate, il team deve ricostruire il contesto prima di agire. Axios crea il livello tra segnali e intervento.",
+          "pain_points": [
+            {
+              "title": "Fonti frammentate",
+              "description": "Il contesto operativo è distribuito su più piattaforme, costringendo a cambiare continuamente schermata e a ricostruire manualmente ciò che sta accadendo."
+            },
+            {
+              "title": "Troppi alert, poco contesto",
+              "description": "Un singolo evento può dire molto poco. La criticità cambia quando affaticamento, velocità, distrazione, percorso e storico convergono nella stessa finestra."
+            },
+            {
+              "title": "Decisioni senza tracciabilità",
+              "description": "Senza un flusso unico è difficile sapere a cosa è stata data priorità, chi è intervenuto, quale azione è stata intrapresa e se ha risolto il rischio operativo."
+            }
+          ],
+          "flow": {
+            "eyebrow": "DALLA SORGENTE ALL'INTERVENTO",
+            "title": "Quattro fasi, un unico flusso decisionale.",
+            "description": "L'obiettivo non è un'altra schermata per ogni tecnologia, ma trasformare segnali dispersi in una coda operativa prioritizzata, spiegabile e attuabile.",
+            "steps": [
+              {
+                "title": "Integrare",
+                "description": "Collegare le fonti già in uso e normalizzare i segnali richiesti dal flusso decisionale."
+              },
+              {
+                "title": "Contestualizzare",
+                "description": "Raggruppare gli eventi per conducente, veicolo, viaggio, posizione e finestra temporale per ricostruire il contesto operativo."
+              },
+              {
+                "title": "Prioritizzare",
+                "description": "Combinare regole, modelli e contesto per stimare la criticità operativa e ordinare ciò che richiede attenzione per primo."
+              },
+              {
+                "title": "Orchestrare",
+                "description": "Raccomandare l'azione successiva, registrare l'intervento e conservare una traccia verificabile per l'analisi e il miglioramento continuo."
+              }
+            ]
+          }
+        },
+        "use_cases": {
+          "eyebrow": "DUE ASSI OPERATIVI",
+          "title": "Lo stesso livello di integrazione per la sicurezza e le operazioni geografiche.",
+          "description": "Axios non dipende da telecamere o rilevatori di affaticamento per creare valore. Nelle operazioni basate su telemetria e localizzazione, la stessa architettura unifica le fonti e trasforma la posizione in eventi, tempi di permanenza, storico e report.",
+          "axes": [
+            {
+              "eyebrow": "SICUREZZA E INTERVENTO",
+              "title": "Criticità operativa",
+              "description": "Quando sono disponibili telecamere, dati di affaticamento, telemetria e altri segnali di rischio, Axios combina il contesto per individuare ciò che richiede attenzione e coordinare un intervento tracciabile.",
+              "items": [
+                "Fusione dei segnali nella stessa finestra temporale",
+                "Criticità per conducente, veicolo e contesto",
+                "Coda prioritizzata e azione consigliata",
+                "Storico verificabile degli interventi"
+              ]
+            },
+            {
+              "eyebrow": "TELEMETRIA E LOCALIZZAZIONE",
+              "title": "Geofencing e operazioni geografiche",
+              "description": "Dove non ci sono telecamere né sensori di affaticamento, Axios può integrare la telemetria di diversi fornitori e trasformare la localizzazione in un unico flusso operativo.",
+              "items": [
+                "Eventi di ingresso e uscita da zone definite dall'azienda",
+                "Tempo di permanenza per veicolo, zona e periodo",
+                "Mappa della flotta in tempo reale",
+                "Storico recente e ultima posizione del veicolo",
+                "Report su spostamenti e tempi di permanenza",
+                "Più fornitori di telemetria in un'unica vista"
+              ]
+            }
+          ],
+          "geo_visual": {
+            "metrics": [
+              "Ingresso / uscita",
+              "Tempo in zona",
+              "Posizione live"
+            ]
+          }
+        },
+        "results": {
+          "eyebrow": "PIATTAFORMA UNIFICATA",
+          "title": "Un livello decisionale sopra le tecnologie già in uso in azienda.",
+          "description": "Axios riunisce segnali, localizzazione, contesto e regole in un unico flusso, così l'operatore sa cosa merita attenzione, dove sta accadendo e cosa fare dopo.",
+          "platform": {
+            "sources": {
+              "title": "Segnali e sistemi",
+              "items": [
+                "Telematica video",
+                "Più fonti di telemetria",
+                "Affaticamento",
+                "GPS, percorsi e geofence",
+                "API interne"
+              ]
+            },
+            "intelligence": {
+              "title": "Axios Intelligence Layer",
+              "description": "L'intelligenza sta nel combinare i segnali e trasformare quel contesto in una decisione operativa tracciabile.",
+              "items": [
+                "Fusione dei segnali nella stessa finestra temporale",
+                "Criticità per conducente, veicolo e contesto",
+                "Eventi di ingresso, uscita e permanenza in zona",
+                "Regole e modelli versionati",
+                "Raccomandazione di intervento"
+              ]
+            },
+            "outputs": {
+              "title": "Decisione operativa",
+              "items": [
+                "Coda prioritizzata",
+                "Interventi",
+                "Mappa in tempo reale",
+                "Storico verificabile",
+                "Classifiche e viaggi",
+                "Report per zona e periodo"
+              ]
+            }
+          },
+          "score": {
+            "eyebrow": "SCORE AXIOS",
+            "title": "Una criticità che si può spiegare.",
+            "description": "Lo Score Axios organizza la priorità all'interno di una finestra temporale operativa, combinando segnali e contesto. L'interpretazione dipende dall'operatività, dalla finestra e dai dati disponibili: per questo ogni calcolo deve essere tracciabile.",
+            "principles": [
+              "Origine e qualità del segnale visibili",
+              "Finestra temporale e contesto espliciti",
+              "Regole, modelli e versioni registrati",
+              "Monitoraggio di falsi alert e alert mancati"
+            ],
+            "visual_label": "ESEMPIO CONCETTUALE",
+            "signals": [
+              "Affaticamento",
+              "Telemetria",
+              "Distrazione",
+              "Contesto del viaggio"
+            ],
+            "output_label": "Sintesi operativa",
+            "priority_label": "PRIORITÀ",
+            "priority_value": "Criticità alta"
+          },
+          "measurement": {
+            "eyebrow": "COME DIMOSTRIAMO IL VALORE",
+            "title": "Un progetto pilota deve migliorare le decisioni, non solo produrre più alert.",
+            "description": "L'implementazione crea valore solo se cambia davvero il modo di lavorare. Per questo misuriamo tempi di risposta, qualità dell'intervento e ricorrenza con periodi e denominatori espliciti.",
+            "cards": [
+              {
+                "title": "Tempo di intervento",
+                "description": "Quanto tempo passa da un segnale rilevante alla prioritizzazione e all'azione effettiva del team."
+              },
+              {
+                "title": "Tasso di alert utili",
+                "description": "Quale quota di alert ha effettivamente portato a una decisione o a un intervento ritenuto rilevante dal team operativo."
+              },
+              {
+                "title": "Falso intervento",
+                "description": "Quante azioni sono state avviate inutilmente, generando costi o attriti operativi evitabili."
+              },
+              {
+                "title": "Alert mancato",
+                "description": "Quali situazioni importanti non sono state prioritizzate e sono state individuate solo in seguito."
+              }
+            ]
+          }
+        },
+        "get_in_touch": {
+          "eyebrow": "PARTIAMO DAL PROBLEMA",
+          "title": "Vuole vedere i suoi dati trasformarsi in decisioni operative?",
+          "subtitle": "In una breve conversazione mappiamo le fonti disponibili e il primo flusso da testare — criticità, geofencing, tracciamento, integrazione multi-sorgente o un altro problema operativo ricorrente.",
+          "note": "Partiamo dalle tecnologie già in uso e dal flusso più piccolo in grado di dimostrare valore sul campo, anche senza telecamere o sensori di affaticamento.",
+          "whatsapp_cta": "Scriva su WhatsApp",
+          "email_cta": "Invii un'e-mail",
+          "phone_cta": "Chiami Axios",
+          "whatsapp_message": "Salve! Ho visitato il sito di Axios Insights e vorrei capire come potete integrare i nostri dati operativi — inclusi telemetria, localizzazione e geofencing — e trasformarli in decisioni operative. Possiamo parlarne?"
+        }
+      }
+    },
+    "not_found": {
+      "sections": {
+        "hero": {
+          "title": "Pagina non trovata",
+          "buttons": {
+            "redirect": "Torna indietro"
+          }
+        }
+      }
+    }
+  }
+}

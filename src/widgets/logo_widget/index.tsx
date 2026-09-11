@@ -9,7 +9,12 @@ export const LogoWidget = ({
   ...props
 }: LogoWidgetPropsType) => {
   return (
-    <Typography fontSize={fontSize} color={color} sx={sx} {...props}>
+    <Typography
+      fontSize={fontSize}
+      color={color}
+      sx={{ "& b": { color: "inherit", fontWeight: 800 }, ...sx }}
+      {...props}
+    >
       <b>axios</b> insights
     </Typography>
   );

@@ -36,8 +36,8 @@ a {
 }
 
 ::selection {
-  color: #151515;
-  background: #ff8034;
+  color: #fafafa;
+  background: #ff6e00;
 }
 
 :focus-visible {
