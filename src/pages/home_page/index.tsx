@@ -11,7 +11,10 @@ import { AboutUsSection } from "./sections/about_us_section";
 import { SECTIONS } from "./sections/constants";
 import { GetInTouchSection } from "./sections/get_in_touch_section";
 import { HeroSection } from "./sections/hero_section";
-import { ResultsSection } from "./sections/results_section";
+import { PlatformSection } from "./sections/platform_section";
+import { ProductTodaySection } from "./sections/product_today_section";
+import { RealProblemsSection } from "./sections/real_problems_section";
+import { TrustPilotSection } from "./sections/trust_pilot_section";
 import { UseCasesSection } from "./sections/use_cases_section";
 
 export const HomePage = () => {
@@ -68,19 +71,11 @@ export const HomePage = () => {
               },
             }}
           >
-            <LogoWidget
-              fontSize={26}
-              sx={{
-                "& b": {
-                  color: "#FF6E00",
-                  fontWeight: 800,
-                },
-              }}
-            />
+            <LogoWidget fontSize={26} />
           </Button>
         }
         navigation={[
-          SECTIONS.ABOUT_US,
+          SECTIONS.PRODUCT_TODAY,
           SECTIONS.RESULTS,
           SECTIONS.GET_IN_TOUCH,
         ].map((value, index) => {
@@ -137,15 +132,22 @@ export const HomePage = () => {
           );
         })}
         actions={<LanguageSwitcherWidget />}
+        drawerActions={<LanguageSwitcherWidget variant="inline" />}
       />
 
       <HeroSection />
 
+      <RealProblemsSection />
+
       <AboutUsSection />
+
+      <ProductTodaySection />
 
       <UseCasesSection />
 
-      <ResultsSection />
+      <PlatformSection />
+
+      <TrustPilotSection />
 
       <GetInTouchSection />
     </LayoutWidget>

@@ -398,8 +398,8 @@ export const HeroSection = () => {
                     label={t("pages.home.sections.hero.demo.priority")}
                     size="small"
                     sx={{
-                      color: "#151515",
-                      backgroundColor: "#FF8034",
+                      color: "#FAFAFA",
+                      backgroundColor: "#FF6E00",
                       borderRadius: "4px",
                       fontWeight: 800,
                       letterSpacing: "0.04em",

@@ -4,6 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import {
   AppBar,
+  Box,
   Drawer,
   IconButton,
   Stack,
@@ -19,6 +20,7 @@ export const HeaderWidget = ({
   brand,
   navigation,
   actions,
+  drawerActions,
   sx,
   ...props
 }: HeaderWidgetPropsType) => {
@@ -222,6 +224,18 @@ export const HeaderWidget = ({
           </IconButton>
 
           {content}
+
+          {drawerActions && (
+            <Box
+              sx={{
+                mt: "auto !important",
+                pt: 3,
+                borderTop: "1px solid rgba(250,250,250,0.08)",
+              }}
+            >
+              {drawerActions}
+            </Box>
+          )}
         </Stack>
       </Drawer>
     </>

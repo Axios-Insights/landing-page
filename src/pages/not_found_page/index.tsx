@@ -12,7 +12,7 @@ export const NotFoundPage = () => {
   return (
     <LayoutWidget>
       <HeaderWidget
-        sx={{ color: "text.primary" }}
+        sx={{ color: "#FAFAFA" }}
         brand={
           <Button
             component={Link}

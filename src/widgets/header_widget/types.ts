@@ -6,4 +6,5 @@ export interface HeaderWidgetPropsType extends AppBarProps {
   brand?: ReactNode;
   navigation?: ReactNode;
   actions?: ReactNode;
+  drawerActions?: ReactNode;
 }

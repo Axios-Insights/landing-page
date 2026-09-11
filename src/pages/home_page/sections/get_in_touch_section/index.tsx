@@ -24,7 +24,7 @@ export const GetInTouchSection = () => {
         position: "relative",
         overflow: "hidden",
         isolation: "isolate",
-        color: "#151515",
+        color: "#FAFAFA",
         backgroundColor: "#FF6E00",
         backgroundImage:
           "radial-gradient(circle at 86% 10%, rgba(250,250,250,0.19), transparent 23%), radial-gradient(circle at 9% 100%, rgba(112,57,16,0.18), transparent 31%)",
@@ -53,7 +53,8 @@ export const GetInTouchSection = () => {
           height: { xs: 230, md: 390 },
           right: { xs: -154, md: -174 },
           bottom: { xs: -142, md: -224 },
-          border: { xs: "36px solid", md: "58px solid" },
+          borderStyle: "solid",
+          borderWidth: { xs: 36, md: 58 },
           borderColor: "rgba(250,250,250,0.17)",
           borderRadius: "50%",
           transform: "rotate(-8deg)",
@@ -69,7 +70,8 @@ export const GetInTouchSection = () => {
           height: { xs: 120, md: 210 },
           left: { xs: -86, md: -108 },
           top: { xs: 48, md: 74 },
-          border: { xs: "20px solid", md: "32px solid" },
+          borderStyle: "solid",
+          borderWidth: { xs: 20, md: 32 },
           borderColor: "rgba(21,21,21,0.075)",
           borderRightColor: "transparent",
           borderBottomColor: "transparent",
@@ -93,13 +95,13 @@ export const GetInTouchSection = () => {
                   sx={{
                     width: 34,
                     height: "1px",
-                    backgroundColor: "rgba(21,21,21,0.72)",
+                    backgroundColor: "rgba(250,250,250,0.80)",
                   }}
                 />
                 <Typography
                   fontSize={12}
                   fontWeight={800}
-                  color="rgba(21,21,21,0.64)"
+                  color="rgba(250,250,250,0.88)"
                   sx={{ letterSpacing: "0.12em" }}
                 >
                   {t("pages.home.sections.get_in_touch.eyebrow")}
@@ -118,7 +120,7 @@ export const GetInTouchSection = () => {
               </Typography>
 
               <Typography
-                color="rgba(21,21,21,0.68)"
+                color="rgba(250,250,250,0.94)"
                 fontSize={{ xs: 17, md: 19 }}
                 lineHeight={1.48}
                 maxWidth={720}
